@@ -2522,7 +2522,7 @@ onAuthStateChanged(auth, async (user) => {
     // 每 3 秒同步一次（確保狀態更新）
     setInterval(syncUserState, 3000);
 
-  function filterUnitsByUser(units) {
+ function filterUnitsByUser(units) {
       // 管理員：顯示所有單元
       if (!isGuestMode && currentUserData?.role === 'admin') {
         console.log('👑 管理員模式：顯示所有教材，共', units.length, '個');
@@ -2538,8 +2538,8 @@ onAuthStateChanged(auth, async (user) => {
         return filtered;
       }
       
-      // 一般用戶
-      if (currentUser && currentUserData) {
+      // 一般用戶（只用 currentUserData，不用 currentUser）
+      if (currentUserData) {
         let userGrades = currentUserData.grade || [];
         if (typeof userGrades === 'string') userGrades = [userGrades];
         
@@ -2564,6 +2564,24 @@ onAuthStateChanged(auth, async (user) => {
           console.warn('⚠️ 使用者沒有教材權限（試用期已過且未分配出版社）');
           return [];
         }
+        
+        const filtered = units.filter(unit => {
+          const unitGrades = unit.grade || [];
+          const gradeMatch = unitGrades.some(g => userGrades.includes(g));
+          const unitPublishers = unit.publisher || [];
+          const publisherMatch = unitPublishers.some(p => effectivePublishers.includes(p));
+          return gradeMatch && publisherMatch;
+        });
+        
+        console.log('👤 一般用戶過濾後:', filtered.length, '/', units.length);
+        if (filtered.length > 0) {
+          console.log('過濾後第一個單元的 publisher:', filtered[0].publisher);
+        }
+        return filtered;
+      }
+      
+      return [];
+    }
         
         const filtered = units.filter(unit => {
           const unitGrades = unit.grade || [];

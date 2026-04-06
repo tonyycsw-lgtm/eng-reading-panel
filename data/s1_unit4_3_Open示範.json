@@ -1,0 +1,122 @@
+{
+  "unitId": "unit4_3",
+  "unitName": "塔克：了不起的治療犬 | Tucker: an amazing therapy dog",
+  "article": {
+    "title": "<strong>Tucker: an amazing therapy dog</strong>\n<strong>塔克：了不起的治療犬</strong>",
+    "illustration": "/images/unit4_3.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "Tucker is a <span class='highlight1'>chocolate</span> <span class='highlight2'>Labradoodle</span>. He started working as a <span class='highlight3'>therapy dog</span> at Independent Schools Foundation Academy in <span class='highlight4'>2019</span>.",
+        "sentences": [
+          "Tucker is a <span class='highlight1'>chocolate</span> <span class='highlight2'>Labradoodle</span>.",
+          "He started working as a <span class='highlight3'>therapy dog</span> at Independent Schools Foundation Academy in <span class='highlight4'>2019</span>."
+        ],
+        "translation": "🌐 塔克是一隻巧克力色的拉布拉多貴賓犬。他於2019年開始在弘立書院擔任治療犬。",
+        "translation_sentences": [
+          "🌐 塔克是一隻巧克力色的拉布拉多貴賓犬。",
+          "他於2019年開始在弘立書院擔任治療犬。"
+        ],
+        "implication": {
+          "english": "💡 The first paragraph introduces Tucker, his breed, and his job as a therapy dog at a specific school.",
+          "chinese": "💡 第一段介紹了塔克、他的品種，以及他在特定學校擔任治療犬的工作。[換句話說]：塔克是一隻受過訓練的治療犬，從2019年開始在一所學校工作。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "<span class='highlight5'>Therapy dogs</span> give <span class='highlight1'>emotional support</span> to <span class='highlight2'>students</span> by providing <span class='highlight3'>comfort</span>. Many students deal with <span class='highlight4'>exam worries</span>, <span class='highlight5'>social challenges</span> or problems at home. Tucker is a <span class='highlight1'>simple solution</span> to these <span class='highlight2'>difficulties</span>.",
+        "sentences": [
+          "<span class='highlight5'>Therapy dogs</span> give <span class='highlight1'>emotional support</span> to <span class='highlight2'>students</span> by providing <span class='highlight3'>comfort</span>.",
+          "Many students deal with <span class='highlight4'>exam worries</span>, <span class='highlight5'>social challenges</span> or problems at home.",
+          "Tucker is a <span class='highlight1'>simple solution</span> to these <span class='highlight2'>difficulties</span>."
+        ],
+        "translation": "🌐 治療犬透過提供安慰，給予學生情感上的支持。許多學生面臨考試焦慮、社交挑戰或家庭問題。塔克是這些困難的一個簡單解決方案。",
+        "translation_sentences": [
+          "🌐 治療犬透過提供安慰，給予學生情感上的支持。",
+          "許多學生面臨考試焦慮、社交挑戰或家庭問題。",
+          "塔克是這些困難的一個簡單解決方案。"
+        ],
+        "implication": {
+          "english": "💡 This paragraph explains the role of therapy dogs and the common problems students face, emphasizing Tucker's importance.",
+          "chinese": "💡 這段說明了治療犬的角色以及學生常遇到的問題，強調塔克的重要性。[換句話說]：治療犬的工作就是安慰學生，幫助他們應對各種壓力，塔克正是為了解決這些問題而存在的。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "Tucker is a <span class='highlight3'>wonderful</span> <span class='highlight4'>companion</span> for many students. When students feel <span class='highlight5'>anxious</span>, they can visit Tucker and <span class='highlight1'>interact</span> with him at <span class='highlight2'>break</span> or <span class='highlight3'>lunch</span>. They can <span class='highlight4'>pet</span> him, give him <span class='highlight5'>treats</span> or just <span class='highlight1'>cuddle</span> with him. Some may play with Tucker to <span class='highlight2'>exercise</span> him. Tucker even helped students <span class='highlight3'>overcome</span> their <span class='highlight4'>fear</span> of dogs. Some of Tucker's best friends are students who were <span class='highlight5'>scared</span> to go near him at first.",
+        "sentences": [
+          "Tucker is a <span class='highlight3'>wonderful</span> <span class='highlight4'>companion</span> for many students.",
+          "When students feel <span class='highlight5'>anxious</span>, they can visit Tucker and <span class='highlight1'>interact</span> with him at <span class='highlight2'>break</span> or <span class='highlight3'>lunch</span>.",
+          "They can <span class='highlight4'>pet</span> him, give him <span class='highlight5'>treats</span> or just <span class='highlight1'>cuddle</span> with him.",
+          "Some may play with Tucker to <span class='highlight2'>exercise</span> him.",
+          "Tucker even helped students <span class='highlight3'>overcome</span> their <span class='highlight4'>fear</span> of dogs.",
+          "Some of Tucker's best friends are students who were <span class='highlight5'>scared</span> to go near him at first."
+        ],
+        "translation": "🌐 對許多學生來說，塔克是一個很棒的夥伴。當學生感到焦慮時，他們可以在休息或午餐時間去拜訪塔克，和他互動。他們可以撫摸他、給他零食，或者只是擁抱他。有些人會和塔克玩耍，讓他運動。塔克甚至幫助學生克服了對狗的恐懼。塔克最好的朋友中，有些是一開始害怕接近他的學生。",
+        "translation_sentences": [
+          "🌐 對許多學生來說，塔克是一個很棒的夥伴。",
+          "當學生感到焦慮時，他們可以在休息或午餐時間去拜訪塔克，和他互動。",
+          "他們可以撫摸他、給他零食，或者只是擁抱他。",
+          "有些人會和塔克玩耍，讓他運動。",
+          "塔克甚至幫助學生克服了對狗的恐懼。",
+          "塔克最好的朋友中，有些是一開始害怕接近他的學生。"
+        ],
+        "implication": {
+          "english": "💡 This paragraph describes how students interact with Tucker and the various benefits, including reducing anxiety and overcoming fear.",
+          "chinese": "💡 這段描述了學生如何與塔克互動以及各種好處，包括減少焦慮和克服恐懼。[換句話說]：學生可以隨時去找塔克，摸摸他、抱抱他，這些互動能讓他們放鬆心情，甚至幫助原本怕狗的學生不再害怕。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "With a <span class='highlight1'>therapy dog</span> around, students seem less <span class='highlight2'>stressed</span> and have better <span class='highlight3'>attitudes</span>. Now, more <span class='highlight4'>schools</span> may get therapy dogs for their students.",
+        "sentences": [
+          "With a <span class='highlight1'>therapy dog</span> around, students seem less <span class='highlight2'>stressed</span> and have better <span class='highlight3'>attitudes</span>.",
+          "Now, more <span class='highlight4'>schools</span> may get therapy dogs for their students."
+        ],
+        "translation": "🌐 有治療犬在身邊，學生們似乎壓力較小，態度也更好。現在，可能有更多學校會為學生引進治療犬。",
+        "translation_sentences": [
+          "🌐 有治療犬在身邊，學生們似乎壓力較小，態度也更好。",
+          "現在，可能有更多學校會為學生引進治療犬。"
+        ],
+        "implication": {
+          "english": "💡 The conclusion highlights the positive impact of therapy dogs and the potential for wider adoption in schools.",
+          "chinese": "💡 結論強調了治療犬的正面影響，以及更多學校可能跟進的趨勢。[換句話說]：塔克的效果很好，所以其他學校也可能會開始引進治療犬來幫助學生。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "chocolate", "meaning": "adj. 巧克力色的", "highlightClass": "highlight1" },
+    { "id": 2, "word": "Labradoodle", "meaning": "n. 拉布拉多貴賓犬", "highlightClass": "highlight2" },
+    { "id": 3, "word": "therapy dog", "meaning": "n. 治療犬", "highlightClass": "highlight3" },
+    { "id": 4, "word": "2019", "meaning": "n. 2019年", "highlightClass": "highlight4" },
+    { "id": 5, "word": "emotional support", "meaning": "n. 情感支持", "highlightClass": "highlight1" },
+    { "id": 6, "word": "students", "meaning": "n. 學生", "highlightClass": "highlight2" },
+    { "id": 7, "word": "comfort", "meaning": "n. 安慰", "highlightClass": "highlight3" },
+    { "id": 8, "word": "exam worries", "meaning": "n. 考試焦慮", "highlightClass": "highlight4" },
+    { "id": 9, "word": "social challenges", "meaning": "n. 社交挑戰", "highlightClass": "highlight5" },
+    { "id": 10, "word": "simple solution", "meaning": "n. 簡單的解決方案", "highlightClass": "highlight1" },
+    { "id": 11, "word": "difficulties", "meaning": "n. 困難", "highlightClass": "highlight2" },
+    { "id": 12, "word": "wonderful", "meaning": "adj. 極好的", "highlightClass": "highlight3" },
+    { "id": 13, "word": "companion", "meaning": "n. 夥伴", "highlightClass": "highlight4" },
+    { "id": 14, "word": "anxious", "meaning": "adj. 焦慮的", "highlightClass": "highlight5" },
+    { "id": 15, "word": "interact", "meaning": "v. 互動", "highlightClass": "highlight1" },
+    { "id": 16, "word": "break", "meaning": "n. 休息時間", "highlightClass": "highlight2" },
+    { "id": 17, "word": "lunch", "meaning": "n. 午餐", "highlightClass": "highlight3" },
+    { "id": 18, "word": "pet", "meaning": "v. 撫摸", "highlightClass": "highlight4" },
+    { "id": 19, "word": "treats", "meaning": "n. 零食", "highlightClass": "highlight5" },
+    { "id": 20, "word": "cuddle", "meaning": "v. 擁抱", "highlightClass": "highlight1" },
+    { "id": 21, "word": "exercise", "meaning": "v. 運動", "highlightClass": "highlight2" },
+    { "id": 22, "word": "overcome", "meaning": "v. 克服", "highlightClass": "highlight3" },
+    { "id": 23, "word": "fear", "meaning": "n. 恐懼", "highlightClass": "highlight4" },
+    { "id": 24, "word": "scared", "meaning": "adj. 害怕的", "highlightClass": "highlight5" },
+    { "id": 25, "word": "stressed", "meaning": "adj. 有壓力的", "highlightClass": "highlight2" },
+    { "id": 26, "word": "attitudes", "meaning": "n. 態度", "highlightClass": "highlight3" },
+    { "id": 27, "word": "schools", "meaning": "n. 學校", "highlightClass": "highlight4" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_3/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_3/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_3/word_{id}.mp3"
+  }
+}

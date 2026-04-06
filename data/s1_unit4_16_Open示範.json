@@ -1,0 +1,144 @@
+{
+  "unitId": "unit4_16",
+  "unitName": "貓咪生病的那天 | The day my cat got sick",
+  "article": {
+    "title": "<strong>The day my cat got sick</strong>\n<strong>貓咪生病的那天</strong>",
+    "illustration": "/images/unit4_16.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "My cat Molly <span class='highlight2'>got</span> <span class='highlight3'>sick</span>. It <span class='highlight4'>happened</span> <span class='highlight5'>suddenly</span>. One day she was <span class='highlight2'>happy</span> and <span class='highlight3'>lively</span>, but the next day she <span class='highlight1'>looked</span> <span class='highlight2'>terrible</span>.",
+        "sentences": [
+          "My cat Molly <span class='highlight2'>got</span> <span class='highlight3'>sick</span>.",
+          "It <span class='highlight4'>happened</span> <span class='highlight5'>suddenly</span>.",
+          "One day she was <span class='highlight2'>happy</span> and <span class='highlight3'>lively</span>, but the next day she <span class='highlight1'>looked</span> <span class='highlight2'>terrible</span>."
+        ],
+        "translation": "🌐 我的貓莫莉生病了。事情發生得很突然。前一天她還高高興興、充滿活力，但第二天她看起來很糟。",
+        "translation_sentences": [
+          "🌐 我的貓莫莉生病了。",
+          "事情發生得很突然。",
+          "前一天她還高高興興、充滿活力，但第二天她看起來很糟。"
+        ],
+        "implication": {
+          "english": "💡 The sudden change in the cat's condition is highlighted, creating concern.",
+          "chinese": "💡 貓咪狀況突然改變，引起擔憂。[換句話說]：莫莉突然就病了，前一天還好好的，隔天就沒精神。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "I <span class='highlight3'>called</span> her <span class='highlight4'>name</span>, but she didn't <span class='highlight1'>move</span>. I <span class='highlight2'>offered</span> her some <span class='highlight3'>food</span>. She <span class='highlight4'>sniffed</span> at her bowl, but then <span class='highlight2'>turned</span> away. That's when I got really <span class='highlight4'>scared</span>.",
+        "sentences": [
+          "I <span class='highlight3'>called</span> her <span class='highlight4'>name</span>, but she didn't <span class='highlight1'>move</span>.",
+          "I <span class='highlight2'>offered</span> her some <span class='highlight3'>food</span>.",
+          "She <span class='highlight4'>sniffed</span> at her bowl, but then <span class='highlight2'>turned</span> away.",
+          "That's when I got really <span class='highlight4'>scared</span>."
+        ],
+        "translation": "🌐 我叫她的名字，但她不動。我給她一些食物。她聞了聞碗，然後轉開頭。那時我真的害怕了。",
+        "translation_sentences": [
+          "🌐 我叫她的名字，但她不動。",
+          "我給她一些食物。",
+          "她聞了聞碗，然後轉開頭。",
+          "那時我真的害怕了。"
+        ],
+        "implication": {
+          "english": "💡 The cat's lack of response to food is a worrying sign, escalating the narrator's fear.",
+          "chinese": "💡 貓對食物沒反應是個令人擔憂的跡象，加劇了敘述者的恐懼。[換句話說]：我叫牠也不理，拿食物給牠，牠聞一聞就不吃了，我開始覺得不對勁。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "Dad and I <span class='highlight5'>decided</span> to go to the <span class='highlight1'>vet</span> right away. 'What should we do?' I <span class='highlight3'>asked</span> the vet. 'Give her this <span class='highlight5'>medicine</span> and let her have more <span class='highlight1'>rest</span>,' said the vet.",
+        "sentences": [
+          "Dad and I <span class='highlight5'>decided</span> to go to the <span class='highlight1'>vet</span> right away.",
+          "'What should we do?' I <span class='highlight3'>asked</span> the vet.",
+          "'Give her this <span class='highlight5'>medicine</span> and let her have more <span class='highlight1'>rest</span>,' said the vet."
+        ],
+        "translation": "🌐 爸爸和我決定立刻去看獸醫。「我們該怎麼辦？」我問獸醫。「給她吃這個藥，讓她多休息，」獸醫說。",
+        "translation_sentences": [
+          "🌐 爸爸和我決定立刻去看獸醫。",
+          "「我們該怎麼辦？」我問獸醫。",
+          "「給她吃這個藥，讓她多休息，」獸醫說。"
+        ],
+        "implication": {
+          "english": "💡 The family takes prompt action by going to the vet, who prescribes medicine and rest.",
+          "chinese": "💡 家人迅速採取行動去看獸醫，獸醫開藥並建議多休息。[換句話說]：我們趕快帶牠去看醫生，醫生說要吃藥多休息。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "When we got home, I <span class='highlight3'>tried</span> to cheer Molly up. I wanted to play with her, but I knew she <span class='highlight4'>needed</span> more rest. I <span class='highlight5'>watched</span> her all day long. I even <span class='highlight1'>checked</span> on her a few times during the night.",
+        "sentences": [
+          "When we got home, I <span class='highlight3'>tried</span> to cheer Molly up.",
+          "I wanted to play with her, but I knew she <span class='highlight4'>needed</span> more rest.",
+          "I <span class='highlight5'>watched</span> her all day long.",
+          "I even <span class='highlight1'>checked</span> on her a few times during the night."
+        ],
+        "translation": "🌐 回家後，我試著讓莫莉開心起來。我想和她玩，但我知道她需要更多休息。我看她一整天。我甚至晚上還看了她好幾次。",
+        "translation_sentences": [
+          "🌐 回家後，我試著讓莫莉開心起來。",
+          "我想和她玩，但我知道她需要更多休息。",
+          "我看她一整天。",
+          "我甚至晚上還看了她好幾次。"
+        ],
+        "implication": {
+          "english": "💡 The narrator's concern is shown through constant attention and checking on the cat.",
+          "chinese": "💡 敘述者的關心透過持續關注和查看貓咪表現出來。[換句話說]：我很擔心，整天陪著牠，晚上也不時起來看牠。"
+        }
+      },
+      {
+        "id": 5,
+        "english": "The next morning, Molly <span class='highlight1'>jumped</span> onto my bed. She was much better! I <span class='highlight4'>kissed</span> her head and <span class='highlight1'>smiled</span>.",
+        "sentences": [
+          "The next morning, Molly <span class='highlight1'>jumped</span> onto my bed.",
+          "She was much better!",
+          "I <span class='highlight4'>kissed</span> her head and <span class='highlight1'>smiled</span>."
+        ],
+        "translation": "🌐 第二天早上，莫莉跳上我的床。她好多了！我親了親她的頭，笑了。",
+        "translation_sentences": [
+          "🌐 第二天早上，莫莉跳上我的床。",
+          "她好多了！",
+          "我親了親她的頭，笑了。"
+        ],
+        "implication": {
+          "english": "💡 Happy ending: the cat recovers, bringing relief and joy.",
+          "chinese": "💡 快樂結局：貓康復了，帶來解脫和喜悅。[換句話說]：隔天早上牠跳上床，看起來好多了，我終於放心了。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "got", "meaning": "v. 變得", "highlightClass": "highlight2" },
+    { "id": 2, "word": "sick", "meaning": "adj. 生病的", "highlightClass": "highlight3" },
+    { "id": 3, "word": "happened", "meaning": "v. 發生", "highlightClass": "highlight4" },
+    { "id": 4, "word": "suddenly", "meaning": "adv. 突然地", "highlightClass": "highlight5" },
+    { "id": 5, "word": "happy", "meaning": "adj. 快樂的", "highlightClass": "highlight2" },
+    { "id": 6, "word": "lively", "meaning": "adj. 充滿活力的", "highlightClass": "highlight3" },
+    { "id": 7, "word": "looked", "meaning": "v. 看起來", "highlightClass": "highlight1" },
+    { "id": 8, "word": "terrible", "meaning": "adj. 糟糕的", "highlightClass": "highlight2" },
+    { "id": 9, "word": "called", "meaning": "v. 叫", "highlightClass": "highlight3" },
+    { "id": 10, "word": "name", "meaning": "n. 名字", "highlightClass": "highlight4" },
+    { "id": 11, "word": "move", "meaning": "v. 移動", "highlightClass": "highlight1" },
+    { "id": 12, "word": "offered", "meaning": "v. 提供", "highlightClass": "highlight2" },
+    { "id": 13, "word": "food", "meaning": "n. 食物", "highlightClass": "highlight3" },
+    { "id": 14, "word": "sniffed", "meaning": "v. 嗅", "highlightClass": "highlight4" },
+    { "id": 15, "word": "turned", "meaning": "v. 轉", "highlightClass": "highlight2" },
+    { "id": 16, "word": "scared", "meaning": "adj. 害怕的", "highlightClass": "highlight4" },
+    { "id": 17, "word": "decided", "meaning": "v. 決定", "highlightClass": "highlight5" },
+    { "id": 18, "word": "vet", "meaning": "n. 獸醫", "highlightClass": "highlight1" },
+    { "id": 19, "word": "asked", "meaning": "v. 問", "highlightClass": "highlight3" },
+    { "id": 20, "word": "medicine", "meaning": "n. 藥", "highlightClass": "highlight5" },
+    { "id": 21, "word": "rest", "meaning": "n. 休息", "highlightClass": "highlight1" },
+    { "id": 22, "word": "tried", "meaning": "v. 嘗試", "highlightClass": "highlight3" },
+    { "id": 23, "word": "needed", "meaning": "v. 需要", "highlightClass": "highlight4" },
+    { "id": 24, "word": "watched", "meaning": "v. 觀看", "highlightClass": "highlight5" },
+    { "id": 25, "word": "checked", "meaning": "v. 檢查", "highlightClass": "highlight1" },
+    { "id": 26, "word": "jumped", "meaning": "v. 跳", "highlightClass": "highlight1" },
+    { "id": 27, "word": "kissed", "meaning": "v. 親吻", "highlightClass": "highlight4" },
+    { "id": 28, "word": "smiled", "meaning": "v. 微笑", "highlightClass": "highlight1" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_16/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_16/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_16/word_{id}.mp3"
+  }
+}

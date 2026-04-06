@@ -1,0 +1,131 @@
+{
+  "unitId": "unit4_2",
+  "unitName": "新毛茸茸的朋友 | A New Furry Friend",
+  "article": {
+    "title": "<strong>A New Furry Friend</strong>\n<strong>新毛茸茸的朋友</strong>",
+    "illustration": "/images/unit4_2.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "In <span class='highlight1'>September</span>, Marcus started going to a new school. He was <span class='highlight2'>shy</span> and could not make any <span class='highlight3'>friends</span>. His <span class='highlight4'>parents</span> were <span class='highlight5'>worried</span>.",
+        "sentences": [
+          "In <span class='highlight1'>September</span>, Marcus started going to a new school.",
+          "He was <span class='highlight2'>shy</span> and could not make any <span class='highlight3'>friends</span>.",
+          "His <span class='highlight4'>parents</span> were <span class='highlight5'>worried</span>."
+        ],
+        "translation": "🌐 九月，馬庫斯開始上新學校。他很害羞，交不到任何朋友。他的父母很擔心。",
+        "translation_sentences": [
+          "🌐 九月，馬庫斯開始上新學校。",
+          "他很害羞，交不到任何朋友。",
+          "他的父母很擔心。"
+        ],
+        "implication": {
+          "english": "💡 The story introduces a common problem: a child struggling to adapt to a new environment and feeling lonely.",
+          "chinese": "💡 故事引入一個常見問題：孩子在適應新環境時感到困難和孤單。[換句話說]：馬庫斯剛轉學，因為害羞交不到朋友，爸媽看在眼裡很著急。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "One day, Marcus <span class='highlight1'>showed</span> his <span class='highlight2'>mum</span> a <span class='highlight3'>picture</span> of a <span class='highlight4'>kitten</span>. 'Can we <span class='highlight5'>adopt</span> her?' he asked <span class='highlight1'>excitedly</span>. His eyes <span class='highlight2'>lit up</span> as he looked at the picture. 'I'm not sure if we can keep the cat, but we can <span class='highlight3'>foster</span> her,' his mum <span class='highlight4'>replied</span>.",
+        "sentences": [
+          "One day, Marcus <span class='highlight1'>showed</span> his <span class='highlight2'>mum</span> a <span class='highlight3'>picture</span> of a <span class='highlight4'>kitten</span>.",
+          "'Can we <span class='highlight5'>adopt</span> her?' he asked <span class='highlight1'>excitedly</span>.",
+          "His eyes <span class='highlight2'>lit up</span> as he looked at the picture.",
+          "'I'm not sure if we can keep the cat, but we can <span class='highlight3'>foster</span> her,' his mum <span class='highlight4'>replied</span>."
+        ],
+        "translation": "🌐 有一天，馬庫斯給媽媽看一張小貓的照片。「我們可以領養牠嗎？」他興奮地問。他看著照片時眼睛亮了起來。「我不確定我們能不能養貓，但我們可以中途照顧牠，」媽媽回答。",
+        "translation_sentences": [
+          "🌐 有一天，馬庫斯給媽媽看一張小貓的照片。",
+          "「我們可以領養牠嗎？」他興奮地問。",
+          "他看著照片時眼睛亮了起來。",
+          "「我不確定我們能不能養貓，但我們可以中途照顧牠，」媽媽回答。"
+        ],
+        "implication": {
+          "english": "💡 'Lit up' shows Marcus's hope and excitement. 'Foster' means temporary care, which is a compromise from his mother.",
+          "chinese": "💡 '眼睛亮了起來'顯示馬庫斯的希望和興奮。'中途照顧'意味著臨時照護，這是媽媽的妥協。[換句話說]：馬庫斯看到小貓的照片眼睛都亮了，媽媽雖然還不確定要不要長期養，但願意先試試看當中途家庭。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "Marcus and his parents <span class='highlight5'>looked after</span> the cat together. He <span class='highlight1'>learnt</span> how to be a <span class='highlight2'>responsible</span> <span class='highlight3'>pet owner</span> along the way. 'Coco's <span class='highlight4'>fur</span> is so <span class='highlight5'>soft</span>,' Marcus said while <span class='highlight1'>brushing</span> its fur. Coco <span class='highlight2'>purred</span> <span class='highlight3'>contentedly</span>. He <span class='highlight4'>shared</span> photos of the small orange cat on <span class='highlight5'>social media</span>. Many of his <span class='highlight1'>classmates</span> <span class='highlight2'>liked</span> the photos and said they wanted to meet Coco.",
+        "sentences": [
+          "Marcus and his parents <span class='highlight5'>looked after</span> the cat together.",
+          "He <span class='highlight1'>learnt</span> how to be a <span class='highlight2'>responsible</span> <span class='highlight3'>pet owner</span> along the way.",
+          "'Coco's <span class='highlight4'>fur</span> is so <span class='highlight5'>soft</span>,' Marcus said while <span class='highlight1'>brushing</span> its fur.",
+          "Coco <span class='highlight2'>purred</span> <span class='highlight3'>contentedly</span>.",
+          "He <span class='highlight4'>shared</span> photos of the small orange cat on <span class='highlight5'>social media</span>.",
+          "Many of his <span class='highlight1'>classmates</span> <span class='highlight2'>liked</span> the photos and said they wanted to meet Coco."
+        ],
+        "translation": "🌐 馬庫斯和他的父母一起照顧這隻貓。他因此學會了如何成為一個負責任的寵物主人。「Coco的毛好柔軟，」馬庫斯一邊刷毛一邊說。Coco滿足地咕嚕叫。他在社交媒體上分享了這隻小橘貓的照片。許多同學按讚，並說他們想見Coco。",
+        "translation_sentences": [
+          "🌐 馬庫斯和他的父母一起照顧這隻貓。",
+          "他因此學會了如何成為一個負責任的寵物主人。",
+          "「Coco的毛好柔軟，」馬庫斯一邊刷毛一邊說。",
+          "Coco滿足地咕嚕叫。",
+          "他在社交媒體上分享了這隻小橘貓的照片。",
+          "許多同學按讚，並說他們想見Coco。"
+        ],
+        "implication": {
+          "english": "💡 Taking care of the cat teaches Marcus responsibility. The cat's positive reaction and classmates' interest show the growing bond.",
+          "chinese": "💡 照顧貓咪讓馬庫斯學會負責任。貓咪的反應和同學的興趣顯示了逐漸建立的情感連結。[換句話說]：照顧Coco的過程中，馬庫斯學會了怎麼當個好主人，Coco也很享受，同學們看到照片都說想來看牠。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "In <span class='highlight4'>November</span>, the family <span class='highlight5'>decided</span> to <span class='highlight1'>adopt</span> the cat. They <span class='highlight2'>invited</span> a few of Marcus' friends over for a <span class='highlight3'>party</span> to <span class='highlight4'>welcome</span> this new family member.",
+        "sentences": [
+          "In <span class='highlight4'>November</span>, the family <span class='highlight5'>decided</span> to <span class='highlight1'>adopt</span> the cat.",
+          "They <span class='highlight2'>invited</span> a few of Marcus' friends over for a <span class='highlight3'>party</span> to <span class='highlight4'>welcome</span> this new family member."
+        ],
+        "translation": "🌐 十一月，這家人決定領養這隻貓。他們邀請了馬庫斯的一些朋友來參加派對，歡迎這位新家庭成員。",
+        "translation_sentences": [
+          "🌐 十一月，這家人決定領養這隻貓。",
+          "他們邀請了馬庫斯的一些朋友來參加派對，歡迎這位新家庭成員。"
+        ],
+        "implication": {
+          "english": "💡 The story has a happy ending: the cat becomes a permanent family member, and Marcus gains friends through this shared joy.",
+          "chinese": "💡 故事有個快樂的結局：貓咪成為永久的家庭成員，而馬庫斯也透過分享這份喜悅交到了朋友。[換句話說]：最後Coco正式成為家裡的一份子，馬庫斯還辦派對邀請同學來慶祝，終於不再孤單了。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "September", "meaning": "n. 九月", "highlightClass": "highlight1" },
+    { "id": 2, "word": "shy", "meaning": "adj. 害羞的", "highlightClass": "highlight2" },
+    { "id": 3, "word": "friends", "meaning": "n. 朋友", "highlightClass": "highlight3" },
+    { "id": 4, "word": "parents", "meaning": "n. 父母", "highlightClass": "highlight4" },
+    { "id": 5, "word": "worried", "meaning": "adj. 擔心的", "highlightClass": "highlight5" },
+    { "id": 6, "word": "showed", "meaning": "v. 展示", "highlightClass": "highlight1" },
+    { "id": 7, "word": "mum", "meaning": "n. 媽媽", "highlightClass": "highlight2" },
+    { "id": 8, "word": "picture", "meaning": "n. 照片", "highlightClass": "highlight3" },
+    { "id": 9, "word": "kitten", "meaning": "n. 小貓", "highlightClass": "highlight4" },
+    { "id": 10, "word": "adopt", "meaning": "v. 領養", "highlightClass": "highlight5" },
+    { "id": 11, "word": "excitedly", "meaning": "adv. 興奮地", "highlightClass": "highlight1" },
+    { "id": 12, "word": "lit up", "meaning": "phr. 亮起來", "highlightClass": "highlight2" },
+    { "id": 13, "word": "foster", "meaning": "v. 中途照顧", "highlightClass": "highlight3" },
+    { "id": 14, "word": "replied", "meaning": "v. 回答", "highlightClass": "highlight4" },
+    { "id": 15, "word": "looked after", "meaning": "phr. 照顧", "highlightClass": "highlight5" },
+    { "id": 16, "word": "learnt", "meaning": "v. 學會", "highlightClass": "highlight1" },
+    { "id": 17, "word": "responsible", "meaning": "adj. 負責任的", "highlightClass": "highlight2" },
+    { "id": 18, "word": "pet owner", "meaning": "n. 寵物主人", "highlightClass": "highlight3" },
+    { "id": 19, "word": "fur", "meaning": "n. 毛皮", "highlightClass": "highlight4" },
+    { "id": 20, "word": "soft", "meaning": "adj. 柔軟的", "highlightClass": "highlight5" },
+    { "id": 21, "word": "brushing", "meaning": "v. 刷", "highlightClass": "highlight1" },
+    { "id": 22, "word": "purred", "meaning": "v. 咕嚕叫", "highlightClass": "highlight2" },
+    { "id": 23, "word": "contentedly", "meaning": "adv. 滿足地", "highlightClass": "highlight3" },
+    { "id": 24, "word": "shared", "meaning": "v. 分享", "highlightClass": "highlight4" },
+    { "id": 25, "word": "social media", "meaning": "n. 社交媒體", "highlightClass": "highlight5" },
+    { "id": 26, "word": "classmates", "meaning": "n. 同學", "highlightClass": "highlight1" },
+    { "id": 27, "word": "liked", "meaning": "v. 喜歡", "highlightClass": "highlight2" },
+    { "id": 28, "word": "November", "meaning": "n. 十一月", "highlightClass": "highlight4" },
+    { "id": 29, "word": "decided", "meaning": "v. 決定", "highlightClass": "highlight5" },
+    { "id": 30, "word": "invited", "meaning": "v. 邀請", "highlightClass": "highlight2" },
+    { "id": 31, "word": "party", "meaning": "n. 派對", "highlightClass": "highlight3" },
+    { "id": 32, "word": "welcome", "meaning": "v. 歡迎", "highlightClass": "highlight4" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_2/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_2/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_2/word_{id}.mp3"
+  }
+}

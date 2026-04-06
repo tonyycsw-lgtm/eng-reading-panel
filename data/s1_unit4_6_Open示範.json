@@ -1,0 +1,162 @@
+{
+  "unitId": "unit4_6",
+  "unitName": "狗狗拯救危機 | Dog saves the day!",
+  "article": {
+    "title": "<strong>Dog saves the day!</strong>\n<strong>狗狗拯救危機</strong>",
+    "illustration": "/images/unit4_6.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "Are dogs <span class='highlight1'>loving</span> <span class='highlight2'>friends</span> or <span class='highlight3'>amazing</span> <span class='highlight4'>security</span> <span class='highlight5'>guards</span>? The <span class='highlight1'>answer</span> is both!",
+        "sentences": [
+          "Are dogs <span class='highlight1'>loving</span> <span class='highlight2'>friends</span> or <span class='highlight3'>amazing</span> <span class='highlight4'>security</span> <span class='highlight5'>guards</span>?",
+          "The <span class='highlight1'>answer</span> is both!"
+        ],
+        "translation": "🌐 狗狗是充滿愛心的朋友，還是出色的保安？答案是兩者都是！",
+        "translation_sentences": [
+          "🌐 狗狗是充滿愛心的朋友，還是出色的保安？",
+          "答案是兩者都是！"
+        ],
+        "implication": {
+          "english": "💡 The opening question introduces the dual role of dogs: as companions and protectors.",
+          "chinese": "💡 開場問題介紹了狗的雙重角色：伴侶和保護者。[換句話說]：狗不只是我們的朋友，還能保護我們的安全。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "Last <span class='highlight3'>weekend</span>, a <span class='highlight4'>German shepherd</span> dog <span class='highlight5'>stopped</span> a <span class='highlight1'>robbery</span> at a <span class='highlight2'>house</span> in Hong Kong.",
+        "sentences": [
+          "Last <span class='highlight3'>weekend</span>, a <span class='highlight4'>German shepherd</span> dog <span class='highlight5'>stopped</span> a <span class='highlight1'>robbery</span> at a <span class='highlight2'>house</span> in Hong Kong."
+        ],
+        "translation": "🌐 上週末，在香港，一隻德國牧羊犬阻止了一起入屋搶劫案。",
+        "translation_sentences": [
+          "🌐 上週末，在香港，一隻德國牧羊犬阻止了一起入屋搶劫案。"
+        ],
+        "implication": {
+          "english": "💡 This sentence gives the main news event: a dog stopped a robbery.",
+          "chinese": "💡 這句話給出了主要新聞事件：一隻狗阻止了一場搶劫。[換句話說]：上週末香港有隻德國牧羊犬立了大功，阻止了小偷。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "On <span class='highlight3'>Saturday</span> <span class='highlight4'>night</span>, a <span class='highlight5'>robber</span> <span class='highlight1'>broke into</span> a house and <span class='highlight2'>wanted</span> to <span class='highlight3'>steal</span> <span class='highlight4'>expensive</span> <span class='highlight5'>artwork</span> and <span class='highlight1'>money</span>, but he never got the <span class='highlight3'>chance</span>. Max, the dog that <span class='highlight4'>lived</span> in the house, <span class='highlight5'>heard</span> the robber and <span class='highlight1'>started</span> to <span class='highlight2'>bark</span>.",
+        "sentences": [
+          "On <span class='highlight3'>Saturday</span> <span class='highlight4'>night</span>, a <span class='highlight5'>robber</span> <span class='highlight1'>broke into</span> a house and <span class='highlight2'>wanted</span> to <span class='highlight3'>steal</span> <span class='highlight4'>expensive</span> <span class='highlight5'>artwork</span> and <span class='highlight1'>money</span>, but he never got the <span class='highlight3'>chance</span>.",
+          "Max, the dog that <span class='highlight4'>lived</span> in the house, <span class='highlight5'>heard</span> the robber and <span class='highlight1'>started</span> to <span class='highlight2'>bark</span>."
+        ],
+        "translation": "🌐 星期六晚上，一名竊賊闖入一棟房子，想要偷昂貴的藝術品和錢，但他根本沒有機會。住在房子裡的狗馬克斯聽到了竊賊的聲音，開始吠叫。",
+        "translation_sentences": [
+          "🌐 星期六晚上，一名竊賊闖入一棟房子，想要偷昂貴的藝術品和錢，但他根本沒有機會。",
+          "住在房子裡的狗馬克斯聽到了竊賊的聲音，開始吠叫。"
+        ],
+        "implication": {
+          "english": "💡 Describes the attempted robbery and how Max's barking foiled it.",
+          "chinese": "💡 描述企圖搶劫以及馬克斯的吠叫如何阻止了它。[換句話說]：小偷想偷東西，但馬克斯一聽到聲音就開始叫，讓他沒辦法得手。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "The <span class='highlight3'>loud</span> <span class='highlight4'>barking</span> <span class='highlight5'>woke up</span> the <span class='highlight1'>owner</span> of the house. 'I <span class='highlight2'>knew</span> something was <span class='highlight3'>wrong</span>, but I didn't <span class='highlight5'>know</span> what,' the owner said. 'Was it a robber or just someone <span class='highlight2'>taking out</span> the <span class='highlight3'>rubbish</span>?'",
+        "sentences": [
+          "The <span class='highlight3'>loud</span> <span class='highlight4'>barking</span> <span class='highlight5'>woke up</span> the <span class='highlight1'>owner</span> of the house.",
+          "'I <span class='highlight2'>knew</span> something was <span class='highlight3'>wrong</span>, but I didn't <span class='highlight5'>know</span> what,' the owner said.",
+          "'Was it a robber or just someone <span class='highlight2'>taking out</span> the <span class='highlight3'>rubbish</span>?'"
+        ],
+        "translation": "🌐 大聲的狗叫聲吵醒了屋主。「我知道出事了，但我不知道是什麼事，」屋主說。「是竊賊，還是只是有人在倒垃圾？」",
+        "translation_sentences": [
+          "🌐 大聲的狗叫聲吵醒了屋主。",
+          "「我知道出事了，但我不知道是什麼事，」屋主說。",
+          "「是竊賊，還是只是有人在倒垃圾？」"
+        ],
+        "implication": {
+          "english": "💡 Shows the owner's confusion upon waking, highlighting the effectiveness of Max's bark.",
+          "chinese": "💡 顯示屋主醒來時的困惑，凸顯馬克斯吠叫的效果。[換句話說]：屋主被吵醒，一開始還搞不清楚發生什麼事，以為是有人在外面倒垃圾。"
+        }
+      },
+      {
+        "id": 5,
+        "english": "The owner got out of <span class='highlight4'>bed</span> and went to his <span class='highlight5'>living</span> <span class='highlight1'>room</span>. He <span class='highlight2'>shouted</span> at the robber and the dog <span class='highlight3'>growled</span> and <span class='highlight4'>barked</span> at the man. 'I was <span class='highlight5'>quite</span> <span class='highlight1'>scared</span>, but my dog was not <span class='highlight3'>afraid</span> at all,' the owner said.",
+        "sentences": [
+          "The owner got out of <span class='highlight4'>bed</span> and went to his <span class='highlight5'>living</span> <span class='highlight1'>room</span>.",
+          "He <span class='highlight2'>shouted</span> at the robber and the dog <span class='highlight3'>growled</span> and <span class='highlight4'>barked</span> at the man.",
+          "'I was <span class='highlight5'>quite</span> <span class='highlight1'>scared</span>, but my dog was not <span class='highlight3'>afraid</span> at all,' the owner said."
+        ],
+        "translation": "🌐 屋主下床走到客廳。他對竊賊大喊，而狗也對那人低吼吠叫。「我當時很害怕，但我的狗一點都不怕，」屋主說。",
+        "translation_sentences": [
+          "🌐 屋主下床走到客廳。",
+          "他對竊賊大喊，而狗也對那人低吼吠叫。",
+          "「我當時很害怕，但我的狗一點都不怕，」屋主說。"
+        ],
+        "implication": {
+          "english": "💡 The owner and dog confront the robber together, showing the dog's bravery.",
+          "chinese": "💡 屋主和狗一起對抗竊賊，顯示狗的勇敢。[換句話說]：屋主下樓查看，和狗一起對小偷大吼，雖然屋主很害怕，但狗一點也不怕。"
+        }
+      },
+      {
+        "id": 6,
+        "english": "The robber <span class='highlight4'>ran away</span>, and the <span class='highlight1'>police</span> <span class='highlight2'>found</span> him an <span class='highlight3'>hour</span> later.",
+        "sentences": [
+          "The robber <span class='highlight4'>ran away</span>, and the <span class='highlight1'>police</span> <span class='highlight2'>found</span> him an <span class='highlight3'>hour</span> later."
+        ],
+        "translation": "🌐 竊賊逃跑了，警察一小時後找到了他。",
+        "translation_sentences": [
+          "🌐 竊賊逃跑了，警察一小時後找到了他。"
+        ],
+        "implication": {
+          "english": "💡 The happy ending: the robber is caught thanks to Max.",
+          "chinese": "💡 快樂結局：多虧馬克斯，小偷被抓住了。[換句話說]：小偷被嚇跑，最後還是被警察抓到了。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "loving", "meaning": "adj. 充滿愛心的", "highlightClass": "highlight1" },
+    { "id": 2, "word": "friends", "meaning": "n. 朋友", "highlightClass": "highlight2" },
+    { "id": 3, "word": "amazing", "meaning": "adj. 了不起的", "highlightClass": "highlight3" },
+    { "id": 4, "word": "security", "meaning": "n. 安全", "highlightClass": "highlight4" },
+    { "id": 5, "word": "guards", "meaning": "n. 守衛", "highlightClass": "highlight5" },
+    { "id": 6, "word": "answer", "meaning": "n. 答案", "highlightClass": "highlight1" },
+    { "id": 7, "word": "weekend", "meaning": "n. 週末", "highlightClass": "highlight3" },
+    { "id": 8, "word": "German shepherd", "meaning": "n. 德國牧羊犬", "highlightClass": "highlight4" },
+    { "id": 9, "word": "stopped", "meaning": "v. 阻止", "highlightClass": "highlight5" },
+    { "id": 10, "word": "robbery", "meaning": "n. 搶劫", "highlightClass": "highlight1" },
+    { "id": 11, "word": "house", "meaning": "n. 房子", "highlightClass": "highlight2" },
+    { "id": 12, "word": "Saturday", "meaning": "n. 星期六", "highlightClass": "highlight3" },
+    { "id": 13, "word": "night", "meaning": "n. 夜晚", "highlightClass": "highlight4" },
+    { "id": 14, "word": "robber", "meaning": "n. 強盜", "highlightClass": "highlight5" },
+    { "id": 15, "word": "broke into", "meaning": "phr. 闖入", "highlightClass": "highlight1" },
+    { "id": 16, "word": "steal", "meaning": "v. 偷竊", "highlightClass": "highlight3" },
+    { "id": 17, "word": "expensive", "meaning": "adj. 昂貴的", "highlightClass": "highlight4" },
+    { "id": 18, "word": "artwork", "meaning": "n. 藝術品", "highlightClass": "highlight5" },
+    { "id": 19, "word": "money", "meaning": "n. 金錢", "highlightClass": "highlight1" },
+    { "id": 20, "word": "chance", "meaning": "n. 機會", "highlightClass": "highlight3" },
+    { "id": 21, "word": "lived", "meaning": "v. 居住", "highlightClass": "highlight4" },
+    { "id": 22, "word": "heard", "meaning": "v. 聽見", "highlightClass": "highlight5" },
+    { "id": 23, "word": "started", "meaning": "v. 開始", "highlightClass": "highlight1" },
+    { "id": 24, "word": "bark", "meaning": "v. 吠叫", "highlightClass": "highlight2" },
+    { "id": 25, "word": "loud", "meaning": "adj. 大聲的", "highlightClass": "highlight3" },
+    { "id": 26, "word": "barking", "meaning": "n. 吠叫聲", "highlightClass": "highlight4" },
+    { "id": 27, "word": "woke up", "meaning": "phr. 叫醒", "highlightClass": "highlight5" },
+    { "id": 28, "word": "owner", "meaning": "n. 主人", "highlightClass": "highlight1" },
+    { "id": 29, "word": "knew", "meaning": "v. 知道", "highlightClass": "highlight2" },
+    { "id": 30, "word": "wrong", "meaning": "adj. 不對勁的", "highlightClass": "highlight3" },
+    { "id": 31, "word": "taking out", "meaning": "phr. 拿出", "highlightClass": "highlight2" },
+    { "id": 32, "word": "rubbish", "meaning": "n. 垃圾", "highlightClass": "highlight3" },
+    { "id": 33, "word": "bed", "meaning": "n. 床", "highlightClass": "highlight4" },
+    { "id": 34, "word": "living", "meaning": "n. 生活", "highlightClass": "highlight5" },
+    { "id": 35, "word": "room", "meaning": "n. 房間", "highlightClass": "highlight1" },
+    { "id": 36, "word": "shouted", "meaning": "v. 大喊", "highlightClass": "highlight2" },
+    { "id": 37, "word": "growled", "meaning": "v. 低吼", "highlightClass": "highlight3" },
+    { "id": 38, "word": "scared", "meaning": "adj. 害怕的", "highlightClass": "highlight1" },
+    { "id": 39, "word": "afraid", "meaning": "adj. 害怕的", "highlightClass": "highlight3" },
+    { "id": 40, "word": "ran away", "meaning": "phr. 逃跑", "highlightClass": "highlight4" },
+    { "id": 41, "word": "police", "meaning": "n. 警察", "highlightClass": "highlight1" },
+    { "id": 42, "word": "found", "meaning": "v. 找到", "highlightClass": "highlight2" },
+    { "id": 43, "word": "hour", "meaning": "n. 小時", "highlightClass": "highlight3" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_6/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_6/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_6/word_{id}.mp3"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "unit4_8",
+  "unitName": "收容所的寵物信息 | Animals at our shelter",
+  "article": {
+    "title": "<strong>Animals at our shelter</strong>\n<strong>收容所的寵物信息</strong>",
+    "illustration": "/images/unit4_8.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "At our <span class='highlight1'>animal</span> <span class='highlight2'>shelter</span>, there are 45 <span class='highlight3'>animals</span> <span class='highlight4'>waiting</span> for <span class='highlight5'>adoption</span>. Among them, there are 22 <span class='highlight1'>cats</span> and 23 <span class='highlight2'>dogs</span>.",
+        "sentences": [
+          "At our <span class='highlight1'>animal</span> <span class='highlight2'>shelter</span>, there are 45 <span class='highlight3'>animals</span> <span class='highlight4'>waiting</span> for <span class='highlight5'>adoption</span>.",
+          "Among them, there are 22 <span class='highlight1'>cats</span> and 23 <span class='highlight2'>dogs</span>."
+        ],
+        "translation": "🌐 在我們的動物收容所裡，有45隻動物等待領養。其中有22隻貓和23隻狗。",
+        "translation_sentences": [
+          "🌐 在我們的動物收容所裡，有45隻動物等待領養。",
+          "其中有22隻貓和23隻狗。"
+        ],
+        "implication": {
+          "english": "💡 The first paragraph gives an overview of the shelter's population.",
+          "chinese": "💡 第一段概述了收容所的動物數量。[換句話說]：我們收容所目前有45隻動物在等新家，貓比狗少一隻。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "This <span class='highlight3'>month</span>, we are <span class='highlight4'>featuring</span> two <span class='highlight5'>special</span> animals. First, there is Tabby. Tabby is an <span class='highlight1'>orange</span> and <span class='highlight2'>white</span> <span class='highlight3'>cat</span>. She is <span class='highlight4'>shy</span> but <span class='highlight5'>friendly</span>. However, she is already 8 years old, which is <span class='highlight1'>quite</span> <span class='highlight2'>old</span> for a cat. She has been at the shelter for 6 <span class='highlight3'>months</span>.",
+        "sentences": [
+          "This <span class='highlight3'>month</span>, we are <span class='highlight4'>featuring</span> two <span class='highlight5'>special</span> animals.",
+          "First, there is Tabby.",
+          "Tabby is an <span class='highlight1'>orange</span> and <span class='highlight2'>white</span> <span class='highlight3'>cat</span>.",
+          "She is <span class='highlight4'>shy</span> but <span class='highlight5'>friendly</span>.",
+          "However, she is already 8 years old, which is <span class='highlight1'>quite</span> <span class='highlight2'>old</span> for a cat.",
+          "She has been at the shelter for 6 <span class='highlight3'>months</span>."
+        ],
+        "translation": "🌐 本月我們特別介紹兩隻動物。第一隻是泰比。泰比是一隻橘白相間的貓。她害羞但友善。不過，她已經8歲了，對貓來說相當老了。她在收容所已經待了6個月。",
+        "translation_sentences": [
+          "🌐 本月我們特別介紹兩隻動物。",
+          "第一隻是泰比。",
+          "泰比是一隻橘白相間的貓。",
+          "她害羞但友善。",
+          "不過，她已經8歲了，對貓來說相當老了。",
+          "她在收容所已經待了6個月。"
+        ],
+        "implication": {
+          "english": "💡 Tabby's profile: her age might make adoption harder, but she is friendly.",
+          "chinese": "💡 泰比的介紹：她的年齡可能讓領養變難，但她很友善。[換句話說]：泰比是隻老貓，個性害羞但親人，已經在收容所待了半年了。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "The second <span class='highlight4'>featured</span> animal is Teddy. Teddy is a <span class='highlight5'>mongrel</span> dog. He has <span class='highlight1'>brown</span> and <span class='highlight2'>black</span> <span class='highlight3'>fur</span>. He is <span class='highlight4'>curious</span> and <span class='highlight5'>confident</span>. Teddy needs a lot of <span class='highlight1'>exercise</span> and <span class='highlight2'>attention</span>. He has been at the shelter for 3 <span class='highlight3'>months</span>.",
+        "sentences": [
+          "The second <span class='highlight4'>featured</span> animal is Teddy.",
+          "Teddy is a <span class='highlight5'>mongrel</span> dog.",
+          "He has <span class='highlight1'>brown</span> and <span class='highlight2'>black</span> <span class='highlight3'>fur</span>.",
+          "He is <span class='highlight4'>curious</span> and <span class='highlight5'>confident</span>.",
+          "Teddy needs a lot of <span class='highlight1'>exercise</span> and <span class='highlight2'>attention</span>.",
+          "He has been at the shelter for 3 <span class='highlight3'>months</span>."
+        ],
+        "translation": "🌐 第二隻介紹的動物是泰迪。泰迪是一隻雜種狗。他有棕色和黑色的毛。他很好奇又自信。泰迪需要大量的運動和關注。他在收容所已經待了3個月。",
+        "translation_sentences": [
+          "🌐 第二隻介紹的動物是泰迪。",
+          "泰迪是一隻雜種狗。",
+          "他有棕色和黑色的毛。",
+          "他很好奇又自信。",
+          "泰迪需要大量的運動和關注。",
+          "他在收容所已經待了3個月。"
+        ],
+        "implication": {
+          "english": "💡 Teddy's profile: his high energy might require an active owner.",
+          "chinese": "💡 泰迪的介紹：他精力旺盛，可能需要好動的主人。[換句話說]：泰迪是米克斯，個性活潑自信，需要每天運動和陪伴，已經等三個月了。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "We <span class='highlight4'>hope</span> someone will <span class='highlight5'>adopt</span> these <span class='highlight1'>lovely</span> animals <span class='highlight2'>soon</span>.",
+        "sentences": [
+          "We <span class='highlight4'>hope</span> someone will <span class='highlight5'>adopt</span> these <span class='highlight1'>lovely</span> animals <span class='highlight2'>soon</span>."
+        ],
+        "translation": "🌐 我們希望有人能盡快領養這些可愛的動物。",
+        "translation_sentences": [
+          "🌐 我們希望有人能盡快領養這些可愛的動物。"
+        ],
+        "implication": {
+          "english": "💡 A call to action, encouraging adoption.",
+          "chinese": "💡 呼籲行動，鼓勵領養。[換句話說]：希望牠們能趕快找到溫暖的家！"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "animal", "meaning": "adj. 動物的", "highlightClass": "highlight1" },
+    { "id": 2, "word": "shelter", "meaning": "n. 收容所", "highlightClass": "highlight2" },
+    { "id": 3, "word": "animals", "meaning": "n. 動物", "highlightClass": "highlight3" },
+    { "id": 4, "word": "waiting", "meaning": "v. 等待", "highlightClass": "highlight4" },
+    { "id": 5, "word": "adoption", "meaning": "n. 領養", "highlightClass": "highlight5" },
+    { "id": 6, "word": "cats", "meaning": "n. 貓", "highlightClass": "highlight1" },
+    { "id": 7, "word": "dogs", "meaning": "n. 狗", "highlightClass": "highlight2" },
+    { "id": 8, "word": "month", "meaning": "n. 月", "highlightClass": "highlight3" },
+    { "id": 9, "word": "featuring", "meaning": "v. 特別介紹", "highlightClass": "highlight4" },
+    { "id": 10, "word": "special", "meaning": "adj. 特別的", "highlightClass": "highlight5" },
+    { "id": 11, "word": "orange", "meaning": "adj. 橙色的", "highlightClass": "highlight1" },
+    { "id": 12, "word": "white", "meaning": "adj. 白色的", "highlightClass": "highlight2" },
+    { "id": 13, "word": "cat", "meaning": "n. 貓", "highlightClass": "highlight3" },
+    { "id": 14, "word": "shy", "meaning": "adj. 害羞的", "highlightClass": "highlight4" },
+    { "id": 15, "word": "friendly", "meaning": "adj. 友善的", "highlightClass": "highlight5" },
+    { "id": 16, "word": "quite", "meaning": "adv. 相當", "highlightClass": "highlight1" },
+    { "id": 17, "word": "old", "meaning": "adj. 年老的", "highlightClass": "highlight2" },
+    { "id": 18, "word": "months", "meaning": "n. 月份", "highlightClass": "highlight3" },
+    { "id": 19, "word": "featured", "meaning": "adj. 被介紹的", "highlightClass": "highlight4" },
+    { "id": 20, "word": "mongrel", "meaning": "n. 雜種狗", "highlightClass": "highlight5" },
+    { "id": 21, "word": "brown", "meaning": "adj. 棕色的", "highlightClass": "highlight1" },
+    { "id": 22, "word": "black", "meaning": "adj. 黑色的", "highlightClass": "highlight2" },
+    { "id": 23, "word": "fur", "meaning": "n. 毛皮", "highlightClass": "highlight3" },
+    { "id": 24, "word": "curious", "meaning": "adj. 好奇的", "highlightClass": "highlight4" },
+    { "id": 25, "word": "confident", "meaning": "adj. 自信的", "highlightClass": "highlight5" },
+    { "id": 26, "word": "exercise", "meaning": "n. 運動", "highlightClass": "highlight1" },
+    { "id": 27, "word": "attention", "meaning": "n. 關注", "highlightClass": "highlight2" },
+    { "id": 28, "word": "hope", "meaning": "v. 希望", "highlightClass": "highlight4" },
+    { "id": 29, "word": "adopt", "meaning": "v. 領養", "highlightClass": "highlight5" },
+    { "id": 30, "word": "lovely", "meaning": "adj. 可愛的", "highlightClass": "highlight1" },
+    { "id": 31, "word": "soon", "meaning": "adv. 很快", "highlightClass": "highlight2" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_8/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_8/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_8/word_{id}.mp3"
+  }
+}

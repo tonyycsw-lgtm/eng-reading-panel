@@ -1,0 +1,235 @@
+{
+  "unitId": "unit4_12",
+  "unitName": "選擇適合你的寵物 | Choose the right pet for you",
+  "article": {
+    "title": "<strong>Choose the right pet for you</strong>\n<strong>選擇適合你的寵物</strong>",
+    "illustration": "/images/unit4_12.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "There are about 470 <span class='highlight1'>million</span> pet <span class='highlight2'>dogs</span> and 370 million pet <span class='highlight3'>cats</span> <span class='highlight4'>worldwide</span>! But which pet is right for you? Take this <span class='highlight5'>quiz</span> to find out!",
+        "sentences": [
+          "There are about 470 <span class='highlight1'>million</span> pet <span class='highlight2'>dogs</span> and 370 million pet <span class='highlight3'>cats</span> <span class='highlight4'>worldwide</span>!",
+          "But which pet is right for you? Take this <span class='highlight5'>quiz</span> to find out!"
+        ],
+        "translation": "🌐 全球約有4.7億隻寵物狗和3.7億隻寵物貓！但哪種寵物適合你呢？做做看這個測驗吧！",
+        "translation_sentences": [
+          "🌐 全球約有4.7億隻寵物狗和3.7億隻寵物貓！",
+          "但哪種寵物適合你呢？做做看這個測驗吧！"
+        ],
+        "implication": {
+          "english": "💡 The introduction presents interesting pet population facts and introduces the pet selection quiz.",
+          "chinese": "💡 開頭介紹有趣的寵物數量統計，並引出寵物選擇測驗。[換句話說]：全世界有好多寵物，但你知道哪種寵物最適合你嗎？來玩個測驗就知道！"
+        }
+      },
+      {
+        "id": 2,
+        "english": "<span class='highlight1'>Question 1:</span> How much <span class='highlight2'>space</span> do you have in your <span class='highlight3'>home</span>? A) I don't have much <span class='highlight4'>space</span> at home. B) I have some <span class='highlight5'>space</span> at home. C) I have a lot of <span class='highlight1'>space</span> at home.",
+        "sentences": [
+          "<span class='highlight1'>Question 1:</span> How much <span class='highlight2'>space</span> do you have in your <span class='highlight3'>home</span>?",
+          "A) I don't have much <span class='highlight4'>space</span> at home.",
+          "B) I have some <span class='highlight5'>space</span> at home.",
+          "C) I have a lot of <span class='highlight1'>space</span> at home."
+        ],
+        "translation": "🌐 問題1：你家裡有多少空間？A) 我家空間不多。B) 我家有一些空間。C) 我家有很多空間。",
+        "translation_sentences": [
+          "🌐 問題1：你家裡有多少空間？",
+          "A) 我家空間不多。",
+          "B) 我家有一些空間。",
+          "C) 我家有很多空間。"
+        ],
+        "implication": {
+          "english": "💡 The first question asks about available space at home, which helps determine suitable pet size.",
+          "chinese": "💡 第一個問題詢問家裡的空間大小，這有助於決定適合的寵物體型。[換句話說]：養寵物前要先想想家裡夠不夠大。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "<span class='highlight2'>Question 2:</span> How do you feel about <span class='highlight3'>outdoor</span> <span class='highlight4'>exercise</span>? A) I don't <span class='highlight5'>exercise</span> outdoors very often. B) I like going for a <span class='highlight1'>run</span> sometimes. C) I love <span class='highlight2'>exercising</span> outdoors every day.",
+        "sentences": [
+          "<span class='highlight2'>Question 2:</span> How do you feel about <span class='highlight3'>outdoor</span> <span class='highlight4'>exercise</span>?",
+          "A) I don't <span class='highlight5'>exercise</span> outdoors very often.",
+          "B) I like going for a <span class='highlight1'>run</span> sometimes.",
+          "C) I love <span class='highlight2'>exercising</span> outdoors every day."
+        ],
+        "translation": "🌐 問題2：你對戶外運動的感覺如何？A) 我不太常在戶外運動。B) 我有時候喜歡跑步。C) 我每天都喜歡在戶外運動。",
+        "translation_sentences": [
+          "🌐 問題2：你對戶外運動的感覺如何？",
+          "A) 我不太常在戶外運動。",
+          "B) 我有時候喜歡跑步。",
+          "C) 我每天都喜歡在戶外運動。"
+        ],
+        "implication": {
+          "english": "💡 The second question assesses the owner's exercise habits, which is important for high-energy pets.",
+          "chinese": "💡 第二個問題評估主人的運動習慣，這對需要大量運動的寵物很重要。[換句話說]：你喜歡運動嗎？這會影響你適不適合養狗喔。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "<span class='highlight3'>Question 3:</span> How much <span class='highlight4'>work</span> do you want to do for your <span class='highlight5'>pet</span>? A) Almost <span class='highlight1'>none</span>. B) Some, but not too much. C) There is no <span class='highlight2'>limit</span>!",
+        "sentences": [
+          "<span class='highlight3'>Question 3:</span> How much <span class='highlight4'>work</span> do you want to do for your <span class='highlight5'>pet</span>?",
+          "A) Almost <span class='highlight1'>none</span>.",
+          "B) Some, but not too much.",
+          "C) There is no <span class='highlight2'>limit</span>!"
+        ],
+        "translation": "🌐 問題3：你願意為寵物付出多少心力？A) 幾乎不。B) 一些，但不要太多。C) 沒有限度！",
+        "translation_sentences": [
+          "🌐 問題3：你願意為寵物付出多少心力？",
+          "A) 幾乎不。",
+          "B) 一些，但不要太多。",
+          "C) 沒有限度！"
+        ],
+        "implication": {
+          "english": "💡 The third question asks about the owner's willingness to care for a pet, from low to high commitment.",
+          "chinese": "💡 第三個問題詢問主人照顧寵物的意願，從低到高的承諾程度。[換句話說]：你願意花多少時間精力照顧寵物？"
+        }
+      },
+      {
+        "id": 5,
+        "english": "<span class='highlight4'>Question 4:</span> How <span class='highlight5'>noisy</span> do you want your <span class='highlight1'>pet</span> to be? A) I want a <span class='highlight2'>quiet</span> pet. B) I don't mind a <span class='highlight3'>noisy</span> pet. C) I want a pet that can be <span class='highlight4'>quiet</span> when I want it to.",
+        "sentences": [
+          "<span class='highlight4'>Question 4:</span> How <span class='highlight5'>noisy</span> do you want your <span class='highlight1'>pet</span> to be?",
+          "A) I want a <span class='highlight2'>quiet</span> pet.",
+          "B) I don't mind a <span class='highlight3'>noisy</span> pet.",
+          "C) I want a pet that can be <span class='highlight4'>quiet</span> when I want it to."
+        ],
+        "translation": "🌐 問題4：你希望你的寵物多吵？A) 我想要安靜的寵物。B) 我不介意吵鬧的寵物。C) 我想要一個在我需要時能安靜的寵物。",
+        "translation_sentences": [
+          "🌐 問題4：你希望你的寵物多吵？",
+          "A) 我想要安靜的寵物。",
+          "B) 我不介意吵鬧的寵物。",
+          "C) 我想要一個在我需要時能安靜的寵物。"
+        ],
+        "implication": {
+          "english": "💡 The fourth question asks about noise tolerance, which helps match with quiet or vocal pets.",
+          "chinese": "💡 第四個問題詢問對噪音的容忍度，有助於匹配安靜或愛叫的寵物。[換句話說]：你能接受寵物吵鬧嗎？"
+        }
+      },
+      {
+        "id": 6,
+        "english": "<span class='highlight5'>Question 5:</span> What do you most want to do with your <span class='highlight1'>pet</span>? A) I want to <span class='highlight2'>look</span> at my pet from a <span class='highlight3'>distance</span>. B) I want to <span class='highlight4'>talk</span> to my pet. C) I want to <span class='highlight5'>hug</span> and <span class='highlight1'>play</span> with my pet.",
+        "sentences": [
+          "<span class='highlight5'>Question 5:</span> What do you most want to do with your <span class='highlight1'>pet</span>?",
+          "A) I want to <span class='highlight2'>look</span> at my pet from a <span class='highlight3'>distance</span>.",
+          "B) I want to <span class='highlight4'>talk</span> to my pet.",
+          "C) I want to <span class='highlight5'>hug</span> and <span class='highlight1'>play</span> with my pet."
+        ],
+        "translation": "🌐 問題5：你最想和寵物做什麼？A) 我想從遠處看著我的寵物。B) 我想和我的寵物說話。C) 我想擁抱和玩耍我的寵物。",
+        "translation_sentences": [
+          "🌐 問題5：你最想和寵物做什麼？",
+          "A) 我想從遠處看著我的寵物。",
+          "B) 我想和我的寵物說話。",
+          "C) 我想擁抱和玩耍我的寵物。"
+        ],
+        "implication": {
+          "english": "💡 The fifth question asks about desired interaction level with pets, from observation to physical contact.",
+          "chinese": "💡 第五個問題詢問期望與寵物的互動程度，從觀察到肢體接觸。[換句話說]：你希望和寵物有多親近？"
+        }
+      },
+      {
+        "id": 7,
+        "english": "<span class='highlight2'>Mostly As:</span> A <span class='highlight3'>fish</span>! Fish are <span class='highlight4'>quiet</span>—you probably will not <span class='highlight5'>hear</span> them at all! They also do not take up much <span class='highlight1'>room</span>. But they are still very <span class='highlight2'>interesting</span> and <span class='highlight3'>beautiful</span> pets!",
+        "sentences": [
+          "<span class='highlight2'>Mostly As:</span> A <span class='highlight3'>fish</span>!",
+          "Fish are <span class='highlight4'>quiet</span>—you probably will not <span class='highlight5'>hear</span> them at all!",
+          "They also do not take up much <span class='highlight1'>room</span>.",
+          "But they are still very <span class='highlight2'>interesting</span> and <span class='highlight3'>beautiful</span> pets!"
+        ],
+        "translation": "🌐 大多是A：魚！魚很安靜——你可能完全聽不到牠們的聲音！牠們也不佔太多空間。但牠們仍然是非常有趣又漂亮的寵物！",
+        "translation_sentences": [
+          "🌐 大多是A：魚！",
+          "魚很安靜——你可能完全聽不到牠們的聲音！",
+          "牠們也不佔太多空間。",
+          "但牠們仍然是非常有趣又漂亮的寵物！"
+        ],
+        "implication": {
+          "english": "💡 If you chose mostly A answers, a fish is the recommended pet for you.",
+          "chinese": "💡 如果你大多選A，魚類是推薦給你的寵物。[換句話說]：你適合養魚，安靜不佔空間，又可以欣賞牠們的美。"
+        }
+      },
+      {
+        "id": 8,
+        "english": "<span class='highlight4'>Mostly Bs:</span> A <span class='highlight5'>bird</span>! Birds are <span class='highlight1'>noisy</span> and <span class='highlight2'>fun</span>. You can <span class='highlight3'>chat</span> with them and let them <span class='highlight4'>fly</span> around your house, but you do not have to spend all day <span class='highlight5'>taking care</span> of them.",
+        "sentences": [
+          "<span class='highlight4'>Mostly Bs:</span> A <span class='highlight5'>bird</span>!",
+          "Birds are <span class='highlight1'>noisy</span> and <span class='highlight2'>fun</span>.",
+          "You can <span class='highlight3'>chat</span> with them and let them <span class='highlight4'>fly</span> around your house, but you do not have to spend all day <span class='highlight5'>taking care</span> of them."
+        ],
+        "translation": "🌐 大多是B：鳥！鳥兒吵鬧又有趣。你可以和牠們聊天，讓牠們在家裡飛，但不需要整天照顧牠們。",
+        "translation_sentences": [
+          "🌐 大多是B：鳥！",
+          "鳥兒吵鬧又有趣。",
+          "你可以和牠們聊天，讓牠們在家裡飛，但不需要整天照顧牠們。"
+        ],
+        "implication": {
+          "english": "💡 If you chose mostly B answers, a bird is the recommended pet for you.",
+          "chinese": "💡 如果你大多選B，鳥類是推薦給你的寵物。[換句話說]：你適合養鳥，可以跟牠說話，又不會太麻煩。"
+        }
+      },
+      {
+        "id": 9,
+        "english": "<span class='highlight1'>Mostly Cs:</span> A <span class='highlight2'>dog</span>! Dogs are <span class='highlight3'>cuddly</span> and <span class='highlight4'>loving</span>. They need plenty of <span class='highlight5'>exercise</span> and require a lot of <span class='highlight1'>work</span> from you. But if you are up for the <span class='highlight2'>challenge</span>, they are <span class='highlight3'>wonderful</span> pets!",
+        "sentences": [
+          "<span class='highlight1'>Mostly Cs:</span> A <span class='highlight2'>dog</span>!",
+          "Dogs are <span class='highlight3'>cuddly</span> and <span class='highlight4'>loving</span>.",
+          "They need plenty of <span class='highlight5'>exercise</span> and require a lot of <span class='highlight1'>work</span> from you.",
+          "But if you are up for the <span class='highlight2'>challenge</span>, they are <span class='highlight3'>wonderful</span> pets!"
+        ],
+        "translation": "🌐 大多是C：狗！狗狗柔軟可愛又充滿愛心。牠們需要大量運動，也需要你付出很多心力。但如果你準備好接受挑戰，牠們是很棒的寵物！",
+        "translation_sentences": [
+          "🌐 大多是C：狗！",
+          "狗狗柔軟可愛又充滿愛心。",
+          "牠們需要大量運動，也需要你付出很多心力。",
+          "但如果你準備好接受挑戰，牠們是很棒的寵物！"
+        ],
+        "implication": {
+          "english": "💡 If you chose mostly C answers, a dog is the recommended pet for you.",
+          "chinese": "💡 如果你大多選C，狗狗是推薦給你的寵物。[換句話說]：你適合養狗，雖然需要花很多時間照顧，但牠們會給你滿滿的愛。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "million", "meaning": "n. 百萬", "highlightClass": "highlight1" },
+    { "id": 2, "word": "dogs", "meaning": "n. 狗", "highlightClass": "highlight2" },
+    { "id": 3, "word": "cats", "meaning": "n. 貓", "highlightClass": "highlight3" },
+    { "id": 4, "word": "worldwide", "meaning": "adv. 全世界", "highlightClass": "highlight4" },
+    { "id": 5, "word": "quiz", "meaning": "n. 測驗", "highlightClass": "highlight5" },
+    { "id": 6, "word": "Question", "meaning": "n. 問題", "highlightClass": "highlight1" },
+    { "id": 7, "word": "space", "meaning": "n. 空間", "highlightClass": "highlight2" },
+    { "id": 8, "word": "home", "meaning": "n. 家", "highlightClass": "highlight3" },
+    { "id": 9, "word": "outdoor", "meaning": "adj. 戶外的", "highlightClass": "highlight3" },
+    { "id": 10, "word": "exercise", "meaning": "n./v. 運動", "highlightClass": "highlight4" },
+    { "id": 11, "word": "run", "meaning": "n. 跑步", "highlightClass": "highlight1" },
+    { "id": 12, "word": "work", "meaning": "n. 工作/心力", "highlightClass": "highlight4" },
+    { "id": 13, "word": "none", "meaning": "pron. 完全沒有", "highlightClass": "highlight1" },
+    { "id": 14, "word": "limit", "meaning": "n. 限制", "highlightClass": "highlight2" },
+    { "id": 15, "word": "noisy", "meaning": "adj. 吵鬧的", "highlightClass": "highlight5" },
+    { "id": 16, "word": "quiet", "meaning": "adj. 安靜的", "highlightClass": "highlight2" },
+    { "id": 17, "word": "look", "meaning": "v. 看", "highlightClass": "highlight2" },
+    { "id": 18, "word": "distance", "meaning": "n. 距離", "highlightClass": "highlight3" },
+    { "id": 19, "word": "talk", "meaning": "v. 說話", "highlightClass": "highlight4" },
+    { "id": 20, "word": "hug", "meaning": "v. 擁抱", "highlightClass": "highlight5" },
+    { "id": 21, "word": "play", "meaning": "v. 玩耍", "highlightClass": "highlight1" },
+    { "id": 22, "word": "fish", "meaning": "n. 魚", "highlightClass": "highlight3" },
+    { "id": 23, "word": "hear", "meaning": "v. 聽見", "highlightClass": "highlight5" },
+    { "id": 24, "word": "room", "meaning": "n. 空間", "highlightClass": "highlight1" },
+    { "id": 25, "word": "interesting", "meaning": "adj. 有趣的", "highlightClass": "highlight2" },
+    { "id": 26, "word": "beautiful", "meaning": "adj. 美麗的", "highlightClass": "highlight3" },
+    { "id": 27, "word": "bird", "meaning": "n. 鳥", "highlightClass": "highlight5" },
+    { "id": 28, "word": "fun", "meaning": "adj. 有趣的", "highlightClass": "highlight2" },
+    { "id": 29, "word": "chat", "meaning": "v. 聊天", "highlightClass": "highlight3" },
+    { "id": 30, "word": "fly", "meaning": "v. 飛", "highlightClass": "highlight4" },
+    { "id": 31, "word": "taking care", "meaning": "phr. 照顧", "highlightClass": "highlight5" },
+    { "id": 32, "word": "cuddly", "meaning": "adj. 可愛柔軟的", "highlightClass": "highlight3" },
+    { "id": 33, "word": "loving", "meaning": "adj. 充滿愛心的", "highlightClass": "highlight4" },
+    { "id": 34, "word": "challenge", "meaning": "n. 挑戰", "highlightClass": "highlight2" },
+    { "id": 35, "word": "wonderful", "meaning": "adj. 極好的", "highlightClass": "highlight3" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_12/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_12/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_12/word_{id}.mp3"
+  }
+}

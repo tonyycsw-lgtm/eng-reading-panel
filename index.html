@@ -1031,9 +1031,6 @@ onAuthStateChanged(auth, async (user) => {
   const trialEndDate = new Date();
   trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS);
   
-  // 注意：這裡的 grade 和 publishers 需要從首次登入彈窗獲取
-  // 但目前的 index.html 沒有首次登入彈窗，需要配合新的 login.html 一起修改
-  
   const userData = {
     email: user.email,
     displayName,
@@ -1042,8 +1039,8 @@ onAuthStateChanged(auth, async (user) => {
     uid: user.uid,
     provider: user.providerData[0]?.providerId || 'unknown',
     role: 'user',
-    grade: '',           // 🔥 新增：年級，由首次登入彈窗填寫
-    publishers: [],      // 🔥 新增：教材權限
+    grade: '',
+    publishers: [],
     premium: false,
     plan: 'free',
     expiresAt: null,
@@ -1059,7 +1056,7 @@ onAuthStateChanged(auth, async (user) => {
     },
     createdAt: new Date().toISOString(),
     lastLoginAt: new Date().toISOString(),
-    lastActiveAt: new Date().toISOString(),  // 🔥 新增
+    lastActiveAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     settings: { language: 'zh', autoPlay: false, notifications: true }
   };
@@ -1077,24 +1074,22 @@ onAuthStateChanged(auth, async (user) => {
         currentUserData = updatedSnap.data();
         console.log(`ℹ️ 用戶 ${user.email} 登入，累計次數: ${currentUserData.loginCount}`);
         
-        // 🔥 新增：檢查並遷移舊資料（如果有 isTeacher 欄位）
+        // 檢查並遷移舊資料（如果有 isTeacher 欄位）
         if (currentUserData.isTeacher === true && !currentUserData.role) {
           console.log('🔄 檢測到舊版 isTeacher 欄位，自動轉換為 role: teacher');
           await updateDoc(userRef, {
             role: 'teacher',
-            isTeacher: null  // 可選：移除舊欄位
+            isTeacher: null
           });
           currentUserData.role = 'teacher';
         }
 
-        // ===== 🔥 修改：檢查帳號是否被停用（延遲登出版） =====
+        // 檢查帳號是否被停用
         if (currentUserData.isDisabled === true) {
           console.log('⚠️ 帳號已被停用，顯示停用頁面');
           
-          // 先隱藏會員資訊列
           document.getElementById('userInfoBar').style.display = 'none';
           
-          // 顯示停用頁面（先讓使用者看到訊息）
           document.getElementById('app').innerHTML = `
             <div class="disabled-account-container" style="max-width: 500px; margin: 50px auto; text-align: center; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
               <i class="fas fa-ban" style="font-size: 64px; color: #ef4444; margin-bottom: 20px;"></i>
@@ -1111,29 +1106,23 @@ onAuthStateChanged(auth, async (user) => {
             </div>
           `;
           
-          // 延遲 3 秒後執行登出，讓使用者先看到訊息
           setTimeout(async () => {
             await signOut(auth);
             console.log('✅ 已執行登出');
-            // 可選：登出後自動跳轉到登入頁
-            // window.location.href = '/eng-reading-panel/login.html';
           }, 5000);
           
-          // 停止執行後續程式碼
           return;
         }
       }
 
-      // ===== 🔥 新增：使用 role 欄位判斷上傳權限 =====
+      // 使用 role 欄位判斷上傳權限
       const userRole = currentUserData?.role || 'user';
       const canUpload = ['teacher', 'admin'].includes(userRole);
       
-      // 控制上傳單元按鈕的顯示
       const uploadWrapper = document.getElementById('upload-wrapper');
       if (uploadWrapper) {
         uploadWrapper.style.display = canUpload ? 'flex' : 'none';
         
-        // 如果有上傳權限，設定上傳事件監聽
         if (canUpload) {
           const uploadInput = document.getElementById('unit-upload');
           if (uploadInput) {
@@ -1160,7 +1149,6 @@ onAuthStateChanged(auth, async (user) => {
         localStorage.setItem('userUID', user.uid);
         localStorage.setItem('userEmail', user.email || '');
         localStorage.setItem('userName', displayName);
-        // 🔥 新增：儲存角色資訊
         localStorage.setItem('userRole', currentUserData?.role || 'user');
       })
       .catch(error => {
@@ -1205,7 +1193,6 @@ onAuthStateChanged(auth, async (user) => {
         }
       }
       
-      // 沒有試用到期日（不應該發生）
       isTrialExpired = true;
       document.getElementById('trialExpiredNotice').style.display = 'flex';
       return true;
@@ -1286,7 +1273,6 @@ onAuthStateChanged(auth, async (user) => {
     // 音頻路徑輔助函數
     // ============================================
     function getAudioPath(unitId, type, identifier) {
-      // 路徑安全過濾
       const safeUnitId = unitId.replace(/[^a-zA-Z0-9_.-]/g, '');
       const safeIdentifier = identifier.toString().replace(/[^a-zA-Z0-9_.-]/g, '');
       
@@ -1345,7 +1331,6 @@ onAuthStateChanged(auth, async (user) => {
         return true;
       },
 
-      // 記錄朗讀次數
       async recordAudioPlay() {
         try {
           const user = window.auth?.currentUser;
@@ -1358,7 +1343,6 @@ onAuthStateChanged(auth, async (user) => {
         }
       },
 
-      // 記錄查詞次數
       async recordVocabLookup() {
         try {
           const user = window.auth?.currentUser;
@@ -1492,7 +1476,6 @@ onAuthStateChanged(auth, async (user) => {
           
           this.recordAudioPlay();
 
-          // 觸發預載入：文章模式
           if (window.PreloadManager) {
             window.PreloadManager.switchMode('article', {
               unitId,
@@ -1539,7 +1522,6 @@ onAuthStateChanged(auth, async (user) => {
         
         this.recordAudioPlay();
 
-        // 觸發預載入：文章模式 (TTS 也觸發預載入)
         if (window.PreloadManager) {
           const unitData = UnitManager.getCurrentUnitData();
           const globalIndex = this.calcGlobalSentenceIndex(unitData, paraNum, sentenceIndex);
@@ -1834,7 +1816,6 @@ onAuthStateChanged(auth, async (user) => {
           
           this.recordVocabLookup();
 
-          // 觸發預載入：詞彙模式
           if (window.PreloadManager) {
             window.PreloadManager.switchMode('vocab', {
               unitId,
@@ -1908,15 +1889,15 @@ onAuthStateChanged(auth, async (user) => {
     window.AudioController = AudioController;
 
     // ============================================
-    // 預載入管理器 - 根據兩種模式智慧預載入
+    // 預載入管理器
     // ============================================
     const PreloadManager = {
-      currentMode: null,        // 'article' 或 'vocab'
-      currentPosition: null,    // 當前位置（句子全局索引或詞彙ID）
-      preloadQueue: [],         // 預載入佇列
-      isActive: false,          // 是否正在預載入
-      networkType: 'wifi',      // 預設為 wifi
-      maxPreload: {             // 根據網路調整預載入數量
+      currentMode: null,
+      currentPosition: null,
+      preloadQueue: [],
+      isActive: false,
+      networkType: 'wifi',
+      maxPreload: {
         wifi: { article: 6, vocab: 10 },
         cellular: { article: 3, vocab: 5 },
         slow: { article: 1, vocab: 2 }
@@ -1924,7 +1905,6 @@ onAuthStateChanged(auth, async (user) => {
 
       init() {
         this.checkNetwork();
-        // 監聽網路變化
         if ('connection' in navigator) {
           navigator.connection.addEventListener('change', () => this.checkNetwork());
         }
@@ -1942,19 +1922,16 @@ onAuthStateChanged(auth, async (user) => {
             this.networkType = 'slow';
           }
         } else {
-          // 預設為 wifi
           this.networkType = 'wifi';
         }
         console.log(`🌐 網路類型: ${this.networkType}`);
       },
 
-      // 切換模式，停止當前預載入，開始新模式
       switchMode(mode, position) {
         if (this.currentMode === mode && 
             this.currentPosition && 
             ((mode === 'article' && position.globalIndex === this.currentPosition.globalIndex) ||
              (mode === 'vocab' && position.vocabId === this.currentPosition.vocabId))) {
-          // 相同位置，不做變化
           return;
         }
 
@@ -1971,17 +1948,14 @@ onAuthStateChanged(auth, async (user) => {
         }
       },
 
-      // 文章模式預載入：以當前句子為中心，預載入接下來的句子
       preloadArticle(position) {
         const { unitId, paraNum, sentenceIndex, globalIndex } = position;
         const unitData = UnitManager.getCurrentUnitData();
         if (!unitData) return;
 
-        // 計算總句子數，以便知道邊界
         const totalSentences = this.calcTotalSentences(unitData);
         const maxCount = this.maxPreload[this.networkType].article;
 
-        // 要預載入的全局句子索引列表
         const targets = [];
         for (let i = 1; i <= maxCount; i++) {
           const targetGlobal = globalIndex + i;
@@ -1992,26 +1966,20 @@ onAuthStateChanged(auth, async (user) => {
           }
         }
 
-        // 加入佇列並開始下載
         this.enqueue(targets.map(idx => ({
           type: 'sentence',
           unitId,
           identifier: idx.toString().padStart(3, '0')
         })));
-
-        // 如果當前句子是段落最後幾句，預載入下個段落的開頭（但上面已經包含在連續句子中，因為全局索引連續）
-        // 但為了保險，可以額外處理段落邊界：確保跨段落的句子也被包括
-        // 不過全局索引已經是連續的，所以不需要特別處理
       },
 
-      // 詞彙模式預載入：以當前詞彙為中心，預載入接下來的詞彙
       preloadVocab(position) {
         const { unitId, vocabId } = position;
         const unitData = UnitManager.getCurrentUnitData();
         if (!unitData || !unitData.vocabulary) return;
 
         const vocabList = unitData.vocabulary;
-        const currentIndex = vocabList.findIndex(v => v.id == vocabId); // 注意 id 可能是數字或字串
+        const currentIndex = vocabList.findIndex(v => v.id == vocabId);
         if (currentIndex === -1) return;
 
         const maxCount = this.maxPreload[this.networkType].vocab;
@@ -2032,7 +2000,6 @@ onAuthStateChanged(auth, async (user) => {
         })));
       },
 
-      // 計算總句子數
       calcTotalSentences(unitData) {
         let total = 0;
         unitData.article.paragraphs.forEach(para => {
@@ -2046,9 +2013,7 @@ onAuthStateChanged(auth, async (user) => {
         return total;
       },
 
-      // 將任務加入佇列，並開始處理
       enqueue(tasks) {
-        // 過濾掉可能已經在快取中的？簡單起見，全部加入，下載時會檢查快取（Service Worker 會處理）
         this.preloadQueue.push(...tasks);
         if (!this.processing) {
           this.processQueue();
@@ -2062,7 +2027,6 @@ onAuthStateChanged(auth, async (user) => {
         this.processing = true;
 
         while (this.preloadQueue.length > 0) {
-          // 檢查是否還處於活躍狀態（可能已被停止）
           if (!this.isActive) {
             this.preloadQueue = [];
             break;
@@ -2071,7 +2035,6 @@ onAuthStateChanged(auth, async (user) => {
           const task = this.preloadQueue.shift();
           await this.downloadAudio(task);
           
-          // 根據網路狀況決定是否稍微等待，避免過度佔用
           if (this.networkType === 'slow') {
             await new Promise(r => setTimeout(r, 300));
           }
@@ -2083,7 +2046,6 @@ onAuthStateChanged(auth, async (user) => {
       async downloadAudio({ type, unitId, identifier }) {
         const audioPath = getAudioPath(unitId, type, identifier);
         try {
-          // 嘗試用 fetch 下載，並存入快取（Service Worker 會處理快取）
           const response = await fetch(audioPath, { mode: 'cors', cache: 'force-cache' });
           if (response.ok) {
             console.log(`📥 預載入成功: ${type} ${identifier}`);
@@ -2106,7 +2068,7 @@ onAuthStateChanged(auth, async (user) => {
     window.PreloadManager = PreloadManager;
 
     // ============================================
-    // 句子懸停管理器 - 完整定義
+    // 句子懸停管理器
     // ============================================
     const SentenceHover = {
       setupHoverListeners(unitId) {
@@ -2177,7 +2139,7 @@ onAuthStateChanged(auth, async (user) => {
 
     window.SentenceHover = SentenceHover;
 
-  // ============================================
+    // ============================================
     // 渲染器
     // ============================================
     const Renderer = {
@@ -2517,6 +2479,93 @@ onAuthStateChanged(auth, async (user) => {
     window.Renderer = Renderer;
 
     // ============================================
+    // 用戶權限過濾函數
+    // ============================================
+    function filterUnitsByUser(units) {
+      // 管理員：顯示所有單元
+      if (!isGuestMode && currentUserData?.role === 'admin') {
+        console.log('👑 管理員模式：顯示所有教材，共', units.length, '個');
+        return units;
+      }
+      
+      // 訪客模式：只能看 Open示範
+      if (isGuestMode) {
+        const filtered = units.filter(unit => 
+          unit.publisher && unit.publisher.includes('Open示範')
+        );
+        console.log('👤 訪客模式過濾後:', filtered.length, '/', units.length);
+        return filtered;
+      }
+      
+      // 一般用戶
+      if (currentUser && currentUserData) {
+        let userGrades = currentUserData.grade || [];
+        if (typeof userGrades === 'string') userGrades = [userGrades];
+        
+        let userPublishers = currentUserData.publishers || [];
+        
+        // 試用期用戶：自動加入 Open示範
+        const trialEndAt = currentUserData.trialEndAt;
+        const isTrial = trialEndAt && new Date(trialEndAt) > new Date();
+        
+        let effectivePublishers = [...userPublishers];
+        if (isTrial && effectivePublishers.length === 0) {
+          effectivePublishers = ['Open示範'];
+          console.log('🎁 試用期：自動獲得 Open示範 權限');
+        }
+        
+        if (userGrades.length === 0) {
+          console.warn('⚠️ 使用者缺少年級設定，無法顯示任何教材');
+          return [];
+        }
+        
+        if (effectivePublishers.length === 0) {
+          console.warn('⚠️ 使用者沒有教材權限（試用期已過且未分配出版社）');
+          return [];
+        }
+        
+        const filtered = units.filter(unit => {
+          const unitGrades = unit.grade || [];
+          const gradeMatch = unitGrades.some(g => userGrades.includes(g));
+          const unitPublishers = unit.publisher || [];
+          const publisherMatch = unitPublishers.some(p => effectivePublishers.includes(p));
+          return gradeMatch && publisherMatch;
+        });
+        
+        console.log('👤 一般用戶過濾後:', filtered.length, '/', units.length);
+        if (filtered.length > 0) {
+          console.log('過濾後第一個單元的 publisher:', filtered[0].publisher);
+        }
+        return filtered;
+      }
+      
+      return [];
+    }
+
+    // 顯示無教材提示
+    function showNoMaterialMessage() {
+      const container = document.getElementById('article-vocab-wrapper');
+      if (container) {
+        container.innerHTML = `
+          <div class="loading-indicator" style="text-align:center; padding: 60px 20px;">
+            <i class="fas fa-book-open" style="font-size: 64px; margin-bottom: 20px; display: block; color: #94a3b8;"></i>
+            <h3 style="font-size: 18px; margin-bottom: 8px; color: #334155;">目前沒有可用的教材</h3>
+            <p style="font-size: 14px;">請聯絡管理員開通權限</p>
+          </div>
+        `;
+      }
+      const titleEl = document.getElementById('practice-title');
+      if (titleEl) titleEl.innerHTML = '暫無教材';
+      const descEl = document.getElementById('practice-desc');
+      if (descEl) descEl.innerHTML = '您的帳號尚未被分配任何教材權限';
+      
+      const floatingPlayer = document.getElementById('floatingPlayer');
+      if (floatingPlayer) {
+        floatingPlayer.style.display = 'none';
+      }
+    }
+
+    // ============================================
     // 單元管理器
     // ============================================
     const UnitManager = (function() {
@@ -2528,8 +2577,14 @@ onAuthStateChanged(auth, async (user) => {
       function getUnitsIndex() { return unitsIndex; }
 
       async function init() {
-
-        await loadUnitsIndex();
+        const filteredUnits = await loadUnitsIndex();
+        unitsIndex = filteredUnits;
+        
+        if (unitsIndex.length === 0) {
+          showNoMaterialMessage();
+          return;
+        }
+        
         populateUnitSelect();
 
         if (window.isTrialExpired && window.isTrialExpired()) {
@@ -2548,20 +2603,22 @@ onAuthStateChanged(auth, async (user) => {
         }
 
         if (unitsIndex.length > 0) await loadAndRenderUnit(unitsIndex[0]);
-
-     }
+      }
 
       async function loadUnitsIndex() {
         try {
-          const res = await fetch(`/eng-reading-panel/data/units-index.json?v=${Date.now()}`);
+          const res = await fetch(`./data/units-index.json?v=${Date.now()}`);
           if (!res.ok) throw new Error('網路錯誤');
-          unitsIndex = await res.json();
-        } catch (e) {
-          console.warn('載入單元索引失敗，使用內置測試數據', e);
-          unitsIndex = [
-            { unitId: 'unit1', unitName: 'Unit 1 – A Severe Fire in Hong Kong', dataUrl: '/eng-reading-panel/data/unit1.json' },
-            { unitId: 'unit2', unitName: 'Unit 2 – The Rise of Blindbox', dataUrl: '/eng-reading-panel/data/unit2.json' }
-          ];
+          const data = await res.json();
+          const allUnits = data.units || [];
+          
+          const filteredUnits = filterUnitsByUser(allUnits);
+          console.log('📚 載入單元索引:', filteredUnits.length, '個單元');
+          
+          return filteredUnits;
+        } catch (error) {
+          console.error('載入單元索引失敗:', error);
+          return [];
         }
       }
 
@@ -2617,7 +2674,6 @@ onAuthStateChanged(auth, async (user) => {
           Renderer.renderAll(unitData, currentUnitId);
           console.log(`單元 ${currentUnitId} 載入完成`);
 
-          // 初始化預載入管理器
           if (window.PreloadManager) {
             window.PreloadManager.init();
           }

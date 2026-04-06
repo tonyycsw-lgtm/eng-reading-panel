@@ -1,0 +1,178 @@
+{
+  "unitId": "unit4_15",
+  "unitName": "照護寵物小技巧 | Pet care tips",
+  "article": {
+    "title": "<strong>Pet care tips</strong>\n<strong>照護寵物小技巧</strong>",
+    "illustration": "/images/unit4_15.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "1. <span class='highlight1'>Brush</span> your dog or cat's <span class='highlight4'>fur</span> <span class='highlight5'>regularly</span> to <span class='highlight1'>prevent</span> <span class='highlight2'>knots</span>.",
+        "sentences": [
+          "1. <span class='highlight1'>Brush</span> your dog or cat's <span class='highlight4'>fur</span> <span class='highlight5'>regularly</span> to <span class='highlight1'>prevent</span> <span class='highlight2'>knots</span>."
+        ],
+        "translation": "🌐 定期刷你的狗或貓的毛，防止打結。",
+        "translation_sentences": [
+          "🌐 定期刷你的狗或貓的毛，防止打結。"
+        ],
+        "implication": {
+          "english": "💡 Regular brushing keeps fur healthy and prevents tangles.",
+          "chinese": "💡 定期刷毛可以保持毛髮健康，防止打結。[換句話說]：每天幫寵物梳毛，毛就不會打結，看起來也漂亮。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "2. If your pet is <span class='highlight4'>scratching</span> itself a lot, it may mean it has <span class='highlight3'>fleas</span>. <span class='highlight4'>Give</span> it a <span class='highlight5'>bath</span> with a <span class='highlight1'>special</span> <span class='highlight2'>shampoo</span>.",
+        "sentences": [
+          "2. If your pet is <span class='highlight4'>scratching</span> itself a lot, it may mean it has <span class='highlight3'>fleas</span>.",
+          "<span class='highlight4'>Give</span> it a <span class='highlight5'>bath</span> with a <span class='highlight1'>special</span> <span class='highlight2'>shampoo</span>."
+        ],
+        "translation": "🌐 如果你的寵物經常抓癢，可能代表牠有跳蚤。用特殊的洗髮精幫牠洗澡。",
+        "translation_sentences": [
+          "🌐 如果你的寵物經常抓癢，可能代表牠有跳蚤。",
+          "用特殊的洗髮精幫牠洗澡。"
+        ],
+        "implication": {
+          "english": "💡 Scratching can indicate fleas, which need special treatment.",
+          "chinese": "💡 抓癢可能表示有跳蚤，需要特殊處理。[換句話說]：寵物一直抓，可能是長跳蚤了，要用專用洗劑幫牠洗澡。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "3. Remember to <span class='highlight4'>trim</span> your dog or cat's <span class='highlight5'>nails</span>. Long nails can <span class='highlight3'>cause</span> <span class='highlight4'>pain</span> when they are walking.",
+        "sentences": [
+          "3. Remember to <span class='highlight4'>trim</span> your dog or cat's <span class='highlight5'>nails</span>.",
+          "Long nails can <span class='highlight3'>cause</span> <span class='highlight4'>pain</span> when they are walking."
+        ],
+        "translation": "🌐 記得幫你的狗或貓剪指甲。長指甲會讓牠們走路時感到疼痛。",
+        "translation_sentences": [
+          "🌐 記得幫你的狗或貓剪指甲。",
+          "長指甲會讓牠們走路時感到疼痛。"
+        ],
+        "implication": {
+          "english": "💡 Regular nail trimming is important for pets' comfort and health.",
+          "chinese": "💡 定期剪指甲對寵物的舒適和健康很重要。[換句話說]：指甲太長走路會痛，要記得定期幫寵物剪指甲。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "4. You can easily teach your dog <span class='highlight3'>different</span> <span class='highlight4'>commands</span> using <span class='highlight5'>treats</span>. Give it a small dog <span class='highlight3'>biscuit</span> when it does a command <span class='highlight5'>correctly</span>.",
+        "sentences": [
+          "4. You can easily teach your dog <span class='highlight3'>different</span> <span class='highlight4'>commands</span> using <span class='highlight5'>treats</span>.",
+          "Give it a small dog <span class='highlight3'>biscuit</span> when it does a command <span class='highlight5'>correctly</span>."
+        ],
+        "translation": "🌐 你可以用零食輕鬆教你的狗各種指令。當牠正確執行指令時，給牠一個小狗餅乾。",
+        "translation_sentences": [
+          "🌐 你可以用零食輕鬆教你的狗各種指令。",
+          "當牠正確執行指令時，給牠一個小狗餅乾。"
+        ],
+        "implication": {
+          "english": "💡 Positive reinforcement with treats is an effective training method.",
+          "chinese": "💡 用零食做正向獎勵是有效的訓練方法。[換句話說]：用零食獎勵，狗狗很快就能學會坐下、握手這些指令。"
+        }
+      },
+      {
+        "id": 5,
+        "english": "5. Dogs are more <span class='highlight2'>active</span> than other pets. <span class='highlight5'>Exercise</span> your dog regularly by going on a walk at least <span class='highlight4'>twice</span> a day.",
+        "sentences": [
+          "5. Dogs are more <span class='highlight2'>active</span> than other pets.",
+          "<span class='highlight5'>Exercise</span> your dog regularly by going on a walk at least <span class='highlight4'>twice</span> a day."
+        ],
+        "translation": "🌐 狗比其他寵物更好動。每天至少帶你的狗散步兩次，讓牠定期運動。",
+        "translation_sentences": [
+          "🌐 狗比其他寵物更好動。",
+          "每天至少帶你的狗散步兩次，讓牠定期運動。"
+        ],
+        "implication": {
+          "english": "💡 Dogs need more exercise than other pets; regular walks are essential.",
+          "chinese": "💡 狗比其他寵物需要更多運動；定期散步是必要的。[換句話說]：狗狗精力旺盛，每天至少要帶出去散步兩次，消耗體力。"
+        }
+      },
+      {
+        "id": 6,
+        "english": "6. Never <span class='highlight1'>overfeed</span> your pet. An <span class='highlight2'>overweight</span> pet can <span class='highlight3'>develop</span> many health problems.",
+        "sentences": [
+          "6. Never <span class='highlight1'>overfeed</span> your pet.",
+          "An <span class='highlight2'>overweight</span> pet can <span class='highlight3'>develop</span> many health problems."
+        ],
+        "translation": "🌐 千萬不要過度餵食你的寵物。過重的寵物可能會發展出許多健康問題。",
+        "translation_sentences": [
+          "🌐 千萬不要過度餵食你的寵物。",
+          "過重的寵物可能會發展出許多健康問題。"
+        ],
+        "implication": {
+          "english": "💡 Overfeeding leads to obesity, which causes health issues.",
+          "chinese": "💡 過度餵食會導致肥胖，進而引起健康問題。[換句話說]：不要餵太多，寵物太胖會有很多病。"
+        }
+      },
+      {
+        "id": 7,
+        "english": "7. Always take your pet to the <span class='highlight3'>vet</span> if you notice anything wrong with it and for <span class='highlight1'>yearly</span> <span class='highlight2'>check-ups</span>.",
+        "sentences": [
+          "7. Always take your pet to the <span class='highlight3'>vet</span> if you notice anything wrong with it and for <span class='highlight1'>yearly</span> <span class='highlight2'>check-ups</span>."
+        ],
+        "translation": "🌐 如果你發現寵物有任何異常，一定要帶牠去看獸醫，並做年度檢查。",
+        "translation_sentences": [
+          "🌐 如果你發現寵物有任何異常，一定要帶牠去看獸醫，並做年度檢查。"
+        ],
+        "implication": {
+          "english": "💡 Regular vet visits and prompt attention to health changes are crucial.",
+          "chinese": "💡 定期看獸醫和及時關注健康變化非常重要。[換句話說]：寵物怪怪的就要趕快看醫生，每年也要做健康檢查。"
+        }
+      },
+      {
+        "id": 8,
+        "english": "Remember, a <span class='highlight4'>healthy</span> pet is a <span class='highlight5'>happy</span> pet!",
+        "sentences": [
+          "Remember, a <span class='highlight4'>healthy</span> pet is a <span class='highlight5'>happy</span> pet!"
+        ],
+        "translation": "🌐 記住，健康的寵物就是快樂的寵物！",
+        "translation_sentences": [
+          "🌐 記住，健康的寵物就是快樂的寵物！"
+        ],
+        "implication": {
+          "english": "💡 The conclusion emphasizes the link between health and happiness.",
+          "chinese": "💡 結論強調健康與快樂的關聯。[換句話說]：寵物健康，牠們才會快樂。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "Brush", "meaning": "v. 刷", "highlightClass": "highlight1" },
+    { "id": 2, "word": "fur", "meaning": "n. 毛皮", "highlightClass": "highlight4" },
+    { "id": 3, "word": "regularly", "meaning": "adv. 定期地", "highlightClass": "highlight5" },
+    { "id": 4, "word": "prevent", "meaning": "v. 預防", "highlightClass": "highlight1" },
+    { "id": 5, "word": "knots", "meaning": "n. 打結", "highlightClass": "highlight2" },
+    { "id": 6, "word": "scratching", "meaning": "v. 抓癢", "highlightClass": "highlight4" },
+    { "id": 7, "word": "fleas", "meaning": "n. 跳蚤", "highlightClass": "highlight3" },
+    { "id": 8, "word": "Give", "meaning": "v. 給予", "highlightClass": "highlight4" },
+    { "id": 9, "word": "bath", "meaning": "n. 洗澡", "highlightClass": "highlight5" },
+    { "id": 10, "word": "special", "meaning": "adj. 特殊的", "highlightClass": "highlight1" },
+    { "id": 11, "word": "shampoo", "meaning": "n. 洗髮精", "highlightClass": "highlight2" },
+    { "id": 12, "word": "trim", "meaning": "v. 修剪", "highlightClass": "highlight4" },
+    { "id": 13, "word": "nails", "meaning": "n. 指甲", "highlightClass": "highlight5" },
+    { "id": 14, "word": "cause", "meaning": "v. 引起", "highlightClass": "highlight3" },
+    { "id": 15, "word": "pain", "meaning": "n. 疼痛", "highlightClass": "highlight4" },
+    { "id": 16, "word": "different", "meaning": "adj. 不同的", "highlightClass": "highlight3" },
+    { "id": 17, "word": "commands", "meaning": "n. 指令", "highlightClass": "highlight4" },
+    { "id": 18, "word": "treats", "meaning": "n. 零食", "highlightClass": "highlight5" },
+    { "id": 19, "word": "biscuit", "meaning": "n. 餅乾", "highlightClass": "highlight3" },
+    { "id": 20, "word": "correctly", "meaning": "adv. 正確地", "highlightClass": "highlight5" },
+    { "id": 21, "word": "active", "meaning": "adj. 活躍的", "highlightClass": "highlight2" },
+    { "id": 22, "word": "Exercise", "meaning": "v. 運動", "highlightClass": "highlight5" },
+    { "id": 23, "word": "twice", "meaning": "adv. 兩次", "highlightClass": "highlight4" },
+    { "id": 24, "word": "overfeed", "meaning": "v. 過度餵食", "highlightClass": "highlight1" },
+    { "id": 25, "word": "overweight", "meaning": "adj. 過重的", "highlightClass": "highlight2" },
+    { "id": 26, "word": "develop", "meaning": "v. 發展", "highlightClass": "highlight3" },
+    { "id": 27, "word": "vet", "meaning": "n. 獸醫", "highlightClass": "highlight3" },
+    { "id": 28, "word": "yearly", "meaning": "adj. 每年的", "highlightClass": "highlight1" },
+    { "id": 29, "word": "check-ups", "meaning": "n. 檢查", "highlightClass": "highlight2" },
+    { "id": 30, "word": "healthy", "meaning": "adj. 健康的", "highlightClass": "highlight4" },
+    { "id": 31, "word": "happy", "meaning": "adj. 快樂的", "highlightClass": "highlight5" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_15/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_15/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_15/word_{id}.mp3"
+  }
+}

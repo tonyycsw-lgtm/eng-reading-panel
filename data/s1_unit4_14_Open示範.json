@@ -1,0 +1,99 @@
+{
+  "unitId": "unit4_14",
+  "unitName": "動物收容所義工經歷照片配文 | Captions for volunteer experience at animal shelter",
+  "article": {
+    "title": "<strong>Captions for volunteer experience at animal shelter</strong>\n<strong>動物收容所義工經歷照片配文</strong>",
+    "illustration": "/images/unit4_14.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "The <span class='highlight2'>shelter</span> <span class='highlight3'>manager</span> <span class='highlight4'>told</span> us to <span class='highlight2'>avoid</span> <span class='highlight3'>busy</span> <span class='highlight4'>streets</span> and <span class='highlight1'>crowds</span> when <span class='highlight3'>walking</span> the dogs.",
+        "sentences": [
+          "The <span class='highlight2'>shelter</span> <span class='highlight3'>manager</span> <span class='highlight4'>told</span> us to <span class='highlight2'>avoid</span> <span class='highlight3'>busy</span> <span class='highlight4'>streets</span> and <span class='highlight1'>crowds</span> when <span class='highlight3'>walking</span> the dogs."
+        ],
+        "translation": "🌐 收容所經理告訴我們，遛狗時要避開繁忙的街道和人群。",
+        "translation_sentences": [
+          "🌐 收容所經理告訴我們，遛狗時要避開繁忙的街道和人群。"
+        ],
+        "implication": {
+          "english": "💡 The manager gives important safety instructions to volunteers walking dogs.",
+          "chinese": "💡 經理給義工們重要的遛狗安全指示。[換句話說]：為了狗狗的安全，遛狗要避開人多車多的地方。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "One of the <span class='highlight4'>vets</span> <span class='highlight5'>taught</span> us how to <span class='highlight4'>look after</span> <span class='highlight1'>puppies</span> and <span class='highlight3'>kittens</span>.",
+        "sentences": [
+          "One of the <span class='highlight4'>vets</span> <span class='highlight5'>taught</span> us how to <span class='highlight4'>look after</span> <span class='highlight1'>puppies</span> and <span class='highlight3'>kittens</span>."
+        ],
+        "translation": "🌐 其中一位獸醫教我們如何照顧小狗和小貓。",
+        "translation_sentences": [
+          "🌐 其中一位獸醫教我們如何照顧小狗和小貓。"
+        ],
+        "implication": {
+          "english": "💡 Volunteers receive hands-on training from a vet on caring for young animals.",
+          "chinese": "💡 義工們接受獸醫的實務訓練，學習照顧幼犬幼貓。[換句話說]：獸醫教我們怎麼照顧這些小傢伙，很實用。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "This <span class='highlight5'>mother</span> <span class='highlight1'>cat</span> is <span class='highlight3'>licking</span> her <span class='highlight5'>kitten</span> to <span class='highlight2'>clean</span> it.",
+        "sentences": [
+          "This <span class='highlight5'>mother</span> <span class='highlight1'>cat</span> is <span class='highlight3'>licking</span> her <span class='highlight5'>kitten</span> to <span class='highlight2'>clean</span> it."
+        ],
+        "translation": "🌐 這隻貓媽媽正在舔牠的小貓，幫牠清潔。",
+        "translation_sentences": [
+          "🌐 這隻貓媽媽正在舔牠的小貓，幫牠清潔。"
+        ],
+        "implication": {
+          "english": "💡 A touching moment showing maternal care in animals.",
+          "chinese": "💡 一個感人的瞬間，展現動物的母愛。[換句話說]：貓媽媽好有愛心，一直舔小貓幫牠洗澡。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "This dog <span class='highlight1'>looks</span> <span class='highlight2'>worried</span> because she is <span class='highlight1'>scared</span> of <span class='highlight3'>humans</span>.",
+        "sentences": [
+          "This dog <span class='highlight1'>looks</span> <span class='highlight2'>worried</span> because she is <span class='highlight1'>scared</span> of <span class='highlight3'>humans</span>."
+        ],
+        "translation": "🌐 這隻狗看起來很擔心，因為牠害怕人類。",
+        "translation_sentences": [
+          "🌐 這隻狗看起來很擔心，因為牠害怕人類。"
+        ],
+        "implication": {
+          "english": "💡 Many shelter animals are fearful due to past experiences; they need gentle care.",
+          "chinese": "💡 很多收容所動物因為過去經歷而害怕人類，需要溫柔對待。[換句話說]：這隻狗可能受過傷，看到人會害怕，需要多一點耐心。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "shelter", "meaning": "n. 收容所", "highlightClass": "highlight2" },
+    { "id": 2, "word": "manager", "meaning": "n. 經理", "highlightClass": "highlight3" },
+    { "id": 3, "word": "told", "meaning": "v. 告訴", "highlightClass": "highlight4" },
+    { "id": 4, "word": "avoid", "meaning": "v. 避免", "highlightClass": "highlight2" },
+    { "id": 5, "word": "busy", "meaning": "adj. 繁忙的", "highlightClass": "highlight3" },
+    { "id": 6, "word": "streets", "meaning": "n. 街道", "highlightClass": "highlight4" },
+    { "id": 7, "word": "crowds", "meaning": "n. 人群", "highlightClass": "highlight1" },
+    { "id": 8, "word": "walking", "meaning": "v. 遛", "highlightClass": "highlight3" },
+    { "id": 9, "word": "vets", "meaning": "n. 獸醫", "highlightClass": "highlight4" },
+    { "id": 10, "word": "taught", "meaning": "v. 教導", "highlightClass": "highlight5" },
+    { "id": 11, "word": "look after", "meaning": "phr. 照顧", "highlightClass": "highlight4" },
+    { "id": 12, "word": "puppies", "meaning": "n. 小狗", "highlightClass": "highlight1" },
+    { "id": 13, "word": "kittens", "meaning": "n. 小貓", "highlightClass": "highlight3" },
+    { "id": 14, "word": "mother", "meaning": "n. 母親", "highlightClass": "highlight5" },
+    { "id": 15, "word": "cat", "meaning": "n. 貓", "highlightClass": "highlight1" },
+    { "id": 16, "word": "licking", "meaning": "v. 舔", "highlightClass": "highlight3" },
+    { "id": 17, "word": "kitten", "meaning": "n. 小貓", "highlightClass": "highlight5" },
+    { "id": 18, "word": "clean", "meaning": "v. 清潔", "highlightClass": "highlight2" },
+    { "id": 19, "word": "looks", "meaning": "v. 看起來", "highlightClass": "highlight1" },
+    { "id": 20, "word": "worried", "meaning": "adj. 擔心的", "highlightClass": "highlight2" },
+    { "id": 21, "word": "scared", "meaning": "adj. 害怕的", "highlightClass": "highlight1" },
+    { "id": 22, "word": "humans", "meaning": "n. 人類", "highlightClass": "highlight3" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_14/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_14/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_14/word_{id}.mp3"
+  }
+}

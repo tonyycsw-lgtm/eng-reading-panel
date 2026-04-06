@@ -883,9 +883,8 @@
   <!-- 音頻容器 -->
   <div id="audio-container" class="audio-element"></div>
 
-  <!-- Firebase 認證腳本 - 第一階段：基礎功能修復 -->
+  <!-- Firebase 認證腳本 -->
   <script type="module">
-    // 導入 Firebase 認證功能
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
     import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
     import { getFirestore, doc, setDoc, getDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
@@ -904,15 +903,15 @@
     const auth = getAuth(app);
     const db = getFirestore(app);
 
-    // 將 auth 和 db 掛載到 window 上，供傳統腳本使用
     window.auth = auth;
     window.db = db;
 
     let currentUser = null;
     let currentUserData = null;
     let isTrialExpired = false;
+    let isGuestMode = false;
 
-    // ===== 閱讀進度追蹤器（完全模組化） =====
+    // 閱讀進度追蹤器
     let readingTimer = null;
     let currentUnitIdForProgress = null;
     let lastRecordedPercent = 0;
@@ -996,7 +995,6 @@
       }
     }
 
-    // 監聽單元切換
     document.addEventListener('DOMContentLoaded', () => {
       const unitSelect = document.getElementById('unit-select');
       if (unitSelect) {
@@ -1006,180 +1004,12 @@
       }
     });
 
-    // 頁面離開時記錄進度
     window.addEventListener('beforeunload', () => {
       if (readingTimer) {
         clearInterval(readingTimer);
         saveFinalProgress();
       }
     });
-
-    // ===== 檢查登入狀態 =====
-onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    document.getElementById('userInfoBar').style.display = 'flex';
-    currentUser = user;
-    
-    const displayName = user.displayName || user.email || '會員';
-    document.getElementById('userNameDisplay').textContent = displayName;
-
-    try {
-      const userRef = doc(db, 'users', user.uid);
-      const userSnap = await getDoc(userRef);
-
-      if (!userSnap.exists()) {
-  const trialEndDate = new Date();
-  trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS);
-  
-  const userData = {
-    email: user.email,
-    displayName,
-    photoURL: user.photoURL || null,
-    phoneNumber: '',
-    uid: user.uid,
-    provider: user.providerData[0]?.providerId || 'unknown',
-    role: 'user',
-    grade: '',
-    publishers: [],
-    premium: false,
-    plan: 'free',
-    expiresAt: null,
-    trialEndAt: trialEndDate.toISOString(),
-    loginCount: 1,
-    audioPlayCount: 0,
-    vocabLookupCount: 0,
-    readingProgress: {},
-    stats: {
-      totalPractices: 0,
-      avgPercentage: 0,
-      badges: { gold: 0, pass: 0 }
-    },
-    createdAt: new Date().toISOString(),
-    lastLoginAt: new Date().toISOString(),
-    lastActiveAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    settings: { language: 'zh', autoPlay: false, notifications: true }
-  };
-  await setDoc(userRef, userData);
-        currentUserData = userData;
-        console.log('✅ 新用戶資料已寫入，試用期 7 天，角色：user');
-            } else {
-        // 既有用戶：更新登入次數
-        await updateDoc(userRef, {
-          lastLoginAt: new Date().toISOString(),
-          loginCount: increment(1),
-          updatedAt: new Date().toISOString()
-        });
-        const updatedSnap = await getDoc(userRef);
-        currentUserData = updatedSnap.data();
-        console.log(`ℹ️ 用戶 ${user.email} 登入，累計次數: ${currentUserData.loginCount}`);
-        
-        // 檢查並遷移舊資料（如果有 isTeacher 欄位）
-        if (currentUserData.isTeacher === true && !currentUserData.role) {
-          console.log('🔄 檢測到舊版 isTeacher 欄位，自動轉換為 role: teacher');
-          await updateDoc(userRef, {
-            role: 'teacher',
-            isTeacher: null
-          });
-          currentUserData.role = 'teacher';
-        }
-
-        // 檢查帳號是否被停用
-        if (currentUserData.isDisabled === true) {
-          console.log('⚠️ 帳號已被停用，顯示停用頁面');
-          
-          document.getElementById('userInfoBar').style.display = 'none';
-          
-          document.getElementById('app').innerHTML = `
-            <div class="disabled-account-container" style="max-width: 500px; margin: 50px auto; text-align: center; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-              <i class="fas fa-ban" style="font-size: 64px; color: #ef4444; margin-bottom: 20px;"></i>
-              <h2 style="color: #1e293b; margin-bottom: 16px;">帳號已停用</h2>
-              <p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">
-                您的帳號已被管理員停用${currentUserData.disabledReason ? '：' + currentUserData.disabledReason : ''}。
-              </p>
-              ${currentUserData.reactivateAt ? 
-                `<p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">預計於 ${new Date(currentUserData.reactivateAt).toLocaleDateString('zh-HK')} 自動啟用。</p>` : 
-                `<p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">如有疑問，請聯絡管理員。</p>`
-              }
-              <p style="color: #94a3b8; font-size: 12px; margin-top: 20px;">系統將在 3 秒後自動登出...</p>
-              <button onclick="window.location.reload()" class="btn" style="margin-top: 20px; padding: 10px 24px; background: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">重新整理</button>
-            </div>
-          `;
-          
-          setTimeout(async () => {
-            await signOut(auth);
-            console.log('✅ 已執行登出');
-          }, 5000);
-          
-          return;
-        }
-      }
-
-      // 使用 role 欄位判斷上傳權限
-      const userRole = currentUserData?.role || 'user';
-      const canUpload = ['teacher', 'admin'].includes(userRole);
-      
-      const uploadWrapper = document.getElementById('upload-wrapper');
-      if (uploadWrapper) {
-        uploadWrapper.style.display = canUpload ? 'flex' : 'none';
-        
-        if (canUpload) {
-          const uploadInput = document.getElementById('unit-upload');
-          if (uploadInput) {
-            uploadInput.removeEventListener('change', window.handleFileUpload);
-            uploadInput.addEventListener('change', function(e) {
-              if (window.UnitManager) {
-                window.UnitManager.handleFileUpload(e.target);
-              }
-            });
-          }
-        }
-      }
-
-      checkTrialExpired();
-
-    } catch (error) {
-      console.error('❌ Firestore 操作失敗:', error);
-    }
-
-    // 獲取並儲存 token
-    user.getIdToken()
-      .then(token => {
-        localStorage.setItem('authToken', token);
-        localStorage.setItem('userUID', user.uid);
-        localStorage.setItem('userEmail', user.email || '');
-        localStorage.setItem('userName', displayName);
-        // 🔥 新增：儲存角色資訊
-        localStorage.setItem('userRole', currentUserData?.role || 'user');
-        
-        // 🔥 新增：儲存完整用戶資料供傳統腳本使用
-        localStorage.setItem('userData', JSON.stringify({
-          uid: user.uid,
-          email: user.email,
-          displayName: displayName,
-          role: currentUserData?.role || 'user',
-          grade: currentUserData?.grade || '',
-          publishers: currentUserData?.publishers || [],
-          trialEndAt: currentUserData?.trialEndAt || null,
-          isGuest: user.isAnonymous || false,
-          isDisabled: currentUserData?.isDisabled || false,
-          lastLoginAt: currentUserData?.lastLoginAt || new Date().toISOString()
-        }));
-      })
-      .catch(error => {
-        console.error('❌ 獲取 Token 失敗:', error);
-      });
-
-    initializeAppContent();
-
-  } else {
-    const currentPath = window.location.pathname;
-    if (!currentPath.includes('login.html')) {
-      sessionStorage.setItem('redirectAfterLogin', currentPath);
-      window.location.href = '/eng-reading-panel/login.html';
-    }
-  }
-});
 
     function checkTrialExpired() {
       if (!currentUserData) return false;
@@ -1281,12 +1111,165 @@ onAuthStateChanged(auth, async (user) => {
 
     window.isTrialExpired = () => isTrialExpired;
     window.getUserData = () => currentUserData;
+
+    // ===== 檢查登入狀態 =====
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        document.getElementById('userInfoBar').style.display = 'flex';
+        currentUser = user;
+        isGuestMode = user.isAnonymous || false;
+        
+        const displayName = user.displayName || user.email || '會員';
+        document.getElementById('userNameDisplay').textContent = displayName;
+
+        try {
+          const userRef = doc(db, 'users', user.uid);
+          const userSnap = await getDoc(userRef);
+
+          if (!userSnap.exists()) {
+            const trialEndDate = new Date();
+            trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS);
+            
+            const userData = {
+              email: user.email,
+              displayName,
+              photoURL: user.photoURL || null,
+              phoneNumber: '',
+              uid: user.uid,
+              provider: user.providerData[0]?.providerId || 'unknown',
+              role: 'user',
+              grade: '',
+              publishers: [],
+              premium: false,
+              plan: 'free',
+              expiresAt: null,
+              trialEndAt: trialEndDate.toISOString(),
+              loginCount: 1,
+              audioPlayCount: 0,
+              vocabLookupCount: 0,
+              readingProgress: {},
+              stats: {
+                totalPractices: 0,
+                avgPercentage: 0,
+                badges: { gold: 0, pass: 0 }
+              },
+              createdAt: new Date().toISOString(),
+              lastLoginAt: new Date().toISOString(),
+              lastActiveAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+              settings: { language: 'zh', autoPlay: false, notifications: true }
+            };
+            await setDoc(userRef, userData);
+            currentUserData = userData;
+            console.log('✅ 新用戶資料已寫入，試用期 7 天，角色：user');
+          } else {
+            await updateDoc(userRef, {
+              lastLoginAt: new Date().toISOString(),
+              loginCount: increment(1),
+              updatedAt: new Date().toISOString()
+            });
+            const updatedSnap = await getDoc(userRef);
+            currentUserData = updatedSnap.data();
+            console.log(`ℹ️ 用戶 ${user.email} 登入，累計次數: ${currentUserData.loginCount}`);
+            
+            if (currentUserData.isTeacher === true && !currentUserData.role) {
+              console.log('🔄 檢測到舊版 isTeacher 欄位，自動轉換為 role: teacher');
+              await updateDoc(userRef, {
+                role: 'teacher',
+                isTeacher: null
+              });
+              currentUserData.role = 'teacher';
+            }
+
+            if (currentUserData.isDisabled === true) {
+              console.log('⚠️ 帳號已被停用，顯示停用頁面');
+              document.getElementById('userInfoBar').style.display = 'none';
+              document.getElementById('app').innerHTML = `
+                <div class="disabled-account-container" style="max-width: 500px; margin: 50px auto; text-align: center; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                  <i class="fas fa-ban" style="font-size: 64px; color: #ef4444; margin-bottom: 20px;"></i>
+                  <h2 style="color: #1e293b; margin-bottom: 16px;">帳號已停用</h2>
+                  <p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">
+                    您的帳號已被管理員停用${currentUserData.disabledReason ? '：' + currentUserData.disabledReason : ''}。
+                  </p>
+                  ${currentUserData.reactivateAt ? 
+                    `<p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">預計於 ${new Date(currentUserData.reactivateAt).toLocaleDateString('zh-HK')} 自動啟用。</p>` : 
+                    `<p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">如有疑問，請聯絡管理員。</p>`
+                  }
+                  <p style="color: #94a3b8; font-size: 12px; margin-top: 20px;">系統將在 3 秒後自動登出...</p>
+                  <button onclick="window.location.reload()" class="btn" style="margin-top: 20px; padding: 10px 24px; background: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">重新整理</button>
+                </div>
+              `;
+              setTimeout(async () => {
+                await signOut(auth);
+                console.log('✅ 已執行登出');
+              }, 5000);
+              return;
+            }
+          }
+
+          const userRole = currentUserData?.role || 'user';
+          const canUpload = ['teacher', 'admin'].includes(userRole);
+          
+          const uploadWrapper = document.getElementById('upload-wrapper');
+          if (uploadWrapper) {
+            uploadWrapper.style.display = canUpload ? 'flex' : 'none';
+            if (canUpload) {
+              const uploadInput = document.getElementById('unit-upload');
+              if (uploadInput) {
+                uploadInput.removeEventListener('change', window.handleFileUpload);
+                uploadInput.addEventListener('change', function(e) {
+                  if (window.UnitManager) {
+                    window.UnitManager.handleFileUpload(e.target);
+                  }
+                });
+              }
+            }
+          }
+
+          checkTrialExpired();
+
+        } catch (error) {
+          console.error('❌ Firestore 操作失敗:', error);
+        }
+
+        user.getIdToken()
+          .then(token => {
+            localStorage.setItem('authToken', token);
+            localStorage.setItem('userUID', user.uid);
+            localStorage.setItem('userEmail', user.email || '');
+            localStorage.setItem('userName', displayName);
+            localStorage.setItem('userRole', currentUserData?.role || 'user');
+            localStorage.setItem('userData', JSON.stringify({
+              uid: user.uid,
+              email: user.email,
+              displayName: displayName,
+              role: currentUserData?.role || 'user',
+              grade: currentUserData?.grade || '',
+              publishers: currentUserData?.publishers || [],
+              trialEndAt: currentUserData?.trialEndAt || null,
+              isGuest: user.isAnonymous || false,
+              isDisabled: currentUserData?.isDisabled || false,
+              lastLoginAt: currentUserData?.lastLoginAt || new Date().toISOString()
+            }));
+          })
+          .catch(error => {
+            console.error('❌ 獲取 Token 失敗:', error);
+          });
+
+        initializeAppContent();
+
+      } else {
+        const currentPath = window.location.pathname;
+        if (!currentPath.includes('login.html')) {
+          sessionStorage.setItem('redirectAfterLogin', currentPath);
+          window.location.href = '/eng-reading-panel/login.html';
+        }
+      }
+    });
   </script>
 
   <script>
-    // ============================================
     // 音頻路徑輔助函數
-    // ============================================
     function getAudioPath(unitId, type, identifier) {
       const safeUnitId = unitId.replace(/[^a-zA-Z0-9_.-]/g, '');
       const safeIdentifier = identifier.toString().replace(/[^a-zA-Z0-9_.-]/g, '');
@@ -1314,9 +1297,7 @@ onAuthStateChanged(auth, async (user) => {
       }
     }
 
-    // ============================================
-    // 音頻控制器 - 完整定義
-    // ============================================
+    // 音頻控制器
     const AudioController = {
       currentAudio: null,
       currentPlayingButton: null,
@@ -1903,9 +1884,7 @@ onAuthStateChanged(auth, async (user) => {
 
     window.AudioController = AudioController;
 
-    // ============================================
     // 預載入管理器
-    // ============================================
     const PreloadManager = {
       currentMode: null,
       currentPosition: null,
@@ -2082,9 +2061,7 @@ onAuthStateChanged(auth, async (user) => {
 
     window.PreloadManager = PreloadManager;
 
-    // ============================================
     // 句子懸停管理器
-    // ============================================
     const SentenceHover = {
       setupHoverListeners(unitId) {
         document.querySelectorAll(`.sentence-highlightable`).forEach(sentence => {
@@ -2154,9 +2131,7 @@ onAuthStateChanged(auth, async (user) => {
 
     window.SentenceHover = SentenceHover;
 
-    // ============================================
     // 渲染器
-    // ============================================
     const Renderer = {
       vocabPages: new Map(),
 
@@ -2493,44 +2468,34 @@ onAuthStateChanged(auth, async (user) => {
 
     window.Renderer = Renderer;
 
-    // ============================================
-    // 用戶權限過濾函數
-    // ============================================
-    
-    // ============================================
-    // 用戶狀態（從 localStorage 同步到傳統腳本）
-    // ============================================
-    let isGuestMode = false;
-    let currentUserData = null;
+    // 用戶狀態同步
+    let isGuestModeGlobal = false;
+    let currentUserDataGlobal = null;
 
     function syncUserState() {
       try {
         const userDataStr = localStorage.getItem('userData');
         if (userDataStr) {
           const userData = JSON.parse(userDataStr);
-          isGuestMode = userData.isGuest === true;
-          currentUserData = userData;
-          console.log('🔄 同步用戶狀態:', { isGuestMode, role: userData.role, grade: userData.grade });
+          isGuestModeGlobal = userData.isGuest === true;
+          currentUserDataGlobal = userData;
+          console.log('🔄 同步用戶狀態:', { isGuestMode: isGuestModeGlobal, role: userData.role, grade: userData.grade });
         }
       } catch(e) {
         console.error('同步用戶狀態失敗:', e);
       }
     }
     
-    // 立即同步
     syncUserState();
-    // 每 3 秒同步一次（確保狀態更新）
     setInterval(syncUserState, 3000);
 
     function filterUnitsByUser(units) {
-      // 管理員：顯示所有單元
-      if (!isGuestMode && currentUserData?.role === 'admin') {
+      if (!isGuestModeGlobal && currentUserDataGlobal?.role === 'admin') {
         console.log('👑 管理員模式：顯示所有教材，共', units.length, '個');
         return units;
       }
       
-      // 訪客模式：只能看 Open示範
-      if (isGuestMode) {
+      if (isGuestModeGlobal) {
         const filtered = units.filter(unit => 
           unit.publisher && unit.publisher.includes('Open示範')
         );
@@ -2538,15 +2503,13 @@ onAuthStateChanged(auth, async (user) => {
         return filtered;
       }
       
-      // 一般用戶（只用 currentUserData，不用 currentUser）
-      if (currentUserData) {
-        let userGrades = currentUserData.grade || [];
+      if (currentUserDataGlobal) {
+        let userGrades = currentUserDataGlobal.grade || [];
         if (typeof userGrades === 'string') userGrades = [userGrades];
         
-        let userPublishers = currentUserData.publishers || [];
+        let userPublishers = currentUserDataGlobal.publishers || [];
         
-        // 試用期用戶：自動加入 Open示範
-        const trialEndAt = currentUserData.trialEndAt;
+        const trialEndAt = currentUserDataGlobal.trialEndAt;
         const isTrial = trialEndAt && new Date(trialEndAt) > new Date();
         
         let effectivePublishers = [...userPublishers];
@@ -2583,7 +2546,6 @@ onAuthStateChanged(auth, async (user) => {
       return [];
     }
 
-    // 顯示無教材提示
     function showNoMaterialMessage() {
       const container = document.getElementById('article-vocab-wrapper');
       if (container) {
@@ -2606,9 +2568,7 @@ onAuthStateChanged(auth, async (user) => {
       }
     }
 
-    // ============================================
     // 單元管理器
-    // ============================================
     const UnitManager = (function() {
       let unitsIndex = [];
       let currentUnitData = null;
@@ -2777,9 +2737,7 @@ onAuthStateChanged(auth, async (user) => {
 
     window.UnitManager = UnitManager;
 
-    // ============================================
     // Service Worker 註冊
-    // ============================================
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/eng-reading-panel/service-worker.js')

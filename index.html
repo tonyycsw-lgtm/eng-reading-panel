@@ -7,7 +7,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- 基礎路徑設定 -->
-  <base href="/eng-reading-f1-new_treasure_plus/">
+  <base href="/eng-reading-panel/">
   
   <style>
     /* ===== 原有樣式保持完全不變 ===== */
@@ -1106,7 +1106,7 @@ onAuthStateChanged(auth, async (user) => {
             await signOut(auth);
             console.log('✅ 已執行登出');
             // 可選：登出後自動跳轉到登入頁
-            // window.location.href = '/eng-reading-f1-new_treasure_plus/login.html';
+            // window.location.href = '/eng-reading-panel/login.html';
           }, 5000);
           
           // 停止執行後續程式碼
@@ -1163,7 +1163,7 @@ onAuthStateChanged(auth, async (user) => {
     const currentPath = window.location.pathname;
     if (!currentPath.includes('login.html')) {
       sessionStorage.setItem('redirectAfterLogin', currentPath);
-      window.location.href = '/eng-reading-f1-new_treasure_plus/login.html';
+      window.location.href = '/eng-reading-panel/login.html';
     }
   }
 });
@@ -1256,7 +1256,7 @@ onAuthStateChanged(auth, async (user) => {
         localStorage.clear();
         
         setTimeout(() => {
-          window.location.href = '/eng-reading-f1-new_treasure_plus/login.html';
+          window.location.href = '/eng-reading-panel/login.html';
         }, 300);
       } catch (error) {
         console.error('登出失敗:', error);
@@ -1293,13 +1293,13 @@ onAuthStateChanged(auth, async (user) => {
         throw new Error('未知音頻類型');
       }
       
-      const basePath = `/eng-reading-f1-new_treasure_plus/audio/${safeUnitId}/${fileName}`;
+      const basePath = `/eng-reading-panel/audio/${safeUnitId}/${fileName}`;
       
       if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         return basePath;
       } else {
         const GITHUB_USER = 'tonyycsw-lgtm';
-        return `https://cdn.jsdelivr.net/gh/${GITHUB_USER}/eng-reading-f1-new_treasure_plus/audio/${safeUnitId}/${fileName}`;
+        return `https://cdn.jsdelivr.net/gh/${GITHUB_USER}/eng-reading-panel/audio/${safeUnitId}/${fileName}`;
       }
     }
 
@@ -1321,7 +1321,7 @@ onAuthStateChanged(auth, async (user) => {
         const token = localStorage.getItem('authToken');
         if (!token) {
           alert('請先登入會員');
-          window.location.href = '/eng-reading-f1-new_treasure_plus/login.html';
+          window.location.href = '/eng-reading-panel/login.html';
           return false;
         }
         return true;
@@ -2219,7 +2219,7 @@ onAuthStateChanged(auth, async (user) => {
                 <span lang="en">${englishTitle}</span><br>
                 <span lang="zh">${chineseTitle}</span>
               </h3>
-              <img src="/eng-reading-f1-new_treasure_plus${article.illustration || '/images/placeholder.png'}" alt="illustration" class="article-illustration"
+              <img src="/eng-reading-panel${article.illustration || '/images/placeholder.png'}" alt="illustration" class="article-illustration"
                    onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
               <div class="image-fallback" style="display:none; width:100%; aspect-ratio:16/9; max-height:220px; align-items:center; justify-content:center; color:#64748b; background-color:#f1f5f9;" lang="zh">
                 <i class="fas fa-image" style="font-size:48px;"></i>
@@ -2543,14 +2543,14 @@ onAuthStateChanged(auth, async (user) => {
 
       async function loadUnitsIndex() {
         try {
-          const res = await fetch(`/eng-reading-f1-new_treasure_plus/data/units-index.json?v=${Date.now()}`);
+          const res = await fetch(`/eng-reading-panel/data/units-index.json?v=${Date.now()}`);
           if (!res.ok) throw new Error('網路錯誤');
           unitsIndex = await res.json();
         } catch (e) {
           console.warn('載入單元索引失敗，使用內置測試數據', e);
           unitsIndex = [
-            { unitId: 'unit1', unitName: 'Unit 1 – A Severe Fire in Hong Kong', dataUrl: '/eng-reading-f1-new_treasure_plus/data/unit1.json' },
-            { unitId: 'unit2', unitName: 'Unit 2 – The Rise of Blindbox', dataUrl: '/eng-reading-f1-new_treasure_plus/data/unit2.json' }
+            { unitId: 'unit1', unitName: 'Unit 1 – A Severe Fire in Hong Kong', dataUrl: '/eng-reading-panel/data/unit1.json' },
+            { unitId: 'unit2', unitName: 'Unit 2 – The Rise of Blindbox', dataUrl: '/eng-reading-panel/data/unit2.json' }
           ];
         }
       }
@@ -2675,7 +2675,7 @@ onAuthStateChanged(auth, async (user) => {
     // ============================================
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/eng-reading-f1-new_treasure_plus/service-worker.js')
+        navigator.serviceWorker.register('/eng-reading-panel/service-worker.js')
           .then(reg => console.log('Service Worker 註冊成功', reg.scope))
           .catch(err => console.log('Service Worker 註冊失敗', err));
       });

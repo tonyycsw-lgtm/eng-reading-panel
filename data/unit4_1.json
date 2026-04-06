@@ -1,0 +1,125 @@
+{
+  "unitId": "unit4_1",
+  "unitName": "難忘的體驗 | A memorable experience",
+  "article": {
+    "title": "<strong>A memorable experience</strong>\n<strong>難忘的體驗</strong>",
+    "illustration": "/images/unit4_1.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "Have you ever been to a <span class='highlight4'>petting zoo</span>? What <span class='highlight1'>animals</span> did you see?",
+        "sentences": [
+          "Have you ever been to a <span class='highlight4'>petting zoo</span>?",
+          "What <span class='highlight1'>animals</span> did you see?"
+        ],
+        "translation": "🌐 你去過寵物動物園嗎？你看到了什麼動物？",
+        "translation_sentences": [
+          "🌐 你去過寵物動物園嗎？",
+          "你看到了什麼動物？"
+        ],
+        "implication": {
+          "english": "💡 The writer starts with questions to engage readers and introduce the topic of visiting a petting zoo.",
+          "chinese": "💡 作者以問題開場，吸引讀者參與，並引入參觀寵物動物園的主題。[換句話說]：作者想先問問讀者有沒有類似的經驗，讓大家更有共鳴。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "<span class='highlight2'>Mum</span> took us to <span class='highlight1'>Butterfly Valley</span> on <span class='highlight3'>Sunday</span>. We got there <span class='highlight5'>right when it opened</span> to <span class='highlight1'>avoid</span> the <span class='highlight5'>crowds</span>. We <span class='highlight2'>stayed</span> there from 10 a.m. to 2 p.m.",
+        "sentences": [
+          "<span class='highlight2'>Mum</span> took us to <span class='highlight1'>Butterfly Valley</span> on <span class='highlight3'>Sunday</span>.",
+          "We got there <span class='highlight5'>right when it opened</span> to <span class='highlight1'>avoid</span> the <span class='highlight5'>crowds</span>.",
+          "We <span class='highlight2'>stayed</span> there from 10 a.m. to 2 p.m."
+        ],
+        "translation": "🌐 媽媽星期天帶我們去蝴蝶谷。我們在它開門時就抵達，以避開人潮。我們從上午10點待到下午2點。",
+        "translation_sentences": [
+          "🌐 媽媽星期天帶我們去蝴蝶谷。",
+          "我們在它開門時就抵達，以避開人潮。",
+          "我們從上午10點待到下午2點。"
+        ],
+        "implication": {
+          "english": "💡 The family planned ahead to avoid crowds, showing it's a popular place. They spent four hours there, indicating they enjoyed it.",
+          "chinese": "💡 這家人提前計劃避開人潮，顯示這是個受歡迎的地方。他們待了四個小時，表示他們玩得很開心。[換句話說]：為了不要人擠人，他們一開門就進去了，而且一待就是半天。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "There were <span class='highlight3'>rabbits</span>, <span class='highlight4'>goats</span> and <span class='highlight2'>alpacas</span> at this <span class='highlight5'>farm</span>. I liked the alpacas the most. They were so <span class='highlight1'>cute</span>! These <span class='highlight2'>medium-sized</span> <span class='highlight1'>animals</span> have very <span class='highlight4'>thick</span> and <span class='highlight5'>soft</span> <span class='highlight1'>fur</span>. They weren't very <span class='highlight2'>big</span>. Even my youngest <span class='highlight3'>brother</span> was <span class='highlight4'>tall enough</span> to <span class='highlight5'>pet</span> them.",
+        "sentences": [
+          "There were <span class='highlight3'>rabbits</span>, <span class='highlight4'>goats</span> and <span class='highlight2'>alpacas</span> at this <span class='highlight5'>farm</span>.",
+          "I liked the alpacas the most.",
+          "They were so <span class='highlight1'>cute</span>!",
+          "These <span class='highlight2'>medium-sized</span> <span class='highlight1'>animals</span> have very <span class='highlight4'>thick</span> and <span class='highlight5'>soft</span> <span class='highlight1'>fur</span>.",
+          "They weren't very <span class='highlight2'>big</span>.",
+          "Even my youngest <span class='highlight3'>brother</span> was <span class='highlight4'>tall enough</span> to <span class='highlight5'>pet</span> them."
+        ],
+        "translation": "🌐 這個農場有兔子、山羊和羊駝。我最喜歡羊駝。它們好可愛！這些中等體型的動物有非常濃密柔軟的毛。它們不是很大。就連我最小的弟弟都夠高可以撫摸牠們。",
+        "translation_sentences": [
+          "🌐 這個農場有兔子、山羊和羊駝。",
+          "我最喜歡羊駝。",
+          "它們好可愛！",
+          "這些中等體型的動物有非常濃密柔軟的毛。",
+          "它們不是很大。",
+          "就連我最小的弟弟都夠高可以撫摸牠們。"
+        ],
+        "implication": {
+          "english": "💡 The writer describes the alpacas' appearance and size, emphasizing they are approachable for children.",
+          "chinese": "💡 作者描述了羊駝的外貌和體型，強調它們對兒童來說很親近。[換句話說]：羊駝毛茸茸的，體型剛剛好，連小小孩都可以摸得到。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "In the <span class='highlight1'>afternoon</span>, we even <span class='highlight2'>fed</span> one of the alpacas. That was <span class='highlight3'>fun</span>, but kind of <span class='highlight4'>strange</span>. She kept <span class='highlight5'>licking</span> my <span class='highlight1'>hand</span>!",
+        "sentences": [
+          "In the <span class='highlight1'>afternoon</span>, we even <span class='highlight2'>fed</span> one of the alpacas.",
+          "That was <span class='highlight3'>fun</span>, but kind of <span class='highlight4'>strange</span>.",
+          "She kept <span class='highlight5'>licking</span> my <span class='highlight1'>hand</span>!"
+        ],
+        "translation": "🌐 下午，我們甚至餵了一隻羊駝。那很有趣，但有點奇怪。牠一直舔我的手！",
+        "translation_sentences": [
+          "🌐 下午，我們甚至餵了一隻羊駝。",
+          "那很有趣，但有點奇怪。",
+          "牠一直舔我的手！"
+        ],
+        "implication": {
+          "english": "💡 The writer shares a personal and slightly amusing experience, making the post more engaging.",
+          "chinese": "💡 作者分享了一個個人且有點好笑的經歷，讓貼文更有趣。[換句話說]：餵羊駝很好玩，但牠一直舔我的手，感覺有點怪怪的。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "petting zoo", "meaning": "n. 寵物動物園", "highlightClass": "highlight4" },
+    { "id": 2, "word": "animals", "meaning": "n. 動物", "highlightClass": "highlight1" },
+    { "id": 3, "word": "Mum", "meaning": "n. 媽媽", "highlightClass": "highlight2" },
+    { "id": 4, "word": "Butterfly Valley", "meaning": "n. 蝴蝶谷", "highlightClass": "highlight1" },
+    { "id": 5, "word": "Sunday", "meaning": "n. 星期天", "highlightClass": "highlight3" },
+    { "id": 6, "word": "right when it opened", "meaning": "phr. 一開門就", "highlightClass": "highlight5" },
+    { "id": 7, "word": "avoid", "meaning": "v. 避免", "highlightClass": "highlight1" },
+    { "id": 8, "word": "crowds", "meaning": "n. 人群", "highlightClass": "highlight5" },
+    { "id": 9, "word": "stayed", "meaning": "v. 停留", "highlightClass": "highlight2" },
+    { "id": 10, "word": "rabbits", "meaning": "n. 兔子", "highlightClass": "highlight3" },
+    { "id": 11, "word": "goats", "meaning": "n. 山羊", "highlightClass": "highlight4" },
+    { "id": 12, "word": "alpacas", "meaning": "n. 羊駝", "highlightClass": "highlight2" },
+    { "id": 13, "word": "farm", "meaning": "n. 農場", "highlightClass": "highlight5" },
+    { "id": 14, "word": "cute", "meaning": "adj. 可愛的", "highlightClass": "highlight1" },
+    { "id": 15, "word": "medium-sized", "meaning": "adj. 中等大小的", "highlightClass": "highlight2" },
+    { "id": 16, "word": "thick", "meaning": "adj. 厚的", "highlightClass": "highlight4" },
+    { "id": 17, "word": "soft", "meaning": "adj. 柔軟的", "highlightClass": "highlight5" },
+    { "id": 18, "word": "fur", "meaning": "n. 毛皮", "highlightClass": "highlight1" },
+    { "id": 19, "word": "big", "meaning": "adj. 大的", "highlightClass": "highlight2" },
+    { "id": 20, "word": "brother", "meaning": "n. 兄弟", "highlightClass": "highlight3" },
+    { "id": 21, "word": "tall enough", "meaning": "phr. 夠高", "highlightClass": "highlight4" },
+    { "id": 22, "word": "pet", "meaning": "v. 撫摸", "highlightClass": "highlight5" },
+    { "id": 23, "word": "afternoon", "meaning": "n. 下午", "highlightClass": "highlight1" },
+    { "id": 24, "word": "fed", "meaning": "v. 餵食", "highlightClass": "highlight2" },
+    { "id": 25, "word": "fun", "meaning": "adj. 有趣的", "highlightClass": "highlight3" },
+    { "id": 26, "word": "strange", "meaning": "adj. 奇怪的", "highlightClass": "highlight4" },
+    { "id": 27, "word": "licking", "meaning": "v. 舔", "highlightClass": "highlight5" },
+    { "id": 28, "word": "hand", "meaning": "n. 手", "highlightClass": "highlight1" }
+  ],
+    "audio": {
+    "sentencePattern": "/audio/unit4_1/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_1/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_1/word_{id}.mp3"
+  }
+}

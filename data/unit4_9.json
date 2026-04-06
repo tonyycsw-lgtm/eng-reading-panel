@@ -1,0 +1,93 @@
+{
+  "unitId": "unit4_9",
+  "unitName": "獸醫訪談筆記 | Notes on interview with a vet",
+  "article": {
+    "title": "<strong>Notes on interview with a vet</strong>\n<strong>獸醫訪談筆記</strong>",
+    "illustration": "/images/unit4_9.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "<span class='highlight1'>Daily</span> <span class='highlight5'>care</span> for <span class='highlight1'>mongrels</span>: <span class='highlight2'>Feed</span> the dogs <span class='highlight3'>at least</span> <span class='highlight4'>twice</span> a day (<span class='highlight5'>morning</span> and <span class='highlight1'>evening</span>). Always <span class='highlight2'>bring</span> <span class='highlight3'>water</span> and a <span class='highlight4'>leash</span> with you when going on <span class='highlight5'>walks</span>. <span class='highlight1'>Exercise</span> them twice a day for 30 <span class='highlight2'>minutes</span> each time. <span class='highlight3'>Prevent</span> <span class='highlight4'>fleas</span> and <span class='highlight5'>ticks</span> using <span class='highlight1'>special</span> <span class='highlight2'>sprays</span> or <span class='highlight3'>collars</span>.",
+        "sentences": [
+          "<span class='highlight1'>Daily</span> <span class='highlight5'>care</span> for <span class='highlight1'>mongrels</span>: <span class='highlight2'>Feed</span> the dogs <span class='highlight3'>at least</span> <span class='highlight4'>twice</span> a day (<span class='highlight5'>morning</span> and <span class='highlight1'>evening</span>).",
+          "Always <span class='highlight2'>bring</span> <span class='highlight3'>water</span> and a <span class='highlight4'>leash</span> with you when going on <span class='highlight5'>walks</span>.",
+          "<span class='highlight1'>Exercise</span> them twice a day for 30 <span class='highlight2'>minutes</span> each time.",
+          "<span class='highlight3'>Prevent</span> <span class='highlight4'>fleas</span> and <span class='highlight5'>ticks</span> using <span class='highlight1'>special</span> <span class='highlight2'>sprays</span> or <span class='highlight3'>collars</span>."
+        ],
+        "translation": "🌐 日常照顧：每天至少餵狗兩次（早上和晚上）。散步時一定要帶水和牽繩。每天運動兩次，每次30分鐘。使用特殊噴劑或項圈預防跳蚤和壁蝨。",
+        "translation_sentences": [
+          "🌐 日常照顧：每天至少餵狗兩次（早上和晚上）。",
+          "散步時一定要帶水和牽繩。",
+          "每天運動兩次，每次30分鐘。",
+          "使用特殊噴劑或項圈預防跳蚤和壁蝨。"
+        ],
+        "implication": {
+          "english": "💡 Daily care covers feeding, exercise, and parasite prevention, which are essential for a mongrel's health.",
+          "chinese": "💡 日常照顧涵蓋餵食、運動和防蟲，這些都是維持雜種犬健康的基礎。[換句話說]：照顧雜種犬其實不難，只要定時餵食、散步、做好防蟲就行了。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "<span class='highlight4'>Special</span> care for <span class='highlight5'>street</span> mongrels: Mongrels living on the street can have <span class='highlight1'>health</span> <span class='highlight2'>issues</span>. Always bring them to the vet for a <span class='highlight3'>check-up</span> first. These dogs are often <span class='highlight4'>scared</span> and <span class='highlight5'>shy</span> of humans. We need to be <span class='highlight1'>patient</span> and <span class='highlight2'>kind</span> with them. These dogs need <span class='highlight3'>extra</span> <span class='highlight4'>love</span> and care to feel <span class='highlight5'>safe</span>.",
+        "sentences": [
+          "<span class='highlight4'>Special</span> care for <span class='highlight5'>street</span> mongrels: Mongrels living on the street can have <span class='highlight1'>health</span> <span class='highlight2'>issues</span>.",
+          "Always bring them to the vet for a <span class='highlight3'>check-up</span> first.",
+          "These dogs are often <span class='highlight4'>scared</span> and <span class='highlight5'>shy</span> of humans.",
+          "We need to be <span class='highlight1'>patient</span> and <span class='highlight2'>kind</span> with them.",
+          "These dogs need <span class='highlight3'>extra</span> <span class='highlight4'>love</span> and care to feel <span class='highlight5'>safe</span>."
+        ],
+        "translation": "🌐 街頭雜種犬的特殊照顧：生活在街頭的雜種犬可能有健康問題。務必先帶牠們去看獸醫做檢查。這些狗通常害怕人類，對人害羞。我們需要對牠們有耐心和愛心。這些狗需要額外的愛和照顧才能感到安全。",
+        "translation_sentences": [
+          "🌐 街頭雜種犬的特殊照顧：生活在街頭的雜種犬可能有健康問題。",
+          "務必先帶牠們去看獸醫做檢查。",
+          "這些狗通常害怕人類，對人害羞。",
+          "我們需要對牠們有耐心和愛心。",
+          "這些狗需要額外的愛和照顧才能感到安全。"
+        ],
+        "implication": {
+          "english": "💡 Street mongrels may have health problems and fear humans, so they need extra patience, kindness, and veterinary care to feel safe.",
+          "chinese": "💡 街頭的流浪狗可能受過創傷，需要更多耐心和關懷，幫助牠們適應新家。[換句話說]：從街頭救回來的狗狗通常比較膽小，要慢慢讓牠們信任你，給牠們很多愛。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "Daily", "meaning": "adj. 日常的", "highlightClass": "highlight1" },
+    { "id": 2, "word": "care", "meaning": "n. 照顧", "highlightClass": "highlight5" },
+    { "id": 3, "word": "mongrels", "meaning": "n. 雜種狗", "highlightClass": "highlight1" },
+    { "id": 4, "word": "Feed", "meaning": "v. 餵食", "highlightClass": "highlight2" },
+    { "id": 5, "word": "at least", "meaning": "phr. 至少", "highlightClass": "highlight3" },
+    { "id": 6, "word": "twice", "meaning": "adv. 兩次", "highlightClass": "highlight4" },
+    { "id": 7, "word": "morning", "meaning": "n. 早上", "highlightClass": "highlight5" },
+    { "id": 8, "word": "evening", "meaning": "n. 晚上", "highlightClass": "highlight1" },
+    { "id": 9, "word": "bring", "meaning": "v. 攜帶", "highlightClass": "highlight2" },
+    { "id": 10, "word": "water", "meaning": "n. 水", "highlightClass": "highlight3" },
+    { "id": 11, "word": "leash", "meaning": "n. 牽繩", "highlightClass": "highlight4" },
+    { "id": 12, "word": "walks", "meaning": "n. 散步", "highlightClass": "highlight5" },
+    { "id": 13, "word": "Exercise", "meaning": "v. 運動", "highlightClass": "highlight1" },
+    { "id": 14, "word": "minutes", "meaning": "n. 分鐘", "highlightClass": "highlight2" },
+    { "id": 15, "word": "Prevent", "meaning": "v. 預防", "highlightClass": "highlight3" },
+    { "id": 16, "word": "fleas", "meaning": "n. 跳蚤", "highlightClass": "highlight4" },
+    { "id": 17, "word": "ticks", "meaning": "n. 壁蝨", "highlightClass": "highlight5" },
+    { "id": 18, "word": "special", "meaning": "adj. 特殊的", "highlightClass": "highlight1" },
+    { "id": 19, "word": "sprays", "meaning": "n. 噴劑", "highlightClass": "highlight2" },
+    { "id": 20, "word": "collars", "meaning": "n. 項圈", "highlightClass": "highlight3" },
+    { "id": 21, "word": "Special", "meaning": "adj. 特別的", "highlightClass": "highlight4" },
+    { "id": 22, "word": "street", "meaning": "n. 街頭", "highlightClass": "highlight5" },
+    { "id": 23, "word": "health", "meaning": "n. 健康", "highlightClass": "highlight1" },
+    { "id": 24, "word": "issues", "meaning": "n. 問題", "highlightClass": "highlight2" },
+    { "id": 25, "word": "check-up", "meaning": "n. 檢查", "highlightClass": "highlight3" },
+    { "id": 26, "word": "scared", "meaning": "adj. 害怕的", "highlightClass": "highlight4" },
+    { "id": 27, "word": "shy", "meaning": "adj. 害羞的", "highlightClass": "highlight5" },
+    { "id": 28, "word": "patient", "meaning": "adj. 耐心的", "highlightClass": "highlight1" },
+    { "id": 29, "word": "kind", "meaning": "adj. 友善的", "highlightClass": "highlight2" },
+    { "id": 30, "word": "extra", "meaning": "adj. 額外的", "highlightClass": "highlight3" },
+    { "id": 31, "word": "love", "meaning": "n. 愛", "highlightClass": "highlight4" },
+    { "id": 32, "word": "safe", "meaning": "adj. 安全的", "highlightClass": "highlight5" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_9/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_9/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_9/word_{id}.mp3"
+  }
+}

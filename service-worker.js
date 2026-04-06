@@ -40,6 +40,12 @@ self.addEventListener('fetch', event => {
   
   const url = new URL(event.request.url);
   
+  // 🔥 新增：忽略帶有查詢參數的請求（如 ?unit=xxx）
+  if (url.search && url.search !== '') {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+  
   // 登入/登出頁面特殊處理：永遠網路優先
   if (url.pathname.includes('/login.html') || url.pathname.includes('/logout.html')) {
     event.respondWith(fetch(event.request));

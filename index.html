@@ -1149,7 +1149,22 @@ onAuthStateChanged(auth, async (user) => {
         localStorage.setItem('userUID', user.uid);
         localStorage.setItem('userEmail', user.email || '');
         localStorage.setItem('userName', displayName);
+        // 🔥 新增：儲存角色資訊
         localStorage.setItem('userRole', currentUserData?.role || 'user');
+        
+        // 🔥 新增：儲存完整用戶資料供傳統腳本使用
+        localStorage.setItem('userData', JSON.stringify({
+          uid: user.uid,
+          email: user.email,
+          displayName: displayName,
+          role: currentUserData?.role || 'user',
+          grade: currentUserData?.grade || '',
+          publishers: currentUserData?.publishers || [],
+          trialEndAt: currentUserData?.trialEndAt || null,
+          isGuest: user.isAnonymous || false,
+          isDisabled: currentUserData?.isDisabled || false,
+          lastLoginAt: currentUserData?.lastLoginAt || new Date().toISOString()
+        }));
       })
       .catch(error => {
         console.error('❌ 獲取 Token 失敗:', error);
@@ -2481,7 +2496,33 @@ onAuthStateChanged(auth, async (user) => {
     // ============================================
     // 用戶權限過濾函數
     // ============================================
-    function filterUnitsByUser(units) {
+    
+    // ============================================
+    // 用戶狀態（從 localStorage 同步到傳統腳本）
+    // ============================================
+    let isGuestMode = false;
+    let currentUserData = null;
+
+    function syncUserState() {
+      try {
+        const userDataStr = localStorage.getItem('userData');
+        if (userDataStr) {
+          const userData = JSON.parse(userDataStr);
+          isGuestMode = userData.isGuest === true;
+          currentUserData = userData;
+          console.log('🔄 同步用戶狀態:', { isGuestMode, role: userData.role, grade: userData.grade });
+        }
+      } catch(e) {
+        console.error('同步用戶狀態失敗:', e);
+      }
+    }
+    
+    // 立即同步
+    syncUserState();
+    // 每 3 秒同步一次（確保狀態更新）
+    setInterval(syncUserState, 3000);
+
+  function filterUnitsByUser(units) {
       // 管理員：顯示所有單元
       if (!isGuestMode && currentUserData?.role === 'admin') {
         console.log('👑 管理員模式：顯示所有教材，共', units.length, '個');

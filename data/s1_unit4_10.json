@@ -1,0 +1,154 @@
+{
+  "unitId": "s1_unit4_10",
+  "unitName": "領養中心的新朋友 | A New Friend at the Adoption Centre",
+  "article": {
+    "title": "<strong>A New Friend at the Adoption Centre</strong>\n<strong>領養中心的新朋友</strong>",
+    "illustration": "/images/unit4_10.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "Lily was a <span class='highlight1'>shy</span> and <span class='highlight2'>lonely</span> <span class='highlight3'>girl</span>. She just <span class='highlight4'>moved</span> to a new school and could not make any <span class='highlight5'>friends</span>. Her <span class='highlight1'>parents</span> were <span class='highlight2'>worried</span> about her, so they <span class='highlight3'>decided</span> to take her to an animal <span class='highlight4'>adoption</span> <span class='highlight5'>centre</span> one <span class='highlight1'>Saturday</span> <span class='highlight2'>morning</span>.",
+        "sentences": [
+          "Lily was a <span class='highlight1'>shy</span> and <span class='highlight2'>lonely</span> <span class='highlight3'>girl</span>.",
+          "She just <span class='highlight4'>moved</span> to a new school and could not make any <span class='highlight5'>friends</span>.",
+          "Her <span class='highlight1'>parents</span> were <span class='highlight2'>worried</span> about her, so they <span class='highlight3'>decided</span> to take her to an animal <span class='highlight4'>adoption</span> <span class='highlight5'>centre</span> one <span class='highlight1'>Saturday</span> <span class='highlight2'>morning</span>."
+        ],
+        "translation": "🌐 莉莉是個害羞又孤單的女孩。她剛搬到一所新學校，交不到任何朋友。她的父母很擔心她，所以決定一個星期六早上帶她去動物領養中心。",
+        "translation_sentences": [
+          "🌐 莉莉是個害羞又孤單的女孩。",
+          "她剛搬到一所新學校，交不到任何朋友。",
+          "她的父母很擔心她，所以決定一個星期六早上帶她去動物領養中心。"
+        ],
+        "implication": {
+          "english": "💡 The story sets up Lily's problem: she is lonely after moving, and her parents try to help by visiting an adoption centre.",
+          "chinese": "💡 故事設定莉莉的問題：搬家後感到孤單，父母試圖透過參觀領養中心來幫助她。[換句話說]：莉莉剛轉學沒朋友，爸媽看她悶悶不樂，就帶她去領養中心走走。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "When they <span class='highlight3'>arrived</span> at the centre, Lily saw a small <span class='highlight4'>brown</span> <span class='highlight5'>mongrel</span> dog in a <span class='highlight1'>cage</span>. The dog looked <span class='highlight2'>scared</span> and <span class='highlight3'>sad</span>, just like Lily <span class='highlight4'>felt</span>. Lily walked to the cage and <span class='highlight5'>gently</span> <span class='highlight1'>touched</span> the dog's <span class='highlight2'>head</span>. The dog <span class='highlight3'>licked</span> her hand <span class='highlight4'>softly</span> and <span class='highlight5'>wagged</span> its short <span class='highlight1'>tail</span>. Lily's <span class='highlight2'>heart</span> felt <span class='highlight3'>warm</span> at that <span class='highlight4'>moment</span>.",
+        "sentences": [
+          "When they <span class='highlight3'>arrived</span> at the centre, Lily saw a small <span class='highlight4'>brown</span> <span class='highlight5'>mongrel</span> dog in a <span class='highlight1'>cage</span>.",
+          "The dog looked <span class='highlight2'>scared</span> and <span class='highlight3'>sad</span>, just like Lily <span class='highlight4'>felt</span>.",
+          "Lily walked to the cage and <span class='highlight5'>gently</span> <span class='highlight1'>touched</span> the dog's <span class='highlight2'>head</span>.",
+          "The dog <span class='highlight3'>licked</span> her hand <span class='highlight4'>softly</span> and <span class='highlight5'>wagged</span> its short <span class='highlight1'>tail</span>.",
+          "Lily's <span class='highlight2'>heart</span> felt <span class='highlight3'>warm</span> at that <span class='highlight4'>moment</span>."
+        ],
+        "translation": "🌐 當他們抵達中心時，莉莉看到一隻棕色的小米克斯狗關在籠子裡。狗看起來害怕又悲傷，就像莉莉的感覺一樣。莉莉走到籠子前，輕輕摸了摸狗的頭。狗輕輕舔了她的手，搖著短短的尾巴。那一刻，莉莉的心感到溫暖。",
+        "translation_sentences": [
+          "🌐 當他們抵達中心時，莉莉看到一隻棕色的小米克斯狗關在籠子裡。",
+          "狗看起來害怕又悲傷，就像莉莉的感覺一樣。",
+          "莉莉走到籠子前，輕輕摸了摸狗的頭。",
+          "狗輕輕舔了她的手，搖著短短的尾巴。",
+          "那一刻，莉莉的心感到溫暖。"
+        ],
+        "implication": {
+          "english": "💡 Lily feels an immediate connection with the scared dog; their emotions mirror each other.",
+          "chinese": "💡 莉莉和那隻害怕的狗立刻產生了連結；他們的情感互相映照。[換句話說]：莉莉看到那隻狗好像看到自己，都一樣孤單害怕，忍不住伸手摸摸牠，沒想到狗也溫柔回應。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "She asked her parents if they could <span class='highlight5'>adopt</span> the dog, and they said yes! Lily <span class='highlight1'>named</span> the dog Lucky. At home, Lucky <span class='highlight2'>stayed</span> with Lily every day. She <span class='highlight3'>talked</span> to Lucky about her school life, and Lucky would <span class='highlight4'>listen</span> <span class='highlight5'>quietly</span> and <span class='highlight1'>nuzzle</span> her hand.",
+        "sentences": [
+          "She asked her parents if they could <span class='highlight5'>adopt</span> the dog, and they said yes!",
+          "Lily <span class='highlight1'>named</span> the dog Lucky.",
+          "At home, Lucky <span class='highlight2'>stayed</span> with Lily every day.",
+          "She <span class='highlight3'>talked</span> to Lucky about her school life, and Lucky would <span class='highlight4'>listen</span> <span class='highlight5'>quietly</span> and <span class='highlight1'>nuzzle</span> her hand."
+        ],
+        "translation": "🌐 她問父母能不能領養這隻狗，他們說好！莉莉給狗取名為樂奇。在家裡，樂奇每天都陪著莉莉。她跟樂奇聊學校生活，樂奇會靜靜地聽，然後用鼻子蹭她的手。",
+        "translation_sentences": [
+          "🌐 她問父母能不能領養這隻狗，他們說好！",
+          "莉莉給狗取名為樂奇。",
+          "在家裡，樂奇每天都陪著莉莉。",
+          "她跟樂奇聊學校生活，樂奇會靜靜地聽，然後用鼻子蹭她的手。"
+        ],
+        "implication": {
+          "english": "💡 Lucky becomes Lily's constant companion and confidant, showing the bond forming.",
+          "chinese": "💡 樂奇成為莉莉的忠實夥伴和傾聽者，顯示他們之間建立了連結。[換句話說]：莉莉每天跟樂奇講心事，樂奇總是安靜聽著，好像真的懂她在說什麼。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "<span class='highlight2'>Weeks</span> later, Lily brought Lucky to the <span class='highlight3'>park</span> near her school. Her <span class='highlight4'>classmates</span> saw the <span class='highlight5'>cute</span> dog and came to <span class='highlight1'>talk</span> to her. They all <span class='highlight2'>loved</span> Lucky and wanted to <span class='highlight3'>play</span> with him. Lily made many new <span class='highlight4'>friends</span> because of Lucky. She was no <span class='highlight5'>longer</span> shy or lonely. Lucky was not just a <span class='highlight1'>pet</span> for Lily—he was her best <span class='highlight2'>friend</span>, and he brought <span class='highlight3'>happiness</span> and <span class='highlight4'>friendship</span> to her <span class='highlight5'>life</span>.",
+        "sentences": [
+          "<span class='highlight2'>Weeks</span> later, Lily brought Lucky to the <span class='highlight3'>park</span> near her school.",
+          "Her <span class='highlight4'>classmates</span> saw the <span class='highlight5'>cute</span> dog and came to <span class='highlight1'>talk</span> to her.",
+          "They all <span class='highlight2'>loved</span> Lucky and wanted to <span class='highlight3'>play</span> with him.",
+          "Lily made many new <span class='highlight4'>friends</span> because of Lucky.",
+          "She was no <span class='highlight5'>longer</span> shy or lonely.",
+          "Lucky was not just a <span class='highlight1'>pet</span> for Lily—he was her best <span class='highlight2'>friend</span>, and he brought <span class='highlight3'>happiness</span> and <span class='highlight4'>friendship</span> to her <span class='highlight5'>life</span>."
+        ],
+        "translation": "🌐 幾週後，莉莉帶樂奇去學校附近的公園。她的同學看到這隻可愛的狗，都來跟她說話。他們都很喜歡樂奇，想和他玩。因為樂奇，莉莉交到了許多新朋友。她不再害羞或孤單。樂奇不只是莉莉的寵物，他是她最好的朋友，他為她的生活帶來了快樂和友誼。",
+        "translation_sentences": [
+          "🌐 幾週後，莉莉帶樂奇去學校附近的公園。",
+          "她的同學看到這隻可愛的狗，都來跟她說話。",
+          "他們都很喜歡樂奇，想和他玩。",
+          "因為樂奇，莉莉交到了許多新朋友。",
+          "她不再害羞或孤單。",
+          "樂奇不只是莉莉的寵物，他是她最好的朋友，他為她的生活帶來了快樂和友誼。"
+        ],
+        "implication": {
+          "english": "💡 Lucky helps Lily connect with classmates, transforming her social life and emotional state.",
+          "chinese": "💡 樂奇幫助莉莉與同學建立連結，改變了她的社交生活和情感狀態。[換句話說]：因為樂奇，莉莉終於交到朋友了，不再覺得孤單，樂奇真的改變了她的人生。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "shy", "meaning": "adj. 害羞的", "highlightClass": "highlight1" },
+    { "id": 2, "word": "lonely", "meaning": "adj. 孤單的", "highlightClass": "highlight2" },
+    { "id": 3, "word": "girl", "meaning": "n. 女孩", "highlightClass": "highlight3" },
+    { "id": 4, "word": "moved", "meaning": "v. 搬家", "highlightClass": "highlight4" },
+    { "id": 5, "word": "friends", "meaning": "n. 朋友", "highlightClass": "highlight5" },
+    { "id": 6, "word": "parents", "meaning": "n. 父母", "highlightClass": "highlight1" },
+    { "id": 7, "word": "worried", "meaning": "adj. 擔心的", "highlightClass": "highlight2" },
+    { "id": 8, "word": "decided", "meaning": "v. 決定", "highlightClass": "highlight3" },
+    { "id": 9, "word": "adoption", "meaning": "n. 領養", "highlightClass": "highlight4" },
+    { "id": 10, "word": "centre", "meaning": "n. 中心", "highlightClass": "highlight5" },
+    { "id": 11, "word": "Saturday", "meaning": "n. 星期六", "highlightClass": "highlight1" },
+    { "id": 12, "word": "morning", "meaning": "n. 早上", "highlightClass": "highlight2" },
+    { "id": 13, "word": "arrived", "meaning": "v. 抵達", "highlightClass": "highlight3" },
+    { "id": 14, "word": "brown", "meaning": "adj. 棕色的", "highlightClass": "highlight4" },
+    { "id": 15, "word": "mongrel", "meaning": "n. 雜種狗", "highlightClass": "highlight5" },
+    { "id": 16, "word": "cage", "meaning": "n. 籠子", "highlightClass": "highlight1" },
+    { "id": 17, "word": "scared", "meaning": "adj. 害怕的", "highlightClass": "highlight2" },
+    { "id": 18, "word": "sad", "meaning": "adj. 悲傷的", "highlightClass": "highlight3" },
+    { "id": 19, "word": "felt", "meaning": "v. 感覺", "highlightClass": "highlight4" },
+    { "id": 20, "word": "gently", "meaning": "adv. 溫柔地", "highlightClass": "highlight5" },
+    { "id": 21, "word": "touched", "meaning": "v. 觸摸", "highlightClass": "highlight1" },
+    { "id": 22, "word": "head", "meaning": "n. 頭", "highlightClass": "highlight2" },
+    { "id": 23, "word": "licked", "meaning": "v. 舔", "highlightClass": "highlight3" },
+    { "id": 24, "word": "softly", "meaning": "adv. 輕輕地", "highlightClass": "highlight4" },
+    { "id": 25, "word": "wagged", "meaning": "v. 搖", "highlightClass": "highlight5" },
+    { "id": 26, "word": "tail", "meaning": "n. 尾巴", "highlightClass": "highlight1" },
+    { "id": 27, "word": "heart", "meaning": "n. 心", "highlightClass": "highlight2" },
+    { "id": 28, "word": "warm", "meaning": "adj. 溫暖的", "highlightClass": "highlight3" },
+    { "id": 29, "word": "moment", "meaning": "n. 時刻", "highlightClass": "highlight4" },
+    { "id": 30, "word": "adopt", "meaning": "v. 領養", "highlightClass": "highlight5" },
+    { "id": 31, "word": "named", "meaning": "v. 命名", "highlightClass": "highlight1" },
+    { "id": 32, "word": "stayed", "meaning": "v. 停留", "highlightClass": "highlight2" },
+    { "id": 33, "word": "talked", "meaning": "v. 說話", "highlightClass": "highlight3" },
+    { "id": 34, "word": "listen", "meaning": "v. 聽", "highlightClass": "highlight4" },
+    { "id": 35, "word": "quietly", "meaning": "adv. 安靜地", "highlightClass": "highlight5" },
+    { "id": 36, "word": "nuzzle", "meaning": "v. 用鼻子蹭", "highlightClass": "highlight1" },
+    { "id": 37, "word": "Weeks", "meaning": "n. 幾週", "highlightClass": "highlight2" },
+    { "id": 38, "word": "park", "meaning": "n. 公園", "highlightClass": "highlight3" },
+    { "id": 39, "word": "classmates", "meaning": "n. 同學", "highlightClass": "highlight4" },
+    { "id": 40, "word": "cute", "meaning": "adj. 可愛的", "highlightClass": "highlight5" },
+    { "id": 41, "word": "talk", "meaning": "v. 說話", "highlightClass": "highlight1" },
+    { "id": 42, "word": "loved", "meaning": "v. 喜愛", "highlightClass": "highlight2" },
+    { "id": 43, "word": "play", "meaning": "v. 玩耍", "highlightClass": "highlight3" },
+    { "id": 44, "word": "longer", "meaning": "adv. 再", "highlightClass": "highlight5" },
+    { "id": 45, "word": "pet", "meaning": "n. 寵物", "highlightClass": "highlight1" },
+    { "id": 46, "word": "friend", "meaning": "n. 朋友", "highlightClass": "highlight2" },
+    { "id": 47, "word": "happiness", "meaning": "n. 快樂", "highlightClass": "highlight3" },
+    { "id": 48, "word": "friendship", "meaning": "n. 友誼", "highlightClass": "highlight4" },
+    { "id": 49, "word": "life", "meaning": "n. 生活", "highlightClass": "highlight5" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_10/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_10/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_10/word_{id}.mp3"
+  }
+}

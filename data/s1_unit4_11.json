@@ -1,0 +1,156 @@
+{
+  "unitId": "s1_unit4_11",
+  "unitName": "亞當的郵件（關於我的寵物） | Email from Adam (About My Pets)",
+  "article": {
+    "title": "<strong>Email from Adam (About My Pets)</strong>\n<strong>亞當的郵件（關於我的寵物）</strong>",
+    "illustration": "/images/unit4_11.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "Hi, Our <span class='highlight1'>dog</span> Roger has <span class='highlight2'>soft</span> <span class='highlight3'>brown</span> <span class='highlight4'>fur</span>! Every <span class='highlight5'>time</span> someone <span class='highlight1'>pets</span> him, he <span class='highlight2'>wags</span> his <span class='highlight3'>tail</span>. But I don't <span class='highlight4'>think</span> he <span class='highlight5'>likes</span> Dad. He <span class='highlight1'>woofs</span> at him when he <span class='highlight2'>tries</span> to <span class='highlight3'>hug</span> him. We <span class='highlight4'>need</span> to <span class='highlight5'>exercise</span> Roger <span class='highlight1'>daily</span>, so we take <span class='highlight2'>turns</span> <span class='highlight3'>walking</span> him. We also <span class='highlight4'>brush</span> his fur to <span class='highlight5'>keep</span> it <span class='highlight1'>shiny</span> and <span class='highlight2'>fluffy</span>.",
+        "sentences": [
+          "Hi,",
+          "Our <span class='highlight1'>dog</span> Roger has <span class='highlight2'>soft</span> <span class='highlight3'>brown</span> <span class='highlight4'>fur</span>!",
+          "Every <span class='highlight5'>time</span> someone <span class='highlight1'>pets</span> him, he <span class='highlight2'>wags</span> his <span class='highlight3'>tail</span>.",
+          "But I don't <span class='highlight4'>think</span> he <span class='highlight5'>likes</span> Dad.",
+          "He <span class='highlight1'>woofs</span> at him when he <span class='highlight2'>tries</span> to <span class='highlight3'>hug</span> him.",
+          "We <span class='highlight4'>need</span> to <span class='highlight5'>exercise</span> Roger <span class='highlight1'>daily</span>, so we take <span class='highlight2'>turns</span> <span class='highlight3'>walking</span> him.",
+          "We also <span class='highlight4'>brush</span> his fur to <span class='highlight5'>keep</span> it <span class='highlight1'>shiny</span> and <span class='highlight2'>fluffy</span>."
+        ],
+        "translation": "🌐 嗨，我們的狗羅傑有柔軟的棕色毛！每次有人摸他，他就會搖尾巴。但我覺得他不喜歡爸爸。當爸爸想抱他的時候，他會對他吠叫。我們需要每天讓羅傑運動，所以我們輪流帶他散步。我們也會刷他的毛，讓它保持光亮蓬鬆。",
+        "translation_sentences": [
+          "🌐 嗨，",
+          "我們的狗羅傑有柔軟的棕色毛！",
+          "每次有人摸他，他就會搖尾巴。",
+          "但我覺得他不喜歡爸爸。",
+          "當爸爸想抱他的時候，他會對他吠叫。",
+          "我們需要每天讓羅傑運動，所以我們輪流帶他散步。",
+          "我們也會刷他的毛，讓它保持光亮蓬鬆。"
+        ],
+        "implication": {
+          "english": "💡 Adam describes his dog Roger's appearance, behavior, and the care he needs, highlighting Roger's dislike for Dad.",
+          "chinese": "💡 亞當描述他的狗羅傑的外貌、行為和需要的照顧，特別提到羅傑不喜歡爸爸。[換句話說]：羅傑雖然可愛，但好像跟爸爸不對盤，爸爸一抱牠就叫。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "We also have a <span class='highlight3'>parrot</span> <span class='highlight4'>named</span> Pat. She has <span class='highlight5'>beautiful</span> <span class='highlight1'>blue</span> <span class='highlight2'>feathers</span>. She has very <span class='highlight3'>sharp</span> <span class='highlight4'>claws</span>, so we need to <span class='highlight5'>trim</span> her <span class='highlight1'>nails</span>. Pat can be very <span class='highlight2'>noisy</span>. She can <span class='highlight3'>squawk</span> non-stop for most of the <span class='highlight4'>mornings</span>.",
+        "sentences": [
+          "We also have a <span class='highlight3'>parrot</span> <span class='highlight4'>named</span> Pat.",
+          "She has <span class='highlight5'>beautiful</span> <span class='highlight1'>blue</span> <span class='highlight2'>feathers</span>.",
+          "She has very <span class='highlight3'>sharp</span> <span class='highlight4'>claws</span>, so we need to <span class='highlight5'>trim</span> her <span class='highlight1'>nails</span>.",
+          "Pat can be very <span class='highlight2'>noisy</span>.",
+          "She can <span class='highlight3'>squawk</span> non-stop for most of the <span class='highlight4'>mornings</span>."
+        ],
+        "translation": "🌐 我們還有一隻叫帕特的鸚鵡。她有漂亮的藍色羽毛。她的爪子很尖，所以我們需要幫她剪指甲。帕特可能很吵。她可以在早上大部分時間不停地尖叫。",
+        "translation_sentences": [
+          "🌐 我們還有一隻叫帕特的鸚鵡。",
+          "她有漂亮的藍色羽毛。",
+          "她的爪子很尖，所以我們需要幫她剪指甲。",
+          "帕特可能很吵。",
+          "她可以在早上大部分時間不停地尖叫。"
+        ],
+        "implication": {
+          "english": "💡 Adam introduces his parrot Pat, describing her appearance, the need for nail trimming, and her noisy behavior.",
+          "chinese": "💡 亞當介紹他的鸚鵡帕特，描述她的外觀、需要剪指甲和她吵鬧的行為。[換句話說]：帕特很漂亮但是很吵，早上都會一直叫個不停。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "Henry is our <span class='highlight5'>hamster</span>. We don't <span class='highlight1'>let</span> him out of his <span class='highlight2'>cage</span> because he is too <span class='highlight3'>small</span>. We won't be <span class='highlight4'>able</span> to <span class='highlight5'>find</span> him! <span class='highlight1'>Sometimes</span>, he <span class='highlight2'>squeaks</span> when he <span class='highlight3'>wants</span> <span class='highlight4'>food</span>. But we try not to <span class='highlight5'>give</span> him too many <span class='highlight1'>treats</span>. He has the <span class='highlight2'>cutest</span> <span class='highlight3'>whiskers</span> on his <span class='highlight4'>face</span>!",
+        "sentences": [
+          "Henry is our <span class='highlight5'>hamster</span>.",
+          "We don't <span class='highlight1'>let</span> him out of his <span class='highlight2'>cage</span> because he is too <span class='highlight3'>small</span>.",
+          "We won't be <span class='highlight4'>able</span> to <span class='highlight5'>find</span> him!",
+          "<span class='highlight1'>Sometimes</span>, he <span class='highlight2'>squeaks</span> when he <span class='highlight3'>wants</span> <span class='highlight4'>food</span>.",
+          "But we try not to <span class='highlight5'>give</span> him too many <span class='highlight1'>treats</span>.",
+          "He has the <span class='highlight2'>cutest</span> <span class='highlight3'>whiskers</span> on his <span class='highlight4'>face</span>!"
+        ],
+        "translation": "🌐 亨利是我們的倉鼠。我們不讓他出籠子，因為他太小了。我們會找不到他！有時候，當他想要食物的時候，他會吱吱叫。但我們盡量不給他太多零食。他的臉上有最可愛的鬍鬚！",
+        "translation_sentences": [
+          "🌐 亨利是我們的倉鼠。",
+          "我們不讓他出籠子，因為他太小了。",
+          "我們會找不到他！",
+          "有時候，當他想要食物的時候，他會吱吱叫。",
+          "但我們盡量不給他太多零食。",
+          "他的臉上有最可愛的鬍鬚！"
+        ],
+        "implication": {
+          "english": "💡 Adam talks about his hamster Henry, explaining why he stays in his cage, his squeaking for food, and his cute whiskers.",
+          "chinese": "💡 亞當談到他的倉鼠亨利，解釋他為什麼待在籠子裡、要食物時的叫聲和他可愛的鬍鬚。[換句話說]：亨利太小了不敢放出來，不然會找不到，餓了會吱吱叫，鬍鬚超可愛。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "Talk soon, Adam",
+        "sentences": [
+          "Talk soon, Adam"
+        ],
+        "translation": "🌐 再聊，亞當",
+        "translation_sentences": [
+          "🌐 再聊，亞當"
+        ],
+        "implication": {
+          "english": "💡 The email ends with a friendly closing.",
+          "chinese": "💡 郵件以友好的結尾結束。[換句話說]：亞當的郵件到此結束。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "dog", "meaning": "n. 狗", "highlightClass": "highlight1" },
+    { "id": 2, "word": "soft", "meaning": "adj. 柔軟的", "highlightClass": "highlight2" },
+    { "id": 3, "word": "brown", "meaning": "adj. 棕色的", "highlightClass": "highlight3" },
+    { "id": 4, "word": "fur", "meaning": "n. 毛皮", "highlightClass": "highlight4" },
+    { "id": 5, "word": "time", "meaning": "n. 次數", "highlightClass": "highlight5" },
+    { "id": 6, "word": "pets", "meaning": "v. 撫摸", "highlightClass": "highlight1" },
+    { "id": 7, "word": "wags", "meaning": "v. 搖", "highlightClass": "highlight2" },
+    { "id": 8, "word": "tail", "meaning": "n. 尾巴", "highlightClass": "highlight3" },
+    { "id": 9, "word": "think", "meaning": "v. 認為", "highlightClass": "highlight4" },
+    { "id": 10, "word": "likes", "meaning": "v. 喜歡", "highlightClass": "highlight5" },
+    { "id": 11, "word": "woofs", "meaning": "v. 吠叫", "highlightClass": "highlight1" },
+    { "id": 12, "word": "tries", "meaning": "v. 嘗試", "highlightClass": "highlight2" },
+    { "id": 13, "word": "hug", "meaning": "v. 擁抱", "highlightClass": "highlight3" },
+    { "id": 14, "word": "need", "meaning": "v. 需要", "highlightClass": "highlight4" },
+    { "id": 15, "word": "exercise", "meaning": "v. 運動", "highlightClass": "highlight5" },
+    { "id": 16, "word": "daily", "meaning": "adv. 每天", "highlightClass": "highlight1" },
+    { "id": 17, "word": "turns", "meaning": "n. 輪流", "highlightClass": "highlight2" },
+    { "id": 18, "word": "walking", "meaning": "v. 散步", "highlightClass": "highlight3" },
+    { "id": 19, "word": "brush", "meaning": "v. 刷", "highlightClass": "highlight4" },
+    { "id": 20, "word": "keep", "meaning": "v. 保持", "highlightClass": "highlight5" },
+    { "id": 21, "word": "shiny", "meaning": "adj. 光亮的", "highlightClass": "highlight1" },
+    { "id": 22, "word": "fluffy", "meaning": "adj. 蓬鬆的", "highlightClass": "highlight2" },
+    { "id": 23, "word": "parrot", "meaning": "n. 鸚鵡", "highlightClass": "highlight3" },
+    { "id": 24, "word": "named", "meaning": "v. 名叫", "highlightClass": "highlight4" },
+    { "id": 25, "word": "beautiful", "meaning": "adj. 美麗的", "highlightClass": "highlight5" },
+    { "id": 26, "word": "blue", "meaning": "adj. 藍色的", "highlightClass": "highlight1" },
+    { "id": 27, "word": "feathers", "meaning": "n. 羽毛", "highlightClass": "highlight2" },
+    { "id": 28, "word": "sharp", "meaning": "adj. 尖銳的", "highlightClass": "highlight3" },
+    { "id": 29, "word": "claws", "meaning": "n. 爪子", "highlightClass": "highlight4" },
+    { "id": 30, "word": "trim", "meaning": "v. 修剪", "highlightClass": "highlight5" },
+    { "id": 31, "word": "nails", "meaning": "n. 指甲", "highlightClass": "highlight1" },
+    { "id": 32, "word": "noisy", "meaning": "adj. 吵鬧的", "highlightClass": "highlight2" },
+    { "id": 33, "word": "squawk", "meaning": "v. 尖叫", "highlightClass": "highlight3" },
+    { "id": 34, "word": "mornings", "meaning": "n. 早上", "highlightClass": "highlight4" },
+    { "id": 35, "word": "hamster", "meaning": "n. 倉鼠", "highlightClass": "highlight5" },
+    { "id": 36, "word": "let", "meaning": "v. 讓", "highlightClass": "highlight1" },
+    { "id": 37, "word": "cage", "meaning": "n. 籠子", "highlightClass": "highlight2" },
+    { "id": 38, "word": "small", "meaning": "adj. 小的", "highlightClass": "highlight3" },
+    { "id": 39, "word": "able", "meaning": "adj. 能夠", "highlightClass": "highlight4" },
+    { "id": 40, "word": "find", "meaning": "v. 找到", "highlightClass": "highlight5" },
+    { "id": 41, "word": "Sometimes", "meaning": "adv. 有時", "highlightClass": "highlight1" },
+    { "id": 42, "word": "squeaks", "meaning": "v. 吱吱叫", "highlightClass": "highlight2" },
+    { "id": 43, "word": "wants", "meaning": "v. 想要", "highlightClass": "highlight3" },
+    { "id": 44, "word": "food", "meaning": "n. 食物", "highlightClass": "highlight4" },
+    { "id": 45, "word": "give", "meaning": "v. 給予", "highlightClass": "highlight5" },
+    { "id": 46, "word": "treats", "meaning": "n. 零食", "highlightClass": "highlight1" },
+    { "id": 47, "word": "cutest", "meaning": "adj. 最可愛的", "highlightClass": "highlight2" },
+    { "id": 48, "word": "whiskers", "meaning": "n. 鬍鬚", "highlightClass": "highlight3" },
+    { "id": 49, "word": "face", "meaning": "n. 臉", "highlightClass": "highlight4" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_11/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_11/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_11/word_{id}.mp3"
+  }
+}

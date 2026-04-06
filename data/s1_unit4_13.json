@@ -1,0 +1,140 @@
+{
+  "unitId": "s1_unit4_13",
+  "unitName": "說服父母領養寵物（部落格） | A blog entry (Asking parents to adopt a pet)",
+  "article": {
+    "title": "<strong>A blog entry (Asking parents to adopt a pet)</strong>\n<strong>說服父母領養寵物（部落格）</strong>",
+    "illustration": "/images/unit4_13.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "My <span class='highlight1'>parents</span> don't like <span class='highlight3'>animals</span>. But I've always <span class='highlight4'>wanted</span> a <span class='highlight5'>pet</span> because I feel <span class='highlight2'>lonely</span> at home as the <span class='highlight3'>only child</span>.",
+        "sentences": [
+          "My <span class='highlight1'>parents</span> don't like <span class='highlight3'>animals</span>.",
+          "But I've always <span class='highlight4'>wanted</span> a <span class='highlight5'>pet</span> because I feel <span class='highlight2'>lonely</span> at home as the <span class='highlight3'>only child</span>."
+        ],
+        "translation": "🌐 我的父母不喜歡動物。但我一直想要一個寵物，因為作為獨生子，我在家感到孤單。",
+        "translation_sentences": [
+          "🌐 我的父母不喜歡動物。",
+          "但我一直想要一個寵物，因為作為獨生子，我在家感到孤單。"
+        ],
+        "implication": {
+          "english": "💡 The blogger introduces the conflict: parents don't like animals, but the child feels lonely and wants a pet.",
+          "chinese": "💡 部落客介紹了衝突：父母不喜歡動物，但孩子感到孤單想要寵物。[換句話說]：我爸媽不喜歡動物，但我自己是獨生子，在家很無聊，一直很想養寵物。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "After reading an <span class='highlight5'>article</span> about a <span class='highlight1'>therapy dog</span> and how it <span class='highlight2'>helped</span> <span class='highlight3'>teens</span> like me feel <span class='highlight4'>happier</span>, I <span class='highlight5'>decided</span> to talk to my parents about <span class='highlight2'>adopting</span> a dog!",
+        "sentences": [
+          "After reading an <span class='highlight5'>article</span> about a <span class='highlight1'>therapy dog</span> and how it <span class='highlight2'>helped</span> <span class='highlight3'>teens</span> like me feel <span class='highlight4'>happier</span>,",
+          "I <span class='highlight5'>decided</span> to talk to my parents about <span class='highlight2'>adopting</span> a dog!"
+        ],
+        "translation": "🌐 在讀了一篇關於治療犬的文章，了解牠如何幫助像我這樣的青少年更快樂之後，我決定和父母談談領養一隻狗的事！",
+        "translation_sentences": [
+          "🌐 在讀了一篇關於治療犬的文章，了解牠如何幫助像我這樣的青少年更快樂之後，",
+          "我決定和父母談談領養一隻狗的事！"
+        ],
+        "implication": {
+          "english": "💡 The article about therapy dogs inspires the blogger to talk to parents about adoption.",
+          "chinese": "💡 關於治療犬的文章啟發了部落客與父母談論領養的事。[換句話說]：我看到一篇報導說治療犬可以讓青少年更快樂，就決定用這個理由說服爸媽。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "I <span class='highlight3'>showed</span> them the article. They <span class='highlight4'>agreed</span> that the dog was a good <span class='highlight5'>solution</span> to help students at school. However, they said not all dogs are <span class='highlight1'>calm</span> and <span class='highlight2'>relaxed</span>. Some dogs may <span class='highlight3'>bark</span> or <span class='highlight4'>bite</span> you if you try to <span class='highlight5'>interact</span> with them.",
+        "sentences": [
+          "I <span class='highlight3'>showed</span> them the article.",
+          "They <span class='highlight4'>agreed</span> that the dog was a good <span class='highlight5'>solution</span> to help students at school.",
+          "However, they said not all dogs are <span class='highlight1'>calm</span> and <span class='highlight2'>relaxed</span>.",
+          "Some dogs may <span class='highlight3'>bark</span> or <span class='highlight4'>bite</span> you if you try to <span class='highlight5'>interact</span> with them."
+        ],
+        "translation": "🌐 我把文章給他們看。他們同意狗是幫助學生的好方法。但是，他們說不是所有的狗都冷靜放鬆。有些狗可能會對你吠叫或咬你，如果你試圖和牠們互動的話。",
+        "translation_sentences": [
+          "🌐 我把文章給他們看。",
+          "他們同意狗是幫助學生的好方法。",
+          "但是，他們說不是所有的狗都冷靜放鬆。",
+          "有些狗可能會對你吠叫或咬你，如果你試圖和牠們互動的話。"
+        ],
+        "implication": {
+          "english": "💡 Parents acknowledge the benefits but express concerns about dogs' unpredictable behavior.",
+          "chinese": "💡 父母承認好處，但表達對狗不可預測行為的擔憂。[換句話說]：爸媽看了文章也覺得狗對學生有幫助，但他們擔心不是每隻狗都溫馴，可能會咬人。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "I wasn't going to <span class='highlight1'>give up</span> so <span class='highlight2'>easily</span>. So, I showed them more articles about how dogs provided <span class='highlight3'>emotional</span> <span class='highlight4'>support</span> to their <span class='highlight5'>owners</span>. I told them how lonely I felt when they were <span class='highlight2'>busy</span> at work.",
+        "sentences": [
+          "I wasn't going to <span class='highlight1'>give up</span> so <span class='highlight2'>easily</span>.",
+          "So, I showed them more articles about how dogs provided <span class='highlight3'>emotional</span> <span class='highlight4'>support</span> to their <span class='highlight5'>owners</span>.",
+          "I told them how lonely I felt when they were <span class='highlight2'>busy</span> at work."
+        ],
+        "translation": "🌐 我不打算這麼輕易放棄。所以，我給他們看更多關於狗如何為主人提供情感支持的文章。我告訴他們，當他們忙於工作時，我感到多麼孤單。",
+        "translation_sentences": [
+          "🌐 我不打算這麼輕易放棄。",
+          "所以，我給他們看更多關於狗如何為主人提供情感支持的文章。",
+          "我告訴他們，當他們忙於工作時，我感到多麼孤單。"
+        ],
+        "implication": {
+          "english": "💡 The blogger persists, using more evidence and appealing to parents' emotions about the child's loneliness.",
+          "chinese": "💡 部落客堅持不懈，用更多證據和情感訴求來打動父母。[換句話說]：我沒那麼容易放棄，又找了很多文章給他們看，還說他們都不在家我很孤單。"
+        }
+      },
+      {
+        "id": 5,
+        "english": "They finally <span class='highlight4'>promised</span> to <span class='highlight5'>visit</span> an animal <span class='highlight1'>shelter</span> with me this <span class='highlight2'>weekend</span>! <span class='highlight3'>Wish</span> me luck!",
+        "sentences": [
+          "They finally <span class='highlight4'>promised</span> to <span class='highlight5'>visit</span> an animal <span class='highlight1'>shelter</span> with me this <span class='highlight2'>weekend</span>!",
+          "<span class='highlight3'>Wish</span> me luck!"
+        ],
+        "translation": "🌐 他們終於答應這週末和我一起去動物收容所！祝我好運吧！",
+        "translation_sentences": [
+          "🌐 他們終於答應這週末和我一起去動物收容所！",
+          "祝我好運吧！"
+        ],
+        "implication": {
+          "english": "💡 The blogger succeeds in persuading parents to visit a shelter, ending on a hopeful note.",
+          "chinese": "💡 部落客成功說服父母去收容所，以充滿希望的語句結束。[換句話說]：爸媽終於答應這週末帶我去收容所了，希望可以領養成功！"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "parents", "meaning": "n. 父母", "highlightClass": "highlight1" },
+    { "id": 2, "word": "animals", "meaning": "n. 動物", "highlightClass": "highlight3" },
+    { "id": 3, "word": "wanted", "meaning": "v. 想要", "highlightClass": "highlight4" },
+    { "id": 4, "word": "pet", "meaning": "n. 寵物", "highlightClass": "highlight5" },
+    { "id": 5, "word": "lonely", "meaning": "adj. 孤單的", "highlightClass": "highlight2" },
+    { "id": 6, "word": "only child", "meaning": "n. 獨生子", "highlightClass": "highlight3" },
+    { "id": 7, "word": "article", "meaning": "n. 文章", "highlightClass": "highlight5" },
+    { "id": 8, "word": "therapy dog", "meaning": "n. 治療犬", "highlightClass": "highlight1" },
+    { "id": 9, "word": "helped", "meaning": "v. 幫助", "highlightClass": "highlight2" },
+    { "id": 10, "word": "teens", "meaning": "n. 青少年", "highlightClass": "highlight3" },
+    { "id": 11, "word": "happier", "meaning": "adj. 更快樂", "highlightClass": "highlight4" },
+    { "id": 12, "word": "decided", "meaning": "v. 決定", "highlightClass": "highlight5" },
+    { "id": 13, "word": "adopting", "meaning": "v. 領養", "highlightClass": "highlight2" },
+    { "id": 14, "word": "showed", "meaning": "v. 展示", "highlightClass": "highlight3" },
+    { "id": 15, "word": "agreed", "meaning": "v. 同意", "highlightClass": "highlight4" },
+    { "id": 16, "word": "solution", "meaning": "n. 解決方案", "highlightClass": "highlight5" },
+    { "id": 17, "word": "calm", "meaning": "adj. 冷靜的", "highlightClass": "highlight1" },
+    { "id": 18, "word": "relaxed", "meaning": "adj. 放鬆的", "highlightClass": "highlight2" },
+    { "id": 19, "word": "bark", "meaning": "v. 吠叫", "highlightClass": "highlight3" },
+    { "id": 20, "word": "bite", "meaning": "v. 咬", "highlightClass": "highlight4" },
+    { "id": 21, "word": "interact", "meaning": "v. 互動", "highlightClass": "highlight5" },
+    { "id": 22, "word": "give up", "meaning": "phr. 放棄", "highlightClass": "highlight1" },
+    { "id": 23, "word": "easily", "meaning": "adv. 容易地", "highlightClass": "highlight2" },
+    { "id": 24, "word": "emotional", "meaning": "adj. 情感的", "highlightClass": "highlight3" },
+    { "id": 25, "word": "support", "meaning": "n. 支持", "highlightClass": "highlight4" },
+    { "id": 26, "word": "owners", "meaning": "n. 主人", "highlightClass": "highlight5" },
+    { "id": 27, "word": "busy", "meaning": "adj. 忙碌的", "highlightClass": "highlight2" },
+    { "id": 28, "word": "promised", "meaning": "v. 答應", "highlightClass": "highlight4" },
+    { "id": 29, "word": "visit", "meaning": "v. 參觀", "highlightClass": "highlight5" },
+    { "id": 30, "word": "shelter", "meaning": "n. 收容所", "highlightClass": "highlight1" },
+    { "id": 31, "word": "weekend", "meaning": "n. 週末", "highlightClass": "highlight2" },
+    { "id": 32, "word": "Wish", "meaning": "v. 祝願", "highlightClass": "highlight3" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_13/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_13/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_13/word_{id}.mp3"
+  }
+}

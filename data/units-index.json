@@ -1,114 +1,114 @@
 {
   "units": [
     {
-      "unitId": "s1_unit4_1_Open示範",
+      "unitId": "s1_unit4_1",
       "unitName": "Unit 4.1 – A memorable experience | 難忘的體驗",
-      "dataUrl": "./data/s1_unit4_1_Open示範.json",
+      "dataUrl": "./data/s1_unit4_1.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_2_Open示範",
+      "unitId": "s1_unit4_2",
       "unitName": "Unit 4.2 – A new furry friend | 新毛茸茸的朋友",
-      "dataUrl": "./data/s1_unit4_2_Open示範.json",
+      "dataUrl": "./data/s1_unit4_2.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_3_Open示範",
+      "unitId": "s1_unit4_3",
       "unitName": "Unit 4.3 – Tucker: an amazing therapy dog | 塔克：了不起的治療犬",
-      "dataUrl": "./data/s1_unit4_3_Open示範.json",
+      "dataUrl": "./data/s1_unit4_3.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_4_Open示範",
+      "unitId": "s1_unit4_4",
       "unitName": "Unit 4.4 – A tale of turtles | 烏龜的故事",
-      "dataUrl": "./data/s1_unit4_4_Open示範.json",
+      "dataUrl": "./data/s1_unit4_4.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_5_Open示範",
+      "unitId": "s1_unit4_5",
       "unitName": "Unit 4.5 – My pet hamster Harold | 我的寵物倉鼠哈羅德",
-      "dataUrl": "./data/s1_unit4_5_Open示範.json",
+      "dataUrl": "./data/s1_unit4_5.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_6_Open示範",
+      "unitId": "s1_unit4_6",
       "unitName": "Unit 4.6 – Dog saves the day! | 狗狗拯救危機",
-      "dataUrl": "./data/s1_unit4_6_Open示範.json",
+      "dataUrl": "./data/s1_unit4_6.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_7_Open示範",
+      "unitId": "s1_unit4_7",
       "unitName": "Unit 4.7 – A visit to Cool Cat Cafe | 走進酷貓咖啡廳",
-      "dataUrl": "./data/s1_unit4_7_Open示範.json",
+      "dataUrl": "./data/s1_unit4_7.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_8_Open示範",
+      "unitId": "s1_unit4_8",
       "unitName": "Unit 4.8 – Animals at our shelter | 收容所的寵物信息",
-      "dataUrl": "./data/s1_unit4_8_Open示範.json",
+      "dataUrl": "./data/s1_unit4_8.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_9_Open示範",
+      "unitId": "s1_unit4_9",
       "unitName": "Unit 4.9 – Caring for mongrels | 照護雜交犬",
-      "dataUrl": "./data/s1_unit4_9_Open示範.json",
+      "dataUrl": "./data/s1_unit4_9.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_10_Open示範",
+      "unitId": "s1_unit4_10",
       "unitName": "Unit 4.10 – A new friend at the adoption centre | 領養中心的新朋友",
-      "dataUrl": "./data/s1_unit4_10_Open示範.json",
+      "dataUrl": "./data/s1_unit4_10.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_11_Open示範",
+      "unitId": "s1_unit4_11",
       "unitName": "Unit 4.11 – Email from Adam (About my pets) | 亞當的郵件",
-      "dataUrl": "./data/s1_unit4_11_Open示範.json",
+      "dataUrl": "./data/s1_unit4_11.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_12_Open示範",
+      "unitId": "s1_unit4_12",
       "unitName": "Unit 4.12 – Choose the right pet for you | 選擇適合你的寵物",
-      "dataUrl": "./data/s1_unit4_12_Open示範.json",
+      "dataUrl": "./data/s1_unit4_12.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_13_Open示範",
+      "unitId": "s1_unit4_13",
       "unitName": "Unit 4.13 – Asking parents to adopt a pet | 說服父母領養寵物",
-      "dataUrl": "./data/s1_unit4_13_Open示範.json",
+      "dataUrl": "./data/s1_unit4_13.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_14_Open示範",
+      "unitId": "s1_unit4_14",
       "unitName": "Unit 4.14 – Captions for volunteer experience | 義工經歷 - 照片配文",
-      "dataUrl": "./data/s1_unit4_14_Open示範.json",
+      "dataUrl": "./data/s1_unit4_14.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_15_Open示範",
+      "unitId": "s1_unit4_15",
       "unitName": "Unit 4.15 – Pet care tips | 照護寵物小技巧",
-      "dataUrl": "./data/s1_unit4_15_Open示範.json",
+      "dataUrl": "./data/s1_unit4_15.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     },
     {
-      "unitId": "s1_unit4_16_Open示範",
+      "unitId": "s1_unit4_16",
       "unitName": "Unit 4.16 – The day my cat got sick | 貓咪生病的那天",
-      "dataUrl": "./data/s1_unit4_16_Open示範.json",
+      "dataUrl": "./data/s1_unit4_16.json",
       "grade": ["S1"],
       "publisher": ["Open示範"]
     }

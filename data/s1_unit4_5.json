@@ -1,0 +1,174 @@
+{
+  "unitId": "s1_unit4_5",
+  "unitName": "我的寵物倉鼠哈羅德 | My pet hamster Harold",
+  "article": {
+    "title": "<strong>My pet hamster Harold</strong>\n<strong>我的寵物倉鼠哈羅德</strong>",
+    "illustration": "/images/unit4_5.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "Hi everybody! This is a <span class='highlight2'>picture</span> of my <span class='highlight3'>pet</span> <span class='highlight4'>hamster</span>. His <span class='highlight5'>name</span> is Harold and he <span class='highlight1'>lives</span> in this <span class='highlight3'>blue</span> <span class='highlight4'>cage</span>.",
+        "sentences": [
+          "Hi everybody!",
+          "This is a <span class='highlight2'>picture</span> of my <span class='highlight3'>pet</span> <span class='highlight4'>hamster</span>.",
+          "His <span class='highlight5'>name</span> is Harold and he <span class='highlight1'>lives</span> in this <span class='highlight3'>blue</span> <span class='highlight4'>cage</span>."
+        ],
+        "translation": "🌐 嗨，大家好！這是我寵物倉鼠的照片。他的名字叫哈羅德，他住在這個藍色的籠子裡。",
+        "translation_sentences": [
+          "🌐 嗨，大家好！",
+          "這是我寵物倉鼠的照片。",
+          "他的名字叫哈羅德，他住在這個藍色的籠子裡。"
+        ],
+        "implication": {
+          "english": "💡 The speaker introduces his pet hamster Harold and his cage, using 'this' to point to the picture and cage.",
+          "chinese": "💡 講者介紹他的寵物倉鼠哈羅德和籠子，用「這個」指向照片和籠子。[換句話說]：大家好，這是我的倉鼠哈羅德，牠住在這個藍色籠子裡。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "Do you see these <span class='highlight1'>red</span> <span class='highlight2'>balls</span> right here? These are Harold's <span class='highlight3'>favourite</span> <span class='highlight5'>toys</span>. And do you see that <span class='highlight2'>wheel</span> in the <span class='highlight3'>back</span>? Harold uses that for <span class='highlight5'>exercise</span>.",
+        "sentences": [
+          "Do you see these <span class='highlight1'>red</span> <span class='highlight2'>balls</span> right here?",
+          "These are Harold's <span class='highlight3'>favourite</span> <span class='highlight5'>toys</span>.",
+          "And do you see that <span class='highlight2'>wheel</span> in the <span class='highlight3'>back</span>?",
+          "Harold uses that for <span class='highlight5'>exercise</span>."
+        ],
+        "translation": "🌐 你看到這邊這些紅色的球嗎？這些是哈羅德最喜歡的玩具。你看到後面的那個輪子嗎？哈羅德用那個來運動。",
+        "translation_sentences": [
+          "🌐 你看到這邊這些紅色的球嗎？",
+          "這些是哈羅德最喜歡的玩具。",
+          "你看到後面的那個輪子嗎？",
+          "哈羅德用那個來運動。"
+        ],
+        "implication": {
+          "english": "💡 The speaker points out Harold's toys and exercise wheel, using 'these' for nearby items and 'that' for the wheel further away.",
+          "chinese": "💡 講者指出哈羅德的玩具和運動輪，用「這些」指近處的物品，用「那個」指較遠的輪子。[換句話說]：這紅球是牠的玩具，後面那個輪子是牠的運動器材。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "Last <span class='highlight1'>week</span>, Harold <span class='highlight2'>escaped</span> from his cage. That was a <span class='highlight4'>terrible</span> day! We <span class='highlight5'>looked for</span> Harold <span class='highlight1'>everywhere</span>, but we <span class='highlight2'>couldn't find</span> him for <span class='highlight3'>hours</span>! Those were very <span class='highlight5'>scary</span> hours! I <span class='highlight1'>thought</span> we might <span class='highlight2'>never</span> <span class='highlight3'>see</span> Harold again. <span class='highlight4'>Luckily</span>, we <span class='highlight5'>found</span> him! Do you know where he was? He was under my <span class='highlight1'>bed</span>. That was his <span class='highlight2'>hiding</span> <span class='highlight3'>spot</span>.",
+        "sentences": [
+          "Last <span class='highlight1'>week</span>, Harold <span class='highlight2'>escaped</span> from his cage.",
+          "That was a <span class='highlight4'>terrible</span> day!",
+          "We <span class='highlight5'>looked for</span> Harold <span class='highlight1'>everywhere</span>, but we <span class='highlight2'>couldn't find</span> him for <span class='highlight3'>hours</span>!",
+          "Those were very <span class='highlight5'>scary</span> hours!",
+          "I <span class='highlight1'>thought</span> we might <span class='highlight2'>never</span> <span class='highlight3'>see</span> Harold again.",
+          "<span class='highlight4'>Luckily</span>, we <span class='highlight5'>found</span> him!",
+          "Do you know where he was?",
+          "He was under my <span class='highlight1'>bed</span>.",
+          "That was his <span class='highlight2'>hiding</span> <span class='highlight3'>spot</span>."
+        ],
+        "translation": "🌐 上星期，哈羅德從籠子裡逃走了。那天真是糟透了！我們到處找哈羅德，但好幾個小時都找不到他！那幾個小時非常可怕！我以為我們可能再也見不到哈羅德了。幸運的是，我們找到他了！你知道他在哪裡嗎？他在我的床底下。那是他的藏身處。",
+        "translation_sentences": [
+          "🌐 上星期，哈羅德從籠子裡逃走了。",
+          "那天真是糟透了！",
+          "我們到處找哈羅德，但好幾個小時都找不到他！",
+          "那幾個小時非常可怕！",
+          "我以為我們可能再也見不到哈羅德了。",
+          "幸運的是，我們找到他了！",
+          "你知道他在哪裡嗎？",
+          "他在我的床底下。",
+          "那是他的藏身處。"
+        ],
+        "implication": {
+          "english": "💡 The speaker narrates the scary escape incident, using 'that' for the specific day and 'those' for the hours, highlighting the relief of finding Harold.",
+          "chinese": "💡 講者敘述了可怕的逃脫事件，用「那個」指特定的一天，「那些」指那幾個小時，強調找到哈羅德的欣慰。[換句話說]：上星期哈羅德跑掉了，我們找了好久都找不到，超可怕的，幸好最後在床底下找到牠。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "I don't <span class='highlight5'>want</span> Harold to <span class='highlight1'>escape</span> from his cage again. I always <span class='highlight2'>make sure</span> the cage is <span class='highlight3'>locked</span> <span class='highlight4'>these days</span>, but it <span class='highlight5'>seems</span> Harold is <span class='highlight1'>looking for</span> <span class='highlight2'>ways</span> to <span class='highlight3'>unlock</span> it.",
+        "sentences": [
+          "I don't <span class='highlight5'>want</span> Harold to <span class='highlight1'>escape</span> from his cage again.",
+          "I always <span class='highlight2'>make sure</span> the cage is <span class='highlight3'>locked</span> <span class='highlight4'>these days</span>, but it <span class='highlight5'>seems</span> Harold is <span class='highlight1'>looking for</span> <span class='highlight2'>ways</span> to <span class='highlight3'>unlock</span> it."
+        ],
+        "translation": "🌐 我不想哈羅德再從籠子裡逃走。最近我總是確保籠子是鎖著的，但哈羅德似乎一直在想辦法打開它。",
+        "translation_sentences": [
+          "🌐 我不想哈羅德再從籠子裡逃走。",
+          "最近我總是確保籠子是鎖著的，但哈羅德似乎一直在想辦法打開它。"
+        ],
+        "implication": {
+          "english": "💡 The speaker takes precautions but Harold is still trying to escape, showing his naughty nature.",
+          "chinese": "💡 講者採取預防措施，但哈羅德仍在嘗試逃跑，顯示牠頑皮的天性。[換句話說]：我現在都把籠子鎖好，但牠好像一直在研究怎麼開鎖。"
+        }
+      },
+      {
+        "id": 5,
+        "english": "<span class='highlight4'>Before</span> I got Harold, I had two <span class='highlight5'>other</span> <span class='highlight4'>hamsters</span> named Wally and Wilma. Those hamsters were a lot less <span class='highlight3'>naughty</span>. They never <span class='highlight4'>tried</span> to <span class='highlight5'>get out of</span> their cage! I want to <span class='highlight1'>teach</span> Harold to <span class='highlight2'>behave</span> well. If you have any <span class='highlight3'>suggestions</span> for me, let me know!",
+        "sentences": [
+          "<span class='highlight4'>Before</span> I got Harold, I had two <span class='highlight5'>other</span> <span class='highlight4'>hamsters</span> named Wally and Wilma.",
+          "Those hamsters were a lot less <span class='highlight3'>naughty</span>.",
+          "They never <span class='highlight4'>tried</span> to <span class='highlight5'>get out of</span> their cage!",
+          "I want to <span class='highlight1'>teach</span> Harold to <span class='highlight2'>behave</span> well.",
+          "If you have any <span class='highlight3'>suggestions</span> for me, let me know!"
+        ],
+        "translation": "🌐 在養哈羅德之前，我有兩隻倉鼠，名叫沃利和威爾瑪。那兩隻倉鼠乖多了。牠們從來沒想過要逃出籠子！我想教哈羅德乖乖聽話。如果你有什麼建議，請告訴我！",
+        "translation_sentences": [
+          "🌐 在養哈羅德之前，我有兩隻倉鼠，名叫沃利和威爾瑪。",
+          "那兩隻倉鼠乖多了。",
+          "牠們從來沒想過要逃出籠子！",
+          "我想教哈羅德乖乖聽話。",
+          "如果你有什麼建議，請告訴我！"
+        ],
+        "implication": {
+          "english": "💡 The speaker compares Harold to previous hamsters, highlighting Harold's naughtiness and asking for advice.",
+          "chinese": "💡 講者將哈羅德與之前的倉鼠比較，突顯哈羅德的頑皮，並徵求建議。[換句話說]：我以前養的兩隻倉鼠很乖，從來不逃跑，哈羅德真的太皮了，誰能教教我怎麼管牠？"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "picture", "meaning": "n. 照片", "highlightClass": "highlight2" },
+    { "id": 2, "word": "pet", "meaning": "n. 寵物", "highlightClass": "highlight3" },
+    { "id": 3, "word": "hamster", "meaning": "n. 倉鼠", "highlightClass": "highlight4" },
+    { "id": 4, "word": "name", "meaning": "n. 名字", "highlightClass": "highlight5" },
+    { "id": 5, "word": "lives", "meaning": "v. 居住", "highlightClass": "highlight1" },
+    { "id": 6, "word": "blue", "meaning": "adj. 藍色的", "highlightClass": "highlight3" },
+    { "id": 7, "word": "cage", "meaning": "n. 籠子", "highlightClass": "highlight4" },
+    { "id": 8, "word": "red", "meaning": "adj. 紅色的", "highlightClass": "highlight1" },
+    { "id": 9, "word": "balls", "meaning": "n. 球", "highlightClass": "highlight2" },
+    { "id": 10, "word": "favourite", "meaning": "adj. 最喜歡的", "highlightClass": "highlight3" },
+    { "id": 11, "word": "toys", "meaning": "n. 玩具", "highlightClass": "highlight5" },
+    { "id": 12, "word": "wheel", "meaning": "n. 輪子", "highlightClass": "highlight2" },
+    { "id": 13, "word": "back", "meaning": "n. 後面", "highlightClass": "highlight3" },
+    { "id": 14, "word": "exercise", "meaning": "n. 運動", "highlightClass": "highlight5" },
+    { "id": 15, "word": "week", "meaning": "n. 星期", "highlightClass": "highlight1" },
+    { "id": 16, "word": "escaped", "meaning": "v. 逃跑", "highlightClass": "highlight2" },
+    { "id": 17, "word": "terrible", "meaning": "adj. 糟糕的", "highlightClass": "highlight4" },
+    { "id": 18, "word": "looked for", "meaning": "phr. 尋找", "highlightClass": "highlight5" },
+    { "id": 19, "word": "everywhere", "meaning": "adv. 到處", "highlightClass": "highlight1" },
+    { "id": 20, "word": "couldn't find", "meaning": "phr. 找不到", "highlightClass": "highlight2" },
+    { "id": 21, "word": "hours", "meaning": "n. 小時", "highlightClass": "highlight3" },
+    { "id": 22, "word": "scary", "meaning": "adj. 可怕的", "highlightClass": "highlight5" },
+    { "id": 23, "word": "thought", "meaning": "v. 認為", "highlightClass": "highlight1" },
+    { "id": 24, "word": "never", "meaning": "adv. 從不", "highlightClass": "highlight2" },
+    { "id": 25, "word": "see", "meaning": "v. 看見", "highlightClass": "highlight3" },
+    { "id": 26, "word": "Luckily", "meaning": "adv. 幸運地", "highlightClass": "highlight4" },
+    { "id": 27, "word": "found", "meaning": "v. 找到", "highlightClass": "highlight5" },
+    { "id": 28, "word": "bed", "meaning": "n. 床", "highlightClass": "highlight1" },
+    { "id": 29, "word": "hiding", "meaning": "n. 躲藏", "highlightClass": "highlight2" },
+    { "id": 30, "word": "spot", "meaning": "n. 地點", "highlightClass": "highlight3" },
+    { "id": 31, "word": "want", "meaning": "v. 想要", "highlightClass": "highlight5" },
+    { "id": 32, "word": "make sure", "meaning": "phr. 確保", "highlightClass": "highlight2" },
+    { "id": 33, "word": "locked", "meaning": "adj. 鎖上的", "highlightClass": "highlight3" },
+    { "id": 34, "word": "these days", "meaning": "phr. 最近", "highlightClass": "highlight4" },
+    { "id": 35, "word": "seems", "meaning": "v. 似乎", "highlightClass": "highlight5" },
+    { "id": 36, "word": "looking for", "meaning": "phr. 尋找", "highlightClass": "highlight1" },
+    { "id": 37, "word": "ways", "meaning": "n. 方法", "highlightClass": "highlight2" },
+    { "id": 38, "word": "unlock", "meaning": "v. 解開", "highlightClass": "highlight3" },
+    { "id": 39, "word": "Before", "meaning": "prep. 在...之前", "highlightClass": "highlight4" },
+    { "id": 40, "word": "other", "meaning": "adj. 其他的", "highlightClass": "highlight5" },
+    { "id": 41, "word": "naughty", "meaning": "adj. 頑皮的", "highlightClass": "highlight3" },
+    { "id": 42, "word": "tried", "meaning": "v. 嘗試", "highlightClass": "highlight4" },
+    { "id": 43, "word": "get out of", "meaning": "phr. 逃出", "highlightClass": "highlight5" },
+    { "id": 44, "word": "teach", "meaning": "v. 教導", "highlightClass": "highlight1" },
+    { "id": 45, "word": "behave", "meaning": "v. 表現", "highlightClass": "highlight2" },
+    { "id": 46, "word": "suggestions", "meaning": "n. 建議", "highlightClass": "highlight3" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_5/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_5/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_5/word_{id}.mp3"
+  }
+}

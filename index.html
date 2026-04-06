@@ -2486,8 +2486,15 @@
       }
     }
     
+syncUserState();
+
+// 監聽 localStorage 變化（跨標籤頁）
+window.addEventListener('storage', (event) => {
+  if (event.key === 'userData') {
+    console.log('🔄 偵測到 userData 變化，重新同步');
     syncUserState();
-    setInterval(syncUserState, 3000);
+  }
+});
 
     function filterUnitsByUser(units) {
       if (!isGuestModeGlobal && currentUserDataGlobal?.role === 'admin') {

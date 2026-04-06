@@ -1,0 +1,211 @@
+{
+  "unitId": "s1_unit4_7",
+  "unitName": "走進酷貓咖啡室 | A visit to Cool Cat Cafe",
+  "article": {
+    "title": "<strong>A visit to Cool Cat Cafe</strong>\n<strong>走進酷貓咖啡廳</strong>",
+    "illustration": "/images/unit4_7.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "Hello readers! Have you <span class='highlight2'>heard of</span> cat <span class='highlight3'>cafes</span>? <span class='highlight4'>These</span> are cafes with lots of <span class='highlight5'>cats</span>. The cats <span class='highlight1'>walk around</span> and <span class='highlight2'>visitors</span> can <span class='highlight3'>play with</span> them.",
+        "sentences": [
+          "Hello readers!",
+          "Have you <span class='highlight2'>heard of</span> cat <span class='highlight3'>cafes</span>?",
+          "<span class='highlight4'>These</span> are cafes with lots of <span class='highlight5'>cats</span>.",
+          "The cats <span class='highlight1'>walk around</span> and <span class='highlight2'>visitors</span> can <span class='highlight3'>play with</span> them."
+        ],
+        "translation": "🌐 讀者們好！你們聽過貓咖啡廳嗎？這些就是有很多貓的咖啡廳。貓咪們走來走去，訪客可以和牠們玩耍。",
+        "translation_sentences": [
+          "🌐 讀者們好！",
+          "你們聽過貓咖啡廳嗎？",
+          "這些就是有很多貓的咖啡廳。",
+          "貓咪們走來走去，訪客可以和牠們玩耍。"
+        ],
+        "implication": {
+          "english": "💡 The blogger introduces the concept of cat cafes, explaining what they are.",
+          "chinese": "💡 部落客介紹貓咖啡廳的概念，解釋什麼是貓咖啡廳。[換句話說]：大家好，你們知道什麼是貓咖啡廳嗎？就是那種有很多貓咪可以互動的咖啡廳。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "I <span class='highlight4'>learnt about</span> cat cafes in <span class='highlight1'>winter</span>, but I didn't <span class='highlight3'>visit</span> one until <span class='highlight5'>spring</span> because I was too <span class='highlight1'>busy</span>.",
+        "sentences": [
+          "I <span class='highlight4'>learnt about</span> cat cafes in <span class='highlight1'>winter</span>, but I didn't <span class='highlight3'>visit</span> one until <span class='highlight5'>spring</span> because I was too <span class='highlight1'>busy</span>."
+        ],
+        "translation": "🌐 我在冬天就聽說過貓咖啡廳，但直到春天才去參觀，因為我太忙了。",
+        "translation_sentences": [
+          "🌐 我在冬天就聽說過貓咖啡廳，但直到春天才去參觀，因為我太忙了。"
+        ],
+        "implication": {
+          "english": "💡 The blogger explains the delay between knowing about cat cafes and actually visiting one.",
+          "chinese": "💡 部落客解釋了知道貓咖啡廳和實際去參觀之間的時間差。[換句話說]：其實我冬天就知道有貓咖啡廳了，但太忙了，拖到春天才去。"
+        }
+      },
+      {
+        "id": 3,
+        "english": "On 3 <span class='highlight3'>April</span>, I <span class='highlight4'>finally</span> went to Cool Cat Cafe with my <span class='highlight5'>mum</span> and my <span class='highlight1'>brother</span>. <span class='highlight2'>This</span> cat in the <span class='highlight3'>photo</span> is called Marbles. She was very <span class='highlight4'>friendly</span> and <span class='highlight5'>playful</span>.",
+        "sentences": [
+          "On 3 <span class='highlight3'>April</span>, I <span class='highlight4'>finally</span> went to Cool Cat Cafe with my <span class='highlight5'>mum</span> and my <span class='highlight1'>brother</span>.",
+          "<span class='highlight2'>This</span> cat in the <span class='highlight3'>photo</span> is called Marbles.",
+          "She was very <span class='highlight4'>friendly</span> and <span class='highlight5'>playful</span>."
+        ],
+        "translation": "🌐 四月三日，我終於和媽媽、弟弟一起去了酷貓咖啡廳。照片裡的這隻貓叫馬布爾斯。她非常友善又好動。",
+        "translation_sentences": [
+          "🌐 四月三日，我終於和媽媽、弟弟一起去了酷貓咖啡廳。",
+          "照片裡的這隻貓叫馬布爾斯。",
+          "她非常友善又好動。"
+        ],
+        "implication": {
+          "english": "💡 The blogger shares when they visited and introduces a specific cat they met.",
+          "chinese": "💡 部落客分享何時造訪，並介紹他們遇到的一隻貓。[換句話說]：四月三日終於去了！照片裡這隻是馬布爾斯，牠很親人也很愛玩。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "We <span class='highlight1'>booked</span> a <span class='highlight2'>spot</span> at 12 noon and we <span class='highlight4'>arrived</span> <span class='highlight5'>right on time</span>. We <span class='highlight1'>stayed</span> from 12 noon to 1.30 p.m.",
+        "sentences": [
+          "We <span class='highlight1'>booked</span> a <span class='highlight2'>spot</span> at 12 noon and we <span class='highlight4'>arrived</span> <span class='highlight5'>right on time</span>.",
+          "We <span class='highlight1'>stayed</span> from 12 noon to 1.30 p.m."
+        ],
+        "translation": "🌐 我們預訂了中午12點的位子，並且準時到達。我們從中午12點待到下午1點半。",
+        "translation_sentences": [
+          "🌐 我們預訂了中午12點的位子，並且準時到達。",
+          "我們從中午12點待到下午1點半。"
+        ],
+        "implication": {
+          "english": "💡 Details the booking and timing of their visit.",
+          "chinese": "💡 詳細說明預訂和造訪時間。[換句話說]：我們有預約，12點準時到，待了一個半小時。"
+        }
+      },
+      {
+        "id": 5,
+        "english": "When we arrived, we <span class='highlight4'>sat down</span> at a <span class='highlight5'>table</span> next to the <span class='highlight1'>window</span> and <span class='highlight2'>ordered</span> some <span class='highlight3'>drinks</span>. I'm not a big <span class='highlight4'>fan</span> of tea or coffee, so I <span class='highlight2'>ordered</span> a <span class='highlight2'>strawberry</span> <span class='highlight3'>smoothie</span>.",
+        "sentences": [
+          "When we arrived, we <span class='highlight4'>sat down</span> at a <span class='highlight5'>table</span> next to the <span class='highlight1'>window</span> and <span class='highlight2'>ordered</span> some <span class='highlight3'>drinks</span>.",
+          "I'm not a big <span class='highlight4'>fan</span> of tea or coffee, so I <span class='highlight2'>ordered</span> a <span class='highlight2'>strawberry</span> <span class='highlight3'>smoothie</span>."
+        ],
+        "translation": "🌐 抵達後，我們坐在靠窗的桌子，點了些飲料。我不太喜歡茶或咖啡，所以我點了一杯草莓冰沙。",
+        "translation_sentences": [
+          "🌐 抵達後，我們坐在靠窗的桌子，點了些飲料。",
+          "我不太喜歡茶或咖啡，所以我點了一杯草莓冰沙。"
+        ],
+        "implication": {
+          "english": "💡 Describes the seating and drink order, showing the cafe atmosphere.",
+          "chinese": "💡 描述座位和點餐，顯示咖啡廳的氛圍。[換句話說]：我們選了窗邊的位子，我不愛喝茶或咖啡，就點了草莓冰沙。"
+        }
+      },
+      {
+        "id": 6,
+        "english": "Do you like <span class='highlight4'>adult</span> cats or <span class='highlight1'>kittens</span>? <span class='highlight2'>Personally</span>, I <span class='highlight3'>prefer</span> adult cats. There were <span class='highlight4'>several</span> of them up for <span class='highlight5'>adoption</span> at the cafe. I <span class='highlight1'>asked</span> my mum if we could <span class='highlight2'>adopt</span> one of <span class='highlight3'>these</span> cats, but she said 'no'.",
+        "sentences": [
+          "Do you like <span class='highlight4'>adult</span> cats or <span class='highlight1'>kittens</span>?",
+          "<span class='highlight2'>Personally</span>, I <span class='highlight3'>prefer</span> adult cats.",
+          "There were <span class='highlight4'>several</span> of them up for <span class='highlight5'>adoption</span> at the cafe.",
+          "I <span class='highlight1'>asked</span> my mum if we could <span class='highlight2'>adopt</span> one of <span class='highlight3'>these</span> cats, but she said 'no'."
+        ],
+        "translation": "🌐 你喜歡成貓還是小貓？就我個人而言，我比較喜歡成貓。咖啡廳裡有好幾隻成貓開放領養。我問媽媽我們能不能領養其中一隻，但她說不行。",
+        "translation_sentences": [
+          "🌐 你喜歡成貓還是小貓？",
+          "就我個人而言，我比較喜歡成貓。",
+          "咖啡廳裡有好幾隻成貓開放領養。",
+          "我問媽媽我們能不能領養其中一隻，但她說不行。"
+        ],
+        "implication": {
+          "english": "💡 The blogger expresses preference for adult cats and mentions adoption, hinting at a desire to adopt.",
+          "chinese": "💡 部落客表達對成貓的偏好，並提到領養，暗示想領養的願望。[換句話說]：我比較喜歡成貓，剛好那裡有幾隻可以領養，我問媽媽能不能養，她說不行。"
+        }
+      },
+      {
+        "id": 7,
+        "english": "I wanted to <span class='highlight1'>stay</span> there <span class='highlight2'>longer</span>, but I had <span class='highlight4'>swimming</span> <span class='highlight5'>class</span> at 2 p.m. When I <span class='highlight1'>left</span> the cafe, I was really <span class='highlight2'>happy</span>! All the cats really <span class='highlight4'>cheered me up</span>.",
+        "sentences": [
+          "I wanted to <span class='highlight1'>stay</span> there <span class='highlight2'>longer</span>, but I had <span class='highlight4'>swimming</span> <span class='highlight5'>class</span> at 2 p.m.",
+          "When I <span class='highlight1'>left</span> the cafe, I was really <span class='highlight2'>happy</span>!",
+          "All the cats really <span class='highlight4'>cheered me up</span>."
+        ],
+        "translation": "🌐 我想待久一點，但我下午2點有游泳課。離開咖啡廳時，我真的很開心！所有的貓真的讓我心情大好。",
+        "translation_sentences": [
+          "🌐 我想待久一點，但我下午2點有游泳課。",
+          "離開咖啡廳時，我真的很開心！",
+          "所有的貓真的讓我心情大好。"
+        ],
+        "implication": {
+          "english": "💡 Despite having to leave, the experience was positive and uplifting.",
+          "chinese": "💡 雖然必須離開，但這次經驗是正面且令人振奮的。[換句話說]：雖然很想多待一會兒，但要去上游泳課了。不過離開時心情超好，被貓咪療癒了。"
+        }
+      },
+      {
+        "id": 8,
+        "english": "I have an <span class='highlight5'>English</span> <span class='highlight1'>test</span> coming up in two days. If I do well in <span class='highlight4'>this</span> test, maybe Mum will let me <span class='highlight2'>adopt</span> a cat!",
+        "sentences": [
+          "I have an <span class='highlight5'>English</span> <span class='highlight1'>test</span> coming up in two days.",
+          "If I do well in <span class='highlight4'>this</span> test, maybe Mum will let me <span class='highlight2'>adopt</span> a cat!"
+        ],
+        "translation": "🌐 我兩天後有英文考試。如果我考得好，也許媽媽會讓我養貓！",
+        "translation_sentences": [
+          "🌐 我兩天後有英文考試。",
+          "如果我考得好，也許媽媽會讓我養貓！"
+        ],
+        "implication": {
+          "english": "💡 The blogger ends with a hopeful note, linking good performance to a possible reward.",
+          "chinese": "💡 部落客以充滿希望的語句作結，將好表現與可能的獎勵連結。[換句話說]：兩天後要考英文，如果考得好，說不定媽媽就會答應讓我養貓了！"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "heard of", "meaning": "phr. 聽說過", "highlightClass": "highlight2" },
+    { "id": 2, "word": "cafes", "meaning": "n. 咖啡廳", "highlightClass": "highlight3" },
+    { "id": 3, "word": "cats", "meaning": "n. 貓", "highlightClass": "highlight5" },
+    { "id": 4, "word": "walk around", "meaning": "phr. 走來走去", "highlightClass": "highlight1" },
+    { "id": 5, "word": "visitors", "meaning": "n. 訪客", "highlightClass": "highlight2" },
+    { "id": 6, "word": "play with", "meaning": "phr. 和...玩耍", "highlightClass": "highlight3" },
+    { "id": 7, "word": "learnt about", "meaning": "phr. 得知", "highlightClass": "highlight4" },
+    { "id": 8, "word": "winter", "meaning": "n. 冬天", "highlightClass": "highlight1" },
+    { "id": 9, "word": "visit", "meaning": "v. 參觀", "highlightClass": "highlight3" },
+    { "id": 10, "word": "spring", "meaning": "n. 春天", "highlightClass": "highlight5" },
+    { "id": 11, "word": "busy", "meaning": "adj. 忙碌的", "highlightClass": "highlight1" },
+    { "id": 12, "word": "April", "meaning": "n. 四月", "highlightClass": "highlight3" },
+    { "id": 13, "word": "finally", "meaning": "adv. 終於", "highlightClass": "highlight4" },
+    { "id": 14, "word": "mum", "meaning": "n. 媽媽", "highlightClass": "highlight5" },
+    { "id": 15, "word": "brother", "meaning": "n. 兄弟", "highlightClass": "highlight1" },
+    { "id": 16, "word": "photo", "meaning": "n. 照片", "highlightClass": "highlight3" },
+    { "id": 17, "word": "friendly", "meaning": "adj. 友善的", "highlightClass": "highlight4" },
+    { "id": 18, "word": "playful", "meaning": "adj. 愛玩的", "highlightClass": "highlight5" },
+    { "id": 19, "word": "booked", "meaning": "v. 預訂", "highlightClass": "highlight1" },
+    { "id": 20, "word": "spot", "meaning": "n. 位子", "highlightClass": "highlight2" },
+    { "id": 21, "word": "arrived", "meaning": "v. 抵達", "highlightClass": "highlight4" },
+    { "id": 22, "word": "right on time", "meaning": "phr. 準時", "highlightClass": "highlight5" },
+    { "id": 23, "word": "stayed", "meaning": "v. 停留", "highlightClass": "highlight1" },
+    { "id": 24, "word": "sat down", "meaning": "phr. 坐下", "highlightClass": "highlight4" },
+    { "id": 25, "word": "table", "meaning": "n. 桌子", "highlightClass": "highlight5" },
+    { "id": 26, "word": "window", "meaning": "n. 窗戶", "highlightClass": "highlight1" },
+    { "id": 27, "word": "ordered", "meaning": "v. 點餐", "highlightClass": "highlight2" },
+    { "id": 28, "word": "drinks", "meaning": "n. 飲料", "highlightClass": "highlight3" },
+    { "id": 29, "word": "fan", "meaning": "n. 粉絲", "highlightClass": "highlight4" },
+    { "id": 30, "word": "strawberry", "meaning": "n. 草莓", "highlightClass": "highlight2" },
+    { "id": 31, "word": "smoothie", "meaning": "n. 冰沙", "highlightClass": "highlight3" },
+    { "id": 32, "word": "adult", "meaning": "adj. 成年的", "highlightClass": "highlight4" },
+    { "id": 33, "word": "kittens", "meaning": "n. 小貓", "highlightClass": "highlight1" },
+    { "id": 34, "word": "Personally", "meaning": "adv. 就個人而言", "highlightClass": "highlight2" },
+    { "id": 35, "word": "prefer", "meaning": "v. 偏好", "highlightClass": "highlight3" },
+    { "id": 36, "word": "several", "meaning": "adj. 幾個", "highlightClass": "highlight4" },
+    { "id": 37, "word": "adoption", "meaning": "n. 領養", "highlightClass": "highlight5" },
+    { "id": 38, "word": "asked", "meaning": "v. 問", "highlightClass": "highlight1" },
+    { "id": 39, "word": "adopt", "meaning": "v. 領養", "highlightClass": "highlight2" },
+    { "id": 40, "word": "stay", "meaning": "v. 停留", "highlightClass": "highlight1" },
+    { "id": 41, "word": "longer", "meaning": "adv. 更久", "highlightClass": "highlight2" },
+    { "id": 42, "word": "swimming", "meaning": "n. 游泳", "highlightClass": "highlight4" },
+    { "id": 43, "word": "class", "meaning": "n. 課程", "highlightClass": "highlight5" },
+    { "id": 44, "word": "left", "meaning": "v. 離開", "highlightClass": "highlight1" },
+    { "id": 45, "word": "happy", "meaning": "adj. 高興的", "highlightClass": "highlight2" },
+    { "id": 46, "word": "cheered me up", "meaning": "phr. 讓我開心起來", "highlightClass": "highlight4" },
+    { "id": 47, "word": "English", "meaning": "n. 英文", "highlightClass": "highlight5" },
+    { "id": 48, "word": "test", "meaning": "n. 考試", "highlightClass": "highlight1" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_7/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_7/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_7/word_{id}.mp3"
+  }
+}

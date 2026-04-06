@@ -1,0 +1,167 @@
+{
+  "unitId": "s1_unit4_4",
+  "unitName": "烏龜的故事 | A tale of turtles",
+  "article": {
+    "title": "<strong>A tale of turtles</strong>\n<strong>烏龜的故事</strong>",
+    "illustration": "/images/unit4_4.png",
+    "paragraphs": [
+      {
+        "id": 1,
+        "english": "<span class='highlight1'>Turtles</span> have <span class='highlight2'>existed</span> for over 200 million years. They lived <span class='highlight3'>alongside</span> the <span class='highlight4'>dinosaurs</span>!",
+        "sentences": [
+          "<span class='highlight1'>Turtles</span> have <span class='highlight2'>existed</span> for over 200 million years.",
+          "They lived <span class='highlight3'>alongside</span> the <span class='highlight4'>dinosaurs</span>!"
+        ],
+        "translation": "🌐 烏龜已經存在超過兩億年。牠們與恐龍同時代生活！",
+        "translation_sentences": [
+          "🌐 烏龜已經存在超過兩億年。",
+          "牠們與恐龍同時代生活！"
+        ],
+        "implication": {
+          "english": "💡 The opening highlights the ancient history of turtles, setting a fascinating tone.",
+          "chinese": "💡 開頭強調烏龜的古老歷史，營造出有趣的氛圍。[換句話說]：烏龜早在恐龍時代就有了，真的是活化石。"
+        }
+      },
+      {
+        "id": 2,
+        "english": "On <span class='highlight5'>Christmas</span> morning, my <span class='highlight1'>cousin</span> and I got <span class='highlight2'>baby</span> turtles as <span class='highlight3'>presents</span>. My turtle was Tina. My cousin's turtle was Tanya. At one month old, our turtles were so <span class='highlight4'>small</span>!",
+        "sentences": [
+          "On <span class='highlight5'>Christmas</span> morning, my <span class='highlight1'>cousin</span> and I got <span class='highlight2'>baby</span> turtles as <span class='highlight3'>presents</span>.",
+          "My turtle was Tina.",
+          "My cousin's turtle was Tanya.",
+          "At one month old, our turtles were so <span class='highlight4'>small</span>!"
+        ],
+        "translation": "🌐 聖誕節早上，我和表弟收到了小烏龜作為禮物。我的烏龜叫蒂娜。表弟的烏龜叫坦雅。一個月大的時候，我們的烏龜好小！",
+        "translation_sentences": [
+          "🌐 聖誕節早上，我和表弟收到了小烏龜作為禮物。",
+          "我的烏龜叫蒂娜。",
+          "表弟的烏龜叫坦雅。",
+          "一個月大的時候，我們的烏龜好小！"
+        ],
+        "implication": {
+          "english": "💡 Introduces the characters and the exciting gift, setting up the story.",
+          "chinese": "💡 介紹人物和令人興奮的禮物，為故事鋪墊。[換句話說]：聖誕節收到小烏龜當禮物，真是驚喜！"
+        }
+      },
+      {
+        "id": 3,
+        "english": "I <span class='highlight5'>spent</span> lots of time with Tina. I took her out of her <span class='highlight1'>tank</span> to play from 6 p.m. to 7 p.m. every day. However, Tina was very <span class='highlight2'>shy</span>. She didn't like to play.",
+        "sentences": [
+          "I <span class='highlight5'>spent</span> lots of time with Tina.",
+          "I took her out of her <span class='highlight1'>tank</span> to play from 6 p.m. to 7 p.m. every day.",
+          "However, Tina was very <span class='highlight2'>shy</span>. She didn't like to play."
+        ],
+        "translation": "🌐 我花很多時間和蒂娜在一起。我每天下午6點到7點把她從缸裡拿出來玩。但是蒂娜非常害羞，她不喜歡玩耍。",
+        "translation_sentences": [
+          "🌐 我花很多時間和蒂娜在一起。",
+          "我每天下午6點到7點把她從缸裡拿出來玩。",
+          "但是蒂娜非常害羞，她不喜歡玩耍。"
+        ],
+        "implication": {
+          "english": "💡 Shows the narrator's care and Tina's personality contrast.",
+          "chinese": "💡 顯示敘述者的照顧以及蒂娜的性格對比。[換句話說]：我每天都會陪蒂娜玩，但她就是不太理我。"
+        }
+      },
+      {
+        "id": 4,
+        "english": "On <span class='highlight3'>New Year's Day</span>, my cousin <span class='highlight4'>visited</span> my house with his turtle. From 10 a.m. to noon, we spent time with our turtles. Tina stayed in her <span class='highlight5'>shell</span>, but Tanya was very <span class='highlight1'>playful</span>. 'Your turtle is very <span class='highlight2'>friendly</span>,' I told my cousin. 'Only in the mornings. In the evenings, she gets <span class='highlight3'>grumpy</span> and <span class='highlight4'>bites</span> me,' he <span class='highlight5'>replied</span>.",
+        "sentences": [
+          "On <span class='highlight3'>New Year's Day</span>, my cousin <span class='highlight4'>visited</span> my house with his turtle.",
+          "From 10 a.m. to noon, we spent time with our turtles.",
+          "Tina stayed in her <span class='highlight5'>shell</span>, but Tanya was very <span class='highlight1'>playful</span>.",
+          "'Your turtle is very <span class='highlight2'>friendly</span>,' I told my cousin.",
+          "'Only in the mornings. In the evenings, she gets <span class='highlight3'>grumpy</span> and <span class='highlight4'>bites</span> me,' he <span class='highlight5'>replied</span>."
+        ],
+        "translation": "🌐 元旦那天，表弟帶著他的烏龜來我家。從上午10點到中午，我們和烏龜一起玩。蒂娜待在殼裡，但坦雅非常好動。「你的烏龜很友善，」我對表弟說。「只有在早上。晚上她就會脾氣暴躁，還會咬我，」他回答。",
+        "translation_sentences": [
+          "🌐 元旦那天，表弟帶著他的烏龜來我家。",
+          "從上午10點到中午，我們和烏龜一起玩。",
+          "蒂娜待在殼裡，但坦雅非常好動。",
+          "「你的烏龜很友善，」我對表弟說。",
+          "「只有在早上。晚上她就會脾氣暴躁，還會咬我，」他回答。"
+        ],
+        "implication": {
+          "english": "💡 Contrasts the two turtles' behaviors, hinting at future mix-up.",
+          "chinese": "💡 對比兩隻烏龜的行為，為後續的弄錯埋下伏筆。[換句話說]：我的烏龜害羞，表弟的活潑，但表弟說他的烏龜晚上會咬人。"
+        }
+      },
+      {
+        "id": 5,
+        "english": "After lunch, my cousin left with his turtle. Later, I noticed something <span class='highlight1'>strange</span> about Tina. When I took her out of her tank at 6 p.m., she was quite <span class='highlight3'>grumpy</span>. Then, she bit my finger! Ouch! I was really <span class='highlight2'>shocked</span> at that moment. Then I <span class='highlight4'>realized</span> that it wasn't Tina at all. My cousin and I <span class='highlight5'>mixed up</span> our turtles!",
+        "sentences": [
+          "After lunch, my cousin left with his turtle.",
+          "Later, I noticed something <span class='highlight1'>strange</span> about Tina.",
+          "When I took her out of her tank at 6 p.m., she was quite <span class='highlight3'>grumpy</span>.",
+          "Then, she bit my finger! Ouch!",
+          "I was really <span class='highlight2'>shocked</span> at that moment.",
+          "Then I <span class='highlight4'>realized</span> that it wasn't Tina at all.",
+          "My cousin and I <span class='highlight5'>mixed up</span> our turtles!"
+        ],
+        "translation": "🌐 午餐後，表弟帶著他的烏龜離開了。後來，我注意到蒂娜有點奇怪。當我下午6點把她從缸裡拿出來時，她相當暴躁。然後她咬了我的手指！哎喲！那一刻我真的很震驚。然後我才意識到這根本不是蒂娜。我和表弟把烏龜弄混了！",
+        "translation_sentences": [
+          "🌐 午餐後，表弟帶著他的烏龜離開了。",
+          "後來，我注意到蒂娜有點奇怪。",
+          "當我下午6點把她從缸裡拿出來時，她相當暴躁。",
+          "然後她咬了我的手指！哎喲！",
+          "那一刻我真的很震驚。",
+          "然後我才意識到這根本不是蒂娜。",
+          "我和表弟把烏龜弄混了！"
+        ],
+        "implication": {
+          "english": "💡 The climax: the narrator discovers the mix-up through Tina's unusual behavior.",
+          "chinese": "💡 高潮：敘述者透過蒂娜的異常行為發現弄錯了。[換句話說]：蒂娜突然變得暴躁還咬我，我才驚覺原來這是表弟的烏龜！"
+        }
+      },
+      {
+        "id": 6,
+        "english": "We met at noon the next day and <span class='highlight1'>switched</span> our turtles back. I'm so <span class='highlight2'>glad</span> I got my shy turtle back!",
+        "sentences": [
+          "We met at noon the next day and <span class='highlight1'>switched</span> our turtles back.",
+          "I'm so <span class='highlight2'>glad</span> I got my shy turtle back!"
+        ],
+        "translation": "🌐 第二天中午我們見面，把烏龜換了回來。我很高興我的害羞烏龜回來了！",
+        "translation_sentences": [
+          "🌐 第二天中午我們見面，把烏龜換了回來。",
+          "我很高興我的害羞烏龜回來了！"
+        ],
+        "implication": {
+          "english": "💡 Happy ending: the turtles are returned, and the narrator appreciates Tina's shy personality.",
+          "chinese": "💡 快樂的結局：烏龜換回來，敘述者更珍惜蒂娜害羞的性格。[換句話說]：還好換回來了，我還是喜歡我原本那隻害羞的烏龜。"
+        }
+      }
+    ]
+  },
+  "vocabulary": [
+    { "id": 1, "word": "turtles", "meaning": "n. 烏龜", "highlightClass": "highlight1" },
+    { "id": 2, "word": "existed", "meaning": "v. 存在", "highlightClass": "highlight2" },
+    { "id": 3, "word": "alongside", "meaning": "prep. 與...同時", "highlightClass": "highlight3" },
+    { "id": 4, "word": "dinosaurs", "meaning": "n. 恐龍", "highlightClass": "highlight4" },
+    { "id": 5, "word": "Christmas", "meaning": "n. 聖誕節", "highlightClass": "highlight5" },
+    { "id": 6, "word": "cousin", "meaning": "n. 表兄弟姊妹", "highlightClass": "highlight1" },
+    { "id": 7, "word": "baby", "meaning": "adj. 幼小的", "highlightClass": "highlight2" },
+    { "id": 8, "word": "presents", "meaning": "n. 禮物", "highlightClass": "highlight3" },
+    { "id": 9, "word": "small", "meaning": "adj. 小的", "highlightClass": "highlight4" },
+    { "id": 10, "word": "spent", "meaning": "v. 花費（時間）", "highlightClass": "highlight5" },
+    { "id": 11, "word": "tank", "meaning": "n. 水缸", "highlightClass": "highlight1" },
+    { "id": 12, "word": "shy", "meaning": "adj. 害羞的", "highlightClass": "highlight2" },
+    { "id": 13, "word": "New Year's Day", "meaning": "n. 元旦", "highlightClass": "highlight3" },
+    { "id": 14, "word": "visited", "meaning": "v. 拜訪", "highlightClass": "highlight4" },
+    { "id": 15, "word": "shell", "meaning": "n. 殼", "highlightClass": "highlight5" },
+    { "id": 16, "word": "playful", "meaning": "adj. 愛玩的", "highlightClass": "highlight1" },
+    { "id": 17, "word": "friendly", "meaning": "adj. 友善的", "highlightClass": "highlight2" },
+    { "id": 18, "word": "grumpy", "meaning": "adj. 脾氣暴躁的", "highlightClass": "highlight3" },
+    { "id": 19, "word": "bites", "meaning": "v. 咬", "highlightClass": "highlight4" },
+    { "id": 20, "word": "replied", "meaning": "v. 回答", "highlightClass": "highlight5" },
+    { "id": 21, "word": "strange", "meaning": "adj. 奇怪的", "highlightClass": "highlight1" },
+    { "id": 22, "word": "shocked", "meaning": "adj. 震驚的", "highlightClass": "highlight2" },
+    { "id": 23, "word": "realized", "meaning": "v. 意識到", "highlightClass": "highlight4" },
+    { "id": 24, "word": "mixed up", "meaning": "phr. 弄混", "highlightClass": "highlight5" },
+    { "id": 25, "word": "switched", "meaning": "v. 交換", "highlightClass": "highlight1" },
+    { "id": 26, "word": "glad", "meaning": "adj. 高興的", "highlightClass": "highlight2" }
+  ],
+  "audio": {
+    "sentencePattern": "/audio/unit4_4/sentence_{globalId}.mp3",
+    "implicationPattern": "/audio/unit4_4/impl_{id}.mp3",
+    "vocabularyPattern": "/audio/unit4_4/word_{id}.mp3"
+  }
+}

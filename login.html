@@ -7,7 +7,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- 基礎路徑設定 -->
-  <base href="/eng-reading-f1-new_treasure_plus/">
+  <base href="/eng-reading-panel/">
   <style>
     * {
       margin: 0;
@@ -510,7 +510,7 @@
         console.log('🔄 跳轉回管理後台:', redirectUrl);
         window.location.href = redirectUrl;
       } else {
-        const defaultUrl = '/eng-reading-f1-new_treasure_plus/index.html';
+       const defaultUrl = '/eng-reading-panel/index.html';
         console.log('🏠 跳轉到預設首頁:', defaultUrl);
         window.location.href = defaultUrl;
       }
@@ -591,7 +591,7 @@
       
       // 設定 Email Link 參數
       const actionCodeSettings = {
-        url: window.location.origin + '/eng-reading-f1-new_treasure_plus/finishSignUp.html',
+        url: window.location.origin + '/eng-reading-panel/finishSignUp.html',
         handleCodeInApp: true
       };
       

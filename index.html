@@ -1028,32 +1028,42 @@ onAuthStateChanged(auth, async (user) => {
       const userSnap = await getDoc(userRef);
 
       if (!userSnap.exists()) {
-        // 新用戶：給予 7 天試用期，並設定預設角色為 user
-        const trialEndDate = new Date();
-        trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS);
-        
-        const userData = {
-          email: user.email,
-          displayName,
-          photoURL: user.photoURL || null,
-          phoneNumber: '',
-          uid: user.uid,
-          provider: user.providerData[0]?.providerId || 'unknown',
-          role: 'user',  // 🔥 新增：預設角色為一般會員
-          premium: false,
-          plan: 'free',
-          expiresAt: null,
-          trialEndAt: trialEndDate.toISOString(),
-          loginCount: 1,
-          audioPlayCount: 0,
-          vocabLookupCount: 0,
-          readingProgress: {},
-          createdAt: new Date().toISOString(),
-          lastLoginAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          settings: { language: 'zh', autoPlay: false, notifications: true }
-        };
-        await setDoc(userRef, userData);
+  const trialEndDate = new Date();
+  trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS);
+  
+  // 注意：這裡的 grade 和 publishers 需要從首次登入彈窗獲取
+  // 但目前的 index.html 沒有首次登入彈窗，需要配合新的 login.html 一起修改
+  
+  const userData = {
+    email: user.email,
+    displayName,
+    photoURL: user.photoURL || null,
+    phoneNumber: '',
+    uid: user.uid,
+    provider: user.providerData[0]?.providerId || 'unknown',
+    role: 'user',
+    grade: '',           // 🔥 新增：年級，由首次登入彈窗填寫
+    publishers: [],      // 🔥 新增：教材權限
+    premium: false,
+    plan: 'free',
+    expiresAt: null,
+    trialEndAt: trialEndDate.toISOString(),
+    loginCount: 1,
+    audioPlayCount: 0,
+    vocabLookupCount: 0,
+    readingProgress: {},
+    stats: {
+      totalPractices: 0,
+      avgPercentage: 0,
+      badges: { gold: 0, pass: 0 }
+    },
+    createdAt: new Date().toISOString(),
+    lastLoginAt: new Date().toISOString(),
+    lastActiveAt: new Date().toISOString(),  // 🔥 新增
+    updatedAt: new Date().toISOString(),
+    settings: { language: 'zh', autoPlay: false, notifications: true }
+  };
+  await setDoc(userRef, userData);
         currentUserData = userData;
         console.log('✅ 新用戶資料已寫入，試用期 7 天，角色：user');
             } else {

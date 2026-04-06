@@ -1012,36 +1012,43 @@
     });
 
     function checkTrialExpired() {
-      if (!currentUserData) return false;
-      
-      if (currentUserData.premium) {
-        isTrialExpired = false;
-        document.getElementById('trialExpiredNotice').style.display = 'none';
-        return false;
-      }
-      
-      if (currentUserData.trialEndAt) {
-        const trialEnd = new Date(currentUserData.trialEndAt);
-        const now = new Date();
-        
-        if (now > trialEnd) {
-          isTrialExpired = true;
-          document.getElementById('trialExpiredNotice').style.display = 'flex';
-          console.log('⚠️ 試用期已屆滿');
-          return true;
-        } else {
-          isTrialExpired = false;
-          document.getElementById('trialExpiredNotice').style.display = 'none';
-          const daysLeft = Math.ceil((trialEnd - now) / (1000 * 60 * 60 * 24));
-          console.log(`✅ 試用期剩餘 ${daysLeft} 天`);
-          return false;
-        }
-      }
-      
+  // 🔥 訪客模式：永遠不顯示試用到期提示
+  if (isGuestMode) {
+    isTrialExpired = false;
+    document.getElementById('trialExpiredNotice').style.display = 'none';
+    return false;
+  }
+  
+  if (!currentUserData) return false;
+  
+  if (currentUserData.premium) {
+    isTrialExpired = false;
+    document.getElementById('trialExpiredNotice').style.display = 'none';
+    return false;
+  }
+  
+  if (currentUserData.trialEndAt) {
+    const trialEnd = new Date(currentUserData.trialEndAt);
+    const now = new Date();
+    
+    if (now > trialEnd) {
       isTrialExpired = true;
       document.getElementById('trialExpiredNotice').style.display = 'flex';
+      console.log('⚠️ 試用期已屆滿');
       return true;
+    } else {
+      isTrialExpired = false;
+      document.getElementById('trialExpiredNotice').style.display = 'none';
+      const daysLeft = Math.ceil((trialEnd - now) / (1000 * 60 * 60 * 24));
+      console.log(`✅ 試用期剩餘 ${daysLeft} 天`);
+      return false;
     }
+  }
+  
+  isTrialExpired = true;
+  document.getElementById('trialExpiredNotice').style.display = 'flex';
+  return true;
+}
 
     function initializeAppContent() {
       const checkInterval = setInterval(() => {

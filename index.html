@@ -1126,8 +1126,26 @@
         currentUser = user;
         isGuestMode = user.isAnonymous || false;
         
-        const displayName = user.displayName || user.email || '會員';
-        document.getElementById('userNameDisplay').textContent = displayName;
+// 根據用戶狀態顯示不同標籤
+let displayName;
+if (user.isAnonymous) {
+  displayName = '訪客';
+} else {
+  // 檢查是否為付費用戶
+  const isPremium = currentUserData?.premium === true;
+  const trialEndAt = currentUserData?.trialEndAt;
+  const isTrialActive = trialEndAt && new Date(trialEndAt) > new Date();
+  
+  if (isPremium) {
+    displayName = '會員';
+  } else if (isTrialActive) {
+    const daysLeft = Math.ceil((new Date(trialEndAt) - new Date()) / (1000 * 60 * 60 * 24));
+    displayName = `試用中 (${daysLeft}天)`;
+  } else {
+    displayName = user.displayName || user.email || '會員';
+  }
+}
+document.getElementById('userNameDisplay').textContent = displayName;
 
         try {
           const userRef = doc(db, 'users', user.uid);
@@ -1247,17 +1265,17 @@
             localStorage.setItem('userName', displayName);
             localStorage.setItem('userRole', currentUserData?.role || 'user');
             localStorage.setItem('userData', JSON.stringify({
-              uid: user.uid,
-              email: user.email,
-              displayName: displayName,
-              role: currentUserData?.role || 'user',
-              grade: currentUserData?.grade || '',
-              publishers: currentUserData?.publishers || [],
-              trialEndAt: currentUserData?.trialEndAt || null,
-              isGuest: user.isAnonymous || false,
-              isDisabled: currentUserData?.isDisabled || false,
-              lastLoginAt: currentUserData?.lastLoginAt || new Date().toISOString()
-            }));
+  uid: user.uid,
+  email: user.email,
+  displayName: user.isAnonymous ? '訪客' : (currentUserData?.premium ? '會員' : (currentUserData?.trialEndAt && new Date(currentUserData.trialEndAt) > new Date() ? `試用中` : (user.displayName || user.email || '會員'))),
+  role: currentUserData?.role || 'user',
+  grade: currentUserData?.grade || '',
+  publishers: currentUserData?.publishers || [],
+  trialEndAt: currentUserData?.trialEndAt || null,
+  isGuest: user.isAnonymous || false,
+  isDisabled: currentUserData?.isDisabled || false,
+  lastLoginAt: currentUserData?.lastLoginAt || new Date().toISOString()
+}));
           })
           .catch(error => {
             console.error('❌ 獲取 Token 失敗:', error);

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>英語閲讀（初中）</title>
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- 基礎路徑設定 -->
   <base href="/eng-reading-panel/">
   
   <style>
-    /* ===== 原有樣式保持完全不變 ===== */
+    /* ===== 基礎樣式 ===== */
     * {
       margin: 0;
       padding: 0;
@@ -39,716 +38,37 @@
       font-weight: normal;
     }
 
-    .article-title[lang="zh"] {
-      font-size: 24px;
-      font-weight: 700;
-      color: #1a365d;
-      margin-bottom: 10px;
-      text-align: center;
-      white-space: pre-line;
-      line-height: 2.0;
-      letter-spacing: 0.25em;
-    }
-
-    .article-title[lang="en"] {
-      font-size: 24px;
-      font-weight: 700;
-      color: #1a365d;
-      margin-bottom: 10px;
-      text-align: center;
-      white-space: pre-line;
-      line-height: 1.3;
-      letter-spacing: normal;
-    }
-
-    .single-paragraph[lang="zh"] {
-      line-height: 2.0;
-      margin-bottom: 12px;
-    }
-
-    .single-paragraph[lang="en"] {
-      line-height: 1.8;
-      margin-bottom: 12px;
-    }
-
-    .sentence-highlightable[lang="en"] {
-      line-height: 1.8;
-      letter-spacing: normal;
-      font-weight: normal;
-    }
-
-    .vocab-word[lang="en"] {
-      font-weight: 700;
-      letter-spacing: normal;
-      line-height: normal;
-    }
-
-    .implication-english[lang="en"] {
-      font-weight: 600;
-      letter-spacing: normal;
-      line-height: normal;
-    }
-
-    .btn[lang="zh"] {
-      letter-spacing: 0.18em;
-      line-height: 1.6;
-    }
-
-    .vocab-meaning[lang="zh"] {
-      letter-spacing: 0.18em;
-      line-height: 1.8;
-    }
-
-    .translation-content[lang="zh"] {
-      letter-spacing: 0.18em;
-      line-height: 1.8;
-    }
-
-    .unit-select[lang="zh"],
-    .unit-select option[lang="zh"] {
-      letter-spacing: 0.15em;
-      line-height: 1.6;
-    }
-
-    .unit-control-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      padding: 12px 16px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      border: 1px solid #e9ecef;
-    }
-
-    .unit-selector-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .unit-select {
-      padding: 8px 16px;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 6px;
-      font-size: 14px;
-      color: #2d3748;
-      background-color: white;
-      cursor: pointer;
-      min-width: 280px;
-    }
-
-    .unit-select:hover {
-      border-color: #5e6ad2;
-    }
-
-    .upload-wrapper {
-      display: flex;
-      align-items: center;
-    }
-
-.upload-btn {
-  background: linear-gradient(135deg, #5e6ad2 0%, #4a56b8 100%);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 13px;
-}
-
-.upload-btn:hover {
-  background: linear-gradient(135deg, #4a56b8 0%, #3d47a0 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(94, 106, 210, 0.3);
-}
-
-    .a4-container {
-      width: 210mm;
-      min-height: 297mm;
+    /* ===== 標籤頁 + 下拉選單專用樣式 ===== */
+    
+    /* 主容器 */
+    .main-container {
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 20mm;
-      background-color: white;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
-      border-radius: 8px;
-      border: 1px solid #e9ecef;
-    }
-
-    .article-vocab-wrapper {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 16mm;
-      align-items: flex-start;
-    }
-
-    .article-section {
-      flex: 7;
-      min-width: 0;
-    }
-
-    .vocab-section {
-      flex: 3;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      height: fit-content;
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      padding: 12px;
-    }
-
-    .article-illustration {
-      width: 100%;
-      height: auto;
-      max-height: 220px;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      margin: 0 auto 16px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      background-color: #f1f5f9;
-    }
-
-    .article-paragraph-wrapper {
-      border: 1px solid #e2e8f0;
-      padding: 16px;
-      border-radius: 8px;
-      font-size: 13px;
-      color: #2d3748;
-      text-align: justify;
-      background-color: #fcfdfe;
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
-
-    .single-paragraph {
-      margin-bottom: 12px;
-    }
-
-    .sentence-highlightable {
-      transition: background-color 0.2s ease, box-shadow 0.2s ease;
-      cursor: pointer;
-      border-radius: 4px;
-      padding: 2px 0;
-      display: inline;
-      position: relative;
-    }
-
-    .sentence-highlightable:hover,
-    .sentence-highlightable.sentence-selected,
-    .sentence-highlightable.sentence-playing {
-      background-color: rgba(79, 70, 229, 0.12);
-      box-shadow: 0 1px 4px rgba(79, 70, 229, 0.1);
-      border-left: none;
-      padding: 2px 0;
-      font-weight: normal;
-      cursor: pointer;
-    }
-
-    .paragraph-controls {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      margin: 12px 0 8px;
-    }
-
-    .btn {
-      border: none;
-      font-size: 11px;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      transition: all 0.25s;
-      font-weight: 500;
-    }
-
-.btn-primary {
-  background: linear-gradient(135deg, #5e6ad2 0%, #4a56b8 100%);
-  color: white;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(135deg, #4a56b8 0%, #3d47a0 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(94, 106, 210, 0.3);
-}
-
-.btn-outline {
-  background: transparent;
-  color: #5e6ad2;
-  border: 1.5px solid #d0d4f0;
-}
-
-.btn-outline:hover {
-  background: #f1f5f9;
-  border-color: #5e6ad2;
-}
-
-    .btn.loading {
-      opacity: 0.7;
-      cursor: wait;
-    }
-
-.toggle-button-group {
-  display: inline-flex;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1.5px solid #d0d4f0;
-  background: white;
-}
-
-.toggle-button-group .btn {
-  margin: 0 !important;
-  border-radius: 0;
-  border: none;
-  border-right: 1.5px solid #d0d4f0;
-  background: transparent;
-  color: #5e6ad2;
-  padding: 6px 12px;
-  font-size: 11px;
-}
-
-.toggle-button-group .btn:last-child {
-  border-right: none;
-}
-
-.toggle-button-group .btn.active {
-  background: linear-gradient(135deg, #5e6ad2 0%, #4a56b8 100%);
-  color: white;
-  border-color: #5e6ad2;
-}
-
-    .unified-content {
-      margin-top: 12px;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .unified-content .translation-content {
-      margin: 0;
-      padding: 16px;
-      background-color: #f0f9ff;
-      border-left: 4px solid #3b82f6;
-      color: #1e40af;
-      font-size: 12px;
-      line-height: 1.8;
-      letter-spacing: 0.18em;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .unified-content .implication-content {
-      margin: 0;
-      padding: 16px;
-      background-color: #fefce8;
-      border-left: 4px solid #f59e0b;
-      color: #92400e;
-      font-size: 12px;
-      display: none;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .unified-content .implication-text-wrapper {
-      flex: 1;
-    }
-
-    .unified-content .implication-english {
-      font-weight: 600;
-      margin-bottom: 8px;
-      line-height: 1.6;
-      letter-spacing: normal;
-    }
-
-    .unified-content .implication-chinese {
-      color: #854d0e;
-      line-height: 1.8;
-      letter-spacing: 0.18em;
-    }
-
-    .unified-content .implication-buttons {
-      display: flex;
-      margin-left: 20px;
-    }
-
-    .unified-content .implication-audio-btn {
-      background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
-      color: #92400e;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-      flex-shrink: 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .unified-content .implication-audio-btn:hover {
-      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-      transform: scale(1.05);
-    }
-
-    .unified-content .implication-audio-btn.playing {
-      background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
-      color: white;
-    }
-
-    .translation-sentence {
-      display: inline;
-      transition: background-color 0.2s ease, box-shadow 0.2s ease;
-      border-radius: 4px;
-      padding: 2px 0;
-      cursor: default;
-    }
-
-    .translation-sentence:hover,
-    .translation-sentence.translation-highlight {
-      background-color: rgba(79, 70, 229, 0.12);
-      box-shadow: 0 1px 4px rgba(79, 70, 229, 0.1);
-      font-weight: 500;
-    }
-
-    .vocab-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #1e40af;
-      padding-bottom: 6px;
-      border-bottom: 1.5px solid #dbeafe;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-
-    .vocab-pagination {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 3px;
-      margin: 8px 0;
-      padding: 5px 0;
-      background: white;
-      border-radius: 6px;
-      border: 1px solid #e2e8f0;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
-    .vocab-pagination::-webkit-scrollbar {
-      height: 4px;
-    }
-
-    .vocab-pagination::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 4px;
-    }
-
-    .vocab-pagination::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
-    }
-
-.vocab-page-btn {
-  min-width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  border: 1.5px solid #e2e8f0;
-  background: white;
-  color: #5e6ad2;
-  font-weight: 600;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-
-.vocab-page-btn:hover:not(:disabled) {
-  background: #5e6ad2;
-  color: white;
-  border-color: #5e6ad2;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(94, 106, 210, 0.25);
-}
-
-.vocab-page-btn.active {
-  background: #5e6ad2;
-  color: white;
-  border-color: #5e6ad2;
-  font-weight: 700;
-  box-shadow: 0 4px 8px rgba(94, 106, 210, 0.3);
-}
-
-    .vocab-page-btn:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-      background: #f1f5f9;
-      border-color: #d1d5db;
-      transform: none;
-      box-shadow: none;
-    }
-
-    .vocab-page-nav {
-      min-width: 36px;
-      font-size: 14px;
-    }
-
-    .vocab-list {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      margin: 0;
-      min-height: auto;
-      height: auto;
-      overflow: visible;
-    }
-
-    .vocab-item {
-      padding: 8px 6px;
-      margin-bottom: 2px;
-      background: white;
-      border-radius: 6px;
-      border: 1px solid #e2e8f0;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-.vocab-item:hover {
-  background: #f8fafc;
-  border-color: #5e6ad2;
-  transform: translateX(2px);
-  box-shadow: 0 2px 8px rgba(94, 106, 210, 0.1);
-}
-
-    .vocab-audio-btn {
-      background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      flex-shrink: 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: all 0.2s;
-      font-size: 11px;
-    }
-
-    .vocab-audio-btn:hover {
-      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-      transform: scale(1.05);
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    .vocab-audio-btn.playing {
-      background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
-      color: white;
-    }
-
-    .vocab-audio-btn.loading {
-      background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
-      animation: pulse 1.5s infinite;
-      cursor: wait;
-    }
-
-    .vocab-text {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-
-    .vocab-word-line {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: 2px;
-    }
-
-    .vocab-number {
-      min-width: 22px;
-      font-weight: 600;
-      color: #4f46e5;
-      font-size: 11px;
-    }
-
-    .vocab-word {
-      font-weight: 700;
-      color: #1e40af;
-      font-size: 13px;
-      word-break: break-all;
-      overflow-wrap: break-word;
-      hyphens: auto;
-      line-height: 1.3;
-    }
-
-    .vocab-meaning {
-      color: #4b5563;
-      font-size: 11px;
-      padding-left: 26px;
-      line-height: 1.4;
-      word-break: break-all;
-      overflow-wrap: break-word;
-      hyphens: auto;
-    }
-
-    .highlight1 { color: #dc2626; background-color: rgba(220, 38, 38, 0.08); }
-    .highlight2 { color: #059669; background-color: rgba(5, 150, 105, 0.08); }
-    .highlight3 { color: #2563eb; background-color: rgba(37, 99, 235, 0.08); }
-    .highlight4 { color: #7c3aed; background-color: rgba(124, 58, 237, 0.08); }
-    .highlight5 { color: #db2777; background-color: rgba(219, 39, 119, 0.08); }
-
-    .paragraph-audio-btn.playing {
-      background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
-      color: white;
-      border-color: #ef4444;
-    }
-
-    .audio-element { display: none; }
-
-    .loading-indicator {
-      padding: 24px;
-      text-align: center;
-      color: #6b7280;
-      font-style: italic;
-      background: #f8fafc;
-      border-radius: 8px;
-      border: 1.5px dashed #cbd5e0;
-    }
-
-    .implication-english,
-    .implication-chinese-part {
-      display: inline;
-      transition: background-color 0.2s ease, box-shadow 0.2s ease;
-      border-radius: 4px;
-      padding: 2px 0;
-      cursor: pointer;
-    }
-
-    .implication-english:hover,
-    .implication-chinese-part:hover {
-      background-color: rgba(79, 70, 229, 0.12);
-      box-shadow: 0 1px 4px rgba(79, 70, 229, 0.1);
-    }
-
-    .implication-english.implication-playing,
-    .implication-chinese-part.implication-playing {
-      background-color: rgba(79, 70, 229, 0.15);
-      box-shadow: 0 1px 4px rgba(79, 70, 229, 0.15);
-      font-weight: 500;
-    }
-
-    .implication-chinese-part.implication-saying {
-      font-style: italic;
-      color: #b45309;
-      font-weight: 600;
-      background-color: rgba(245, 158, 11, 0.1);
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-
-    .unified-content .translation-content,
-    .unified-content .implication-content {
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    @media screen and (max-width: 1024px) {
-      .a4-container { 
-        width: 100%; 
-        padding: 15px; 
-      }
-      .article-vocab-wrapper { 
-        flex-direction: column; 
-        gap: 20px;
-      }
-      .article-section,
-      .vocab-section { 
-        width: 100%; 
-        flex: none;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      body { padding: 10px; }
-      .btn { width: 100%; justify-content: center; }
-      .paragraph-controls { flex-direction: column; align-items: stretch; }
-      .unit-control-bar { flex-direction: column; gap: 12px; align-items: stretch; }
-      .unit-select { width: 100%; min-width: auto; }
-      .upload-btn { width: 100%; justify-content: center; }
-    }
-
-    /* 試用到期提示樣式（無按鈕版本） */
-    .trial-expired-notice {
-      background-color: #fee2e2;
-      border: 1px solid #ef4444;
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
     }
     
-    .trial-expired-notice .message {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: #991b1b;
-      font-weight: 500;
-    }
-    
-    .trial-expired-notice .message i {
-      font-size: 24px;
-      color: #ef4444;
-    }
-
-    /* 會員資訊列樣式 */
+    /* 會員資訊列 */
     .user-info-bar {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       padding: 0 16px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       gap: 15px;
     }
     
-.user-greeting {
-  color: #5e6ad2;
-  font-weight: 500;
-  font-size: 14px;
-  background: #f0f2ff;
-  padding: 6px 15px;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid #e0e4f0;
-  box-shadow: 0 2px 6px rgba(94, 106, 210, 0.08);
-}
+    .user-greeting {
+      color: #5e6ad2;
+      font-weight: 500;
+      font-size: 14px;
+      background: #f0f2ff;
+      padding: 6px 15px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #e0e4f0;
+      box-shadow: 0 2px 6px rgba(94, 106, 210, 0.08);
+    }
     
     .user-greeting i {
       color: #fbbf24;
@@ -784,19 +104,524 @@
       color: #ef4444;
     }
     
-    .logout-btn i {
+    /* 標籤頁容器 */
+    .tabs-container {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* 標籤頁導航欄 */
+    .tabs-nav {
+      display: flex;
+      flex-wrap: wrap;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0 12px;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    
+    .tabs-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+    
+    .tabs-nav::-webkit-scrollbar-track {
+      background: #e2e8f0;
+      border-radius: 4px;
+    }
+    
+    .tabs-nav::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    
+    .tab-btn {
+      padding: 14px 20px;
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+    }
+    
+    .tab-btn:hover {
+      color: #5e6ad2;
+      background: #f1f5f9;
+    }
+    
+    .tab-btn.active {
+      color: #5e6ad2;
+      border-bottom-color: #5e6ad2;
+      background: white;
+    }
+    
+    /* 標籤頁進度指示器 */
+    .tab-progress {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: normal;
+      background: #e2e8f0;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+    
+    .tab-progress .progress-bar {
+      width: 40px;
+      height: 3px;
+      background: #cbd5e1;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    
+    .tab-progress .progress-fill {
+      height: 100%;
+      background: #5e6ad2;
+      border-radius: 3px;
+      transition: width 0.3s;
+    }
+    
+    /* 新增標籤按鈕 */
+    .add-tab-btn {
+      padding: 14px 16px;
+      background: transparent;
+      border: none;
+      color: #5e6ad2;
+      cursor: pointer;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+    
+    .add-tab-btn:hover {
+      color: #4a56b8;
+    }
+    
+    /* 下拉選單區域 */
+    .subunit-selector {
+      padding: 16px 20px;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .subunit-selector label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .subunit-select {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px 14px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 14px;
+      background: white;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .subunit-select:hover,
+    .subunit-select:focus {
+      border-color: #5e6ad2;
+      outline: none;
+    }
+    
+    /* 上傳按鈕 */
+    .upload-wrapper {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+    
+    .upload-btn {
+      background: linear-gradient(135deg, #5e6ad2 0%, #4a56b8 100%);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    
+    .upload-btn:hover {
+      background: linear-gradient(135deg, #4a56b8 0%, #3d47a0 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(94, 106, 210, 0.3);
+    }
+    
+    /* 教材內容區域 */
+    .tab-content {
+      padding: 24px;
+      min-height: 500px;
+    }
+    
+    /* 試用到期提示 */
+    .trial-expired-notice {
+      background-color: #fee2e2;
+      border: 1px solid #ef4444;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .trial-expired-notice .message {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #991b1b;
+      font-weight: 500;
+    }
+    
+    .trial-expired-notice .message i {
+      font-size: 24px;
+      color: #ef4444;
+    }
+    
+    /* 空狀態 */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #94a3b8;
+    }
+    
+    .empty-state i {
+      font-size: 64px;
+      margin-bottom: 16px;
+      display: block;
+      color: #cbd5e1;
+    }
+    
+    .empty-state h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #64748b;
+    }
+    
+    /* 文章內容樣式（保持原有） */
+    .a4-container {
+      width: 100%;
+      background-color: white;
+      border-radius: 12px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .article-vocab-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    
+    .article-section {
+      flex: 7;
+      min-width: 0;
+    }
+    
+    .vocab-section {
+      flex: 3;
+      min-width: 0;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 16px;
+    }
+    
+    .article-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a365d;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    
+    .article-illustration {
+      width: 100%;
+      max-height: 220px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .article-paragraph-wrapper {
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      text-align: justify;
+      background: #fcfdfe;
+    }
+    
+    .single-paragraph {
+      margin-bottom: 16px;
+    }
+    
+    .sentence-highlightable {
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 2px 0;
+      display: inline;
+    }
+    
+    .sentence-highlightable:hover,
+    .sentence-highlightable.sentence-selected {
+      background-color: rgba(94, 106, 210, 0.12);
+    }
+    
+    .paragraph-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin: 16px 0 12px;
+    }
+    
+    .btn {
+      border: none;
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s;
+      font-weight: 500;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #5e6ad2 0%, #4a56b8 100%);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #4a56b8 0%, #3d47a0 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(94, 106, 210, 0.3);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: #5e6ad2;
+      border: 1.5px solid #d0d4f0;
+    }
+    
+    .btn-outline:hover {
+      background: #f1f5f9;
+      border-color: #5e6ad2;
+    }
+    
+    .toggle-button-group {
+      display: inline-flex;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1.5px solid #d0d4f0;
+      background: white;
+    }
+    
+    .toggle-button-group .btn {
+      margin: 0 !important;
+      border-radius: 0;
+      border: none;
+      border-right: 1.5px solid #d0d4f0;
+      background: transparent;
+      color: #5e6ad2;
+    }
+    
+    .toggle-button-group .btn:last-child {
+      border-right: none;
+    }
+    
+    .toggle-button-group .btn.active {
+      background: linear-gradient(135deg, #5e6ad2 0%, #4a56b8 100%);
+      color: white;
+    }
+    
+    .unified-content {
+      margin-top: 12px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .unified-content .translation-content {
+      padding: 16px;
+      background-color: #f0f9ff;
+      border-left: 4px solid #3b82f6;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    
+    .unified-content .implication-content {
+      padding: 16px;
+      background-color: #fefce8;
+      border-left: 4px solid #f59e0b;
+      font-size: 13px;
+      display: none;
+    }
+    
+    .vocab-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e40af;
+      text-align: center;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid #dbeafe;
+    }
+    
+    .vocab-pagination {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin: 12px 0;
+      flex-wrap: wrap;
+    }
+    
+    .vocab-page-btn {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1.5px solid #e2e8f0;
+      background: white;
+      color: #5e6ad2;
+      font-weight: 600;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .vocab-page-btn:hover:not(:disabled) {
+      background: #5e6ad2;
+      color: white;
+      border-color: #5e6ad2;
+    }
+    
+    .vocab-page-btn.active {
+      background: #5e6ad2;
+      color: white;
+      border-color: #5e6ad2;
+    }
+    
+    .vocab-page-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    
+    .vocab-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    
+    .vocab-item {
+      padding: 10px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    
+    .vocab-item:hover {
+      border-color: #5e6ad2;
+      transform: translateX(2px);
+    }
+    
+    .vocab-audio-btn {
+      background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    
+    .vocab-audio-btn.playing {
+      background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+    }
+    
+    .vocab-text {
+      flex: 1;
+    }
+    
+    .vocab-word {
+      font-weight: 700;
+      color: #1e40af;
       font-size: 14px;
     }
     
-    .loading-auth {
+    .vocab-meaning {
+      color: #4b5563;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    
+    .highlight1 { color: #dc2626; background-color: rgba(220, 38, 38, 0.08); }
+    .highlight2 { color: #059669; background-color: rgba(5, 150, 105, 0.08); }
+    .highlight3 { color: #2563eb; background-color: rgba(37, 99, 235, 0.08); }
+    .highlight4 { color: #7c3aed; background-color: rgba(124, 58, 237, 0.08); }
+    .highlight5 { color: #db2777; background-color: rgba(219, 39, 119, 0.08); }
+    
+    .loading-indicator {
       padding: 40px;
       text-align: center;
       color: #6b7280;
     }
-
-    .logout-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
+    
+    .audio-element { display: none; }
+    
+    @media screen and (max-width: 1024px) {
+      .article-vocab-wrapper { flex-direction: column; }
+      .article-section, .vocab-section { width: 100%; }
+    }
+    
+    @media screen and (max-width: 768px) {
+      body { padding: 10px; }
+      .subunit-selector { flex-direction: column; align-items: stretch; }
+      .subunit-select { width: 100%; }
+      .upload-wrapper { margin-left: 0; }
+      .btn { width: 100%; justify-content: center; }
+      .paragraph-controls { flex-direction: column; }
+      .toggle-button-group { width: 100%; }
+      .toggle-button-group .btn { flex: 1; text-align: center; }
     }
     
     @keyframes spin {
@@ -806,39 +631,10 @@
     .fa-spinner {
       animation: spin 1s linear infinite;
     }
-
-/* 停用帳號頁面樣式 */
-.disabled-account-container {
-  max-width: 500px;
-  margin: 50px auto;
-  text-align: center;
-  padding: 40px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.disabled-account-container h2 {
-  color: #1e293b;
-  margin-bottom: 16px;
-}
-
-.disabled-account-container p {
-  color: #64748b;
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
   </style>
 </head>
-<body lang="zh">
-  <!-- 系統設定：管理員開關 -->
-  <script>
-    // ===== 系統設定 =====
-    const SITE_VERSION = 'v1.0.1';
-    const TRIAL_DAYS = 7;
-  </script>
-
-  <div id="app" data-unit-id="">
+<body>
+  <div class="main-container">
     <!-- 會員資訊列 -->
     <div class="user-info-bar" id="userInfoBar" style="display: none;">
       <div class="user-greeting" id="userGreeting">
@@ -849,98 +645,115 @@
         <i class="fas fa-sign-out-alt"></i> 登出
       </button>
     </div>
-
-    <!-- 單元控制列 -->
-    <div class="unit-control-bar">
-      <div class="unit-selector-wrapper">
-        <label for="unit-select"><i class="fas fa-book-open"></i> 選擇單元：</label>
-        <select id="unit-select" class="unit-select">
-          <option value="">載入中…</option>
-        </select>
-      </div>
-      <div class="upload-wrapper" id="upload-wrapper" style="display: none;">
-        <label for="unit-upload" class="btn btn-outline upload-btn">
-          <i class="fas fa-upload"></i> 上傳單元
-        </label>
-        <input type="file" id="unit-upload" accept="application/json, .json" style="display:none;">
-      </div>
-    </div>
-
-    <!-- 試用到期提示區 -->
+    
+    <!-- 試用到期提示 -->
     <div id="trialExpiredNotice" class="trial-expired-notice" style="display: none;">
       <div class="message">
         <i class="fas fa-hourglass-end"></i>
         <span>⚠️ 您的免費試用期已屆滿。請聯絡管理員，以解鎖全部內容</span>
       </div>
     </div>
-
-    <!-- 動態內容容器 -->
-    <div class="a4-container">
-      <div class="article-vocab-wrapper" id="article-vocab-wrapper"></div>
+    
+    <!-- 標籤頁容器 -->
+    <div class="tabs-container">
+      <div class="tabs-nav" id="tabsNav">
+        <!-- 動態生成標籤頁按鈕 -->
+      </div>
+      
+      <div class="subunit-selector" id="subunitSelector" style="display: none;">
+        <label><i class="fas fa-book-open"></i> 選擇課文：</label>
+        <select id="subunitSelect" class="subunit-select">
+          <option value="">載入中...</option>
+        </select>
+        <div class="upload-wrapper" id="uploadWrapper" style="display: none;">
+          <label for="unitUpload" class="upload-btn">
+            <i class="fas fa-upload"></i> 上傳單元
+          </label>
+          <input type="file" id="unitUpload" accept="application/json, .json" style="display:none;">
+        </div>
+      </div>
+      
+      <div class="tab-content" id="tabContent">
+        <div class="empty-state">
+          <i class="fas fa-book"></i>
+          <h3>正在載入教材...</h3>
+          <p>請稍候</p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- 音頻容器 -->
+  
   <div id="audio-container" class="audio-element"></div>
-
-  <!-- Firebase 認證腳本 -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
-    import { getFirestore, doc, setDoc, getDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+  
+  <script>
+    // ===== 系統設定 =====
+    const SITE_VERSION = 'v1.2.0';
+    const TRIAL_DAYS = 7;
     
-    const firebaseConfig = {
-      apiKey: "AIzaSyBwvsGR126V-_yNR9ZafSwNtp_lfS6jYFQ",
-      authDomain: "eng-read-mb-f1-newtreasureplus.firebaseapp.com",
-      projectId: "eng-read-mb-f1-newtreasureplus",
-      storageBucket: "eng-read-mb-f1-newtreasureplus.firebasestorage.app",
-      messagingSenderId: "609164976857",
-      appId: "1:609164976857:web:647920c68d2aaa0d47d4c8",
-      measurementId: "G-B6GRLE9Y57"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-
-    window.auth = auth;
-    window.db = db;
-
+    // 全局變量
     let currentUser = null;
     let currentUserData = null;
     let isTrialExpired = false;
     let isGuestMode = false;
-
-    // 閱讀進度追蹤器
+    
+    // 教材數據
+    let curriculum = [];        // 教材結構 [{ id, name, subUnits, progress }]
+    let activeUnitId = null;    // 當前選中的教材 ID
+    let activeSubUnitId = null; // 當前選中的子單元 ID
+    let currentUnitData = null;  // 當前載入的單元數據
+    
+    // 閱讀進度追蹤
     let readingTimer = null;
     let currentUnitIdForProgress = null;
     let lastRecordedPercent = 0;
     const PROGRESS_THRESHOLD = 10;
-
-    window.startReadingSession = function(unitId) {
+    
+    // ===== 輔助函數 =====
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>"']/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        if (m === '"') return '&quot;';
+        return '&#39;';
+      });
+    }
+    
+    function showToast(message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.textContent = message;
+      toast.style.cssText = `
+        position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+        background: ${type === 'error' ? '#ef4444' : '#10b981'};
+        color: white; padding: 10px 20px; border-radius: 40px;
+        font-size: 14px; z-index: 10000; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        white-space: nowrap; max-width: 90%; overflow: hidden; text-overflow: ellipsis;
+      `;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+    
+    // ===== 閱讀進度追蹤 =====
+    function startReadingSession(unitId) {
       if (readingTimer) clearInterval(readingTimer);
       currentUnitIdForProgress = unitId;
       lastRecordedPercent = 0;
       
       readingTimer = setInterval(async () => {
-        const user = auth.currentUser;
-        if (!user || !currentUnitIdForProgress) return;
-        
+        if (!currentUser || !currentUnitIdForProgress) return;
         const articleWrapper = document.querySelector('.article-paragraph-wrapper');
         if (!articleWrapper) return;
         
         const scrollTop = window.scrollY;
         const articleHeight = articleWrapper.scrollHeight;
         const windowHeight = window.innerHeight;
-        
-        let currentPercent = Math.min(
-          Math.floor((scrollTop + windowHeight) / articleHeight * 100),
-          100
-        );
+        let currentPercent = Math.min(Math.floor((scrollTop + windowHeight) / articleHeight * 100), 100);
         
         if (Math.abs(currentPercent - lastRecordedPercent) >= PROGRESS_THRESHOLD) {
           try {
-            const userRef = doc(db, 'users', user.uid);
+            const { doc, updateDoc } = await import('https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js');
+            const userRef = doc(window.db, 'users', currentUser.uid);
             await updateDoc(userRef, {
               [`readingProgress.${currentUnitIdForProgress}`]: currentPercent,
               lastReadUnit: currentUnitIdForProgress,
@@ -948,1586 +761,549 @@
             });
             lastRecordedPercent = currentPercent;
             console.log(`📖 閱讀進度更新: ${currentUnitIdForProgress} = ${currentPercent}%`);
+            
+            // 更新本地儲存的進度
+            updateLocalProgress(currentUnitIdForProgress, currentPercent);
           } catch (error) {
-            console.error('❌ 更新閱讀進度失敗:', error);
+            console.error('更新閱讀進度失敗:', error);
           }
         }
       }, 30000);
-    };
-
-    window.stopReadingSession = function() {
+    }
+    
+    function stopReadingSession() {
       if (readingTimer) {
         clearInterval(readingTimer);
         readingTimer = null;
       }
-      saveFinalProgress();
       currentUnitIdForProgress = null;
-    };
-
-    async function saveFinalProgress() {
-      const user = auth.currentUser;
-      if (!user || !currentUnitIdForProgress) return;
-      
-      const articleWrapper = document.querySelector('.article-paragraph-wrapper');
-      if (!articleWrapper) return;
-      
-      const scrollTop = window.scrollY;
-      const articleHeight = articleWrapper.scrollHeight;
-      const windowHeight = window.innerHeight;
-      
-      let finalPercent = Math.min(
-        Math.floor((scrollTop + windowHeight) / articleHeight * 100),
-        100
-      );
-      
-      if (Math.abs(finalPercent - lastRecordedPercent) >= 1) {
-        try {
-          const userRef = doc(db, 'users', user.uid);
-          await updateDoc(userRef, {
-            [`readingProgress.${currentUnitIdForProgress}`]: finalPercent,
-            lastReadUnit: currentUnitIdForProgress,
-            lastReadAt: new Date().toISOString()
-          });
-          console.log(`📖 最終進度已保存: ${currentUnitIdForProgress} = ${finalPercent}%`);
-        } catch (error) {
-          console.error('❌ 保存最終進度失敗:', error);
-        }
-      }
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const unitSelect = document.getElementById('unit-select');
-      if (unitSelect) {
-        unitSelect.addEventListener('change', () => {
-          window.stopReadingSession();
-        });
-      }
-    });
-
-    window.addEventListener('beforeunload', () => {
-      if (readingTimer) {
-        clearInterval(readingTimer);
-        saveFinalProgress();
-      }
-    });
-
-    function checkTrialExpired() {
-  // 🔥 訪客模式：永遠不顯示試用到期提示
-  if (isGuestMode) {
-    isTrialExpired = false;
-    document.getElementById('trialExpiredNotice').style.display = 'none';
-    return false;
-  }
-  
-  if (!currentUserData) return false;
-  
-  if (currentUserData.premium) {
-    isTrialExpired = false;
-    document.getElementById('trialExpiredNotice').style.display = 'none';
-    return false;
-  }
-  
-  if (currentUserData.trialEndAt) {
-    const trialEnd = new Date(currentUserData.trialEndAt);
-    const now = new Date();
     
-    if (now > trialEnd) {
-      isTrialExpired = true;
-      document.getElementById('trialExpiredNotice').style.display = 'flex';
-      console.log('⚠️ 試用期已屆滿');
-      return true;
-    } else {
-      isTrialExpired = false;
-      document.getElementById('trialExpiredNotice').style.display = 'none';
-      const daysLeft = Math.ceil((trialEnd - now) / (1000 * 60 * 60 * 24));
-      console.log(`✅ 試用期剩餘 ${daysLeft} 天`);
-      return false;
+    function updateLocalProgress(unitId, progress) {
+      const saved = JSON.parse(localStorage.getItem('reading_progress') || '{}');
+      saved[unitId] = progress;
+      localStorage.setItem('reading_progress', JSON.stringify(saved));
+      updateTabProgress(activeUnitId);
     }
-  }
-  
-  isTrialExpired = true;
-  document.getElementById('trialExpiredNotice').style.display = 'flex';
-  return true;
-}
-
-    function initializeAppContent() {
-      const checkInterval = setInterval(() => {
-        if (window.UnitManager) {
-          clearInterval(checkInterval);
-          
-          const originalLoadAndRender = window.UnitManager.loadAndRenderUnit;
-          window.UnitManager.loadAndRenderUnit = async function(unitInfo) {
-            if (isTrialExpired) {
-              const unitsIndex = window.UnitManager.getUnitsIndex?.() || [];
-              const firstUnit = unitsIndex[0];
-              if (unitInfo && firstUnit && unitInfo.unitId !== firstUnit.unitId) {
-                alert('⚠️ 試用期已屆滿，只能閱讀第一篇文章。');
-                return originalLoadAndRender.call(this, firstUnit);
-              }
-            }
-            const result = await originalLoadAndRender.call(this, unitInfo);
-            return result;
-          };
-
-          const originalHandleSelect = window.UnitManager.handleUnitSelect;
-          window.UnitManager.handleUnitSelect = async function(unitId) {
-            if (isTrialExpired) {
-              const unitsIndex = window.UnitManager.getUnitsIndex?.() || [];
-              const firstUnit = unitsIndex[0];
-              if (unitId !== firstUnit?.unitId) {
-                alert('⚠️ 試用期已屆滿，只能閱讀第一篇文章。');
-                const select = document.getElementById('unit-select');
-                if (select && firstUnit) select.value = firstUnit.unitId;
-                return;
-              }
-            }
-            window.stopReadingSession();
-            return originalHandleSelect.call(this, unitId);
-          };
-
-          window.UnitManager.init();
-        }
-      }, 100);
+    
+    function getStoredProgress(unitId) {
+      const saved = JSON.parse(localStorage.getItem('reading_progress') || '{}');
+      return saved[unitId] || 0;
     }
-
-    window.handleLogout = async function() {
+    
+    // ===== 教材管理器 =====
+    async function loadUnitsIndex() {
       try {
-        const btn = document.getElementById('logoutBtn');
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 登出中...';
-        btn.disabled = true;
-        
-        if (readingTimer) {
-          clearInterval(readingTimer);
-          await saveFinalProgress();
-        }
-        
-        await signOut(auth);
-        localStorage.clear();
-        
-        setTimeout(() => {
-          window.location.href = '/eng-reading-panel/login.html';
-        }, 300);
+        const res = await fetch(`./data/units-index.json?v=${Date.now()}`);
+        if (!res.ok) throw new Error('網路錯誤');
+        const data = await res.json();
+        return data.units || [];
       } catch (error) {
-        console.error('登出失敗:', error);
-        alert('登出失敗：' + error.message);
-        const btn = document.getElementById('logoutBtn');
-        btn.innerHTML = '<i class="fas fa-sign-out-alt"></i> 登出';
-        btn.disabled = false;
-      }
-    };
-
-    window.isTrialExpired = () => isTrialExpired;
-    window.getUserData = () => currentUserData;
-
-    // ===== 檢查登入狀態 =====
-    onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        document.getElementById('userInfoBar').style.display = 'flex';
-        currentUser = user;
-        isGuestMode = user.isAnonymous || false;
-        
-// 根據用戶狀態顯示不同標籤
-let displayName;
-if (user.isAnonymous) {
-  displayName = '訪客';
-} else {
-  // 檢查是否為付費用戶
-  const isPremium = currentUserData?.premium === true;
-  const trialEndAt = currentUserData?.trialEndAt;
-  const isTrialActive = trialEndAt && new Date(trialEndAt) > new Date();
-  
-  if (isPremium) {
-    displayName = '會員';
-  } else if (isTrialActive) {
-    const daysLeft = Math.ceil((new Date(trialEndAt) - new Date()) / (1000 * 60 * 60 * 24));
-    displayName = `試用中 (${daysLeft}天)`;
-  } else {
-    displayName = user.displayName || user.email || '會員';
-  }
-}
-document.getElementById('userNameDisplay').textContent = displayName;
-
-        try {
-          const userRef = doc(db, 'users', user.uid);
-          const userSnap = await getDoc(userRef);
-
-          if (!userSnap.exists()) {
-            const trialEndDate = new Date();
-            trialEndDate.setDate(trialEndDate.getDate() + TRIAL_DAYS);
-            
-            const userData = {
-              email: user.email,
-              displayName,
-              photoURL: user.photoURL || null,
-              phoneNumber: '',
-              uid: user.uid,
-              provider: user.providerData[0]?.providerId || 'unknown',
-              role: 'user',
-              grade: '',
-              publishers: [],
-              premium: false,
-              plan: 'free',
-              expiresAt: null,
-              trialEndAt: trialEndDate.toISOString(),
-              loginCount: 1,
-              audioPlayCount: 0,
-              vocabLookupCount: 0,
-              readingProgress: {},
-              stats: {
-                totalPractices: 0,
-                avgPercentage: 0,
-                badges: { gold: 0, pass: 0 }
-              },
-              createdAt: new Date().toISOString(),
-              lastLoginAt: new Date().toISOString(),
-              lastActiveAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
-              settings: { language: 'zh', autoPlay: false, notifications: true }
-            };
-            await setDoc(userRef, userData);
-            currentUserData = userData;
-            console.log('✅ 新用戶資料已寫入，試用期 7 天，角色：user');
-          } else {
-            await updateDoc(userRef, {
-              lastLoginAt: new Date().toISOString(),
-              loginCount: increment(1),
-              updatedAt: new Date().toISOString()
-            });
-            const updatedSnap = await getDoc(userRef);
-            currentUserData = updatedSnap.data();
-            console.log(`ℹ️ 用戶 ${user.email} 登入，累計次數: ${currentUserData.loginCount}`);
-            
-            if (currentUserData.isTeacher === true && !currentUserData.role) {
-              console.log('🔄 檢測到舊版 isTeacher 欄位，自動轉換為 role: teacher');
-              await updateDoc(userRef, {
-                role: 'teacher',
-                isTeacher: null
-              });
-              currentUserData.role = 'teacher';
-            }
-
-            if (currentUserData.isDisabled === true) {
-              console.log('⚠️ 帳號已被停用，顯示停用頁面');
-              document.getElementById('userInfoBar').style.display = 'none';
-              document.getElementById('app').innerHTML = `
-                <div class="disabled-account-container" style="max-width: 500px; margin: 50px auto; text-align: center; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                  <i class="fas fa-ban" style="font-size: 64px; color: #ef4444; margin-bottom: 20px;"></i>
-                  <h2 style="color: #1e293b; margin-bottom: 16px;">帳號已停用</h2>
-                  <p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">
-                    您的帳號已被管理員停用${currentUserData.disabledReason ? '：' + currentUserData.disabledReason : ''}。
-                  </p>
-                  ${currentUserData.reactivateAt ? 
-                    `<p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">預計於 ${new Date(currentUserData.reactivateAt).toLocaleDateString('zh-HK')} 自動啟用。</p>` : 
-                    `<p style="color: #64748b; margin-bottom: 12px; line-height: 1.6;">如有疑問，請聯絡管理員。</p>`
-                  }
-                  <p style="color: #94a3b8; font-size: 12px; margin-top: 20px;">系統將在 3 秒後自動登出...</p>
-                  <button onclick="window.location.reload()" class="btn" style="margin-top: 20px; padding: 10px 24px; background: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">重新整理</button>
-                </div>
-              `;
-              setTimeout(async () => {
-                await signOut(auth);
-                console.log('✅ 已執行登出');
-              }, 5000);
-              return;
-            }
-          }
-
-          const userRole = currentUserData?.role || 'user';
-          const canUpload = ['teacher', 'admin'].includes(userRole);
-          
-          const uploadWrapper = document.getElementById('upload-wrapper');
-          if (uploadWrapper) {
-            uploadWrapper.style.display = canUpload ? 'flex' : 'none';
-            if (canUpload) {
-              const uploadInput = document.getElementById('unit-upload');
-              if (uploadInput) {
-                uploadInput.removeEventListener('change', window.handleFileUpload);
-                uploadInput.addEventListener('change', function(e) {
-                  if (window.UnitManager) {
-                    window.UnitManager.handleFileUpload(e.target);
-                  }
-                });
-              }
-            }
-          }
-
-          checkTrialExpired();
-
-        } catch (error) {
-          console.error('❌ Firestore 操作失敗:', error);
-        }
-
-        user.getIdToken()
-          .then(token => {
-            localStorage.setItem('authToken', token);
-            localStorage.setItem('userUID', user.uid);
-            localStorage.setItem('userEmail', user.email || '');
-            localStorage.setItem('userName', displayName);
-            localStorage.setItem('userRole', currentUserData?.role || 'user');
-            localStorage.setItem('userData', JSON.stringify({
-  uid: user.uid,
-  email: user.email,
-  displayName: user.isAnonymous ? '訪客' : (currentUserData?.premium ? '會員' : (currentUserData?.trialEndAt && new Date(currentUserData.trialEndAt) > new Date() ? `試用中` : (user.displayName || user.email || '會員'))),
-  role: currentUserData?.role || 'user',
-  grade: currentUserData?.grade || '',
-  publishers: currentUserData?.publishers || [],
-  trialEndAt: currentUserData?.trialEndAt || null,
-  isGuest: user.isAnonymous || false,
-  isDisabled: currentUserData?.isDisabled || false,
-  lastLoginAt: currentUserData?.lastLoginAt || new Date().toISOString()
-}));
-          })
-          .catch(error => {
-            console.error('❌ 獲取 Token 失敗:', error);
-          });
-
-        initializeAppContent();
-
-      } else {
-        const currentPath = window.location.pathname;
-        if (!currentPath.includes('login.html')) {
-          sessionStorage.setItem('redirectAfterLogin', currentPath);
-          window.location.href = '/eng-reading-panel/login.html';
-        }
-      }
-    });
-  </script>
-
-  <script>
-    // 音頻路徑輔助函數
-    function getAudioPath(unitId, type, identifier) {
-      const safeUnitId = unitId.replace(/[^a-zA-Z0-9_.-]/g, '');
-      const safeIdentifier = identifier.toString().replace(/[^a-zA-Z0-9_.-]/g, '');
-      
-      let fileName;
-      if (type === 'sentence') {
-        fileName = `sentence_${safeIdentifier}.mp3`;
-      } else if (type === 'word') {
-        const paddedId = safeIdentifier.padStart(3, '0');
-        fileName = `word_${paddedId}.mp3`;
-      } else if (type === 'impl') {
-        const paddedId = safeIdentifier.padStart(3, '0');
-        fileName = `impl_${paddedId}.mp3`;
-      } else {
-        throw new Error('未知音頻類型');
-      }
-      
-      const basePath = `/eng-reading-panel/audio/${safeUnitId}/${fileName}`;
-      
-      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        return basePath;
-      } else {
-        const GITHUB_USER = 'tonyycsw-lgtm';
-        return `https://cdn.jsdelivr.net/gh/${GITHUB_USER}/eng-reading-panel/audio/${safeUnitId}/${fileName}`;
+        console.error('載入單元索引失敗:', error);
+        return [];
       }
     }
-
-    // 音頻控制器
-    const AudioController = {
-      currentAudio: null,
-      currentPlayingButton: null,
-      currentParagraphSentences: [],
-      currentSentenceIndex: -1,
-      currentParaNum: null,
-      currentUnitId: null,
-      isPlayingParagraph: false,
-      globalStartIndex: 0,
-      ttsPlaying: false,
-
-      checkAuth() {
-        const token = localStorage.getItem('authToken');
-        if (!token) {
-          alert('請先登入會員');
-          window.location.href = '/eng-reading-panel/login.html';
-          return false;
+    
+    function groupByUnit(units) {
+      const groups = {};
+      units.forEach(unit => {
+        let groupKey = 'other';
+        const match = unit.unitId.match(/(unit\d+)/i);
+        if (match) groupKey = match[1].toLowerCase();
+        
+        if (!groups[groupKey]) {
+          groups[groupKey] = {
+            id: groupKey,
+            name: `Unit ${groupKey.replace('unit', '')}`,
+            subUnits: []
+          };
         }
-        return true;
-      },
-
-      checkTrialAccess() {
-        if (window.isTrialExpired && window.isTrialExpired()) {
-          alert('⚠️ 試用期已屆滿。請升級以繼續體驗。');
-          return false;
-        }
-        return true;
-      },
-
-      async recordAudioPlay() {
-        try {
-          const user = window.auth?.currentUser;
-          if (!user) return;
-          const { doc, updateDoc, increment } = await import('https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js');
-          const userRef = doc(window.db, 'users', user.uid);
-          await updateDoc(userRef, { audioPlayCount: increment(1) });
-        } catch (error) {
-          console.error('❌ 記錄朗讀次數失敗', error);
-        }
-      },
-
-      async recordVocabLookup() {
-        try {
-          const user = window.auth?.currentUser;
-          if (!user) return;
-          const { doc, updateDoc, increment } = await import('https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js');
-          const userRef = doc(window.db, 'users', user.uid);
-          await updateDoc(userRef, { vocabLookupCount: increment(1) });
-        } catch (error) {
-          console.error('❌ 記錄查詞次數失敗', error);
-        }
-      },
-
-      resetButton(btn) {
-        if (!btn) return;
-        btn.classList.remove('playing', 'loading');
-        if (btn.id.includes('_para-audio-btn-')) {
-          btn.innerHTML = '<i class="fas fa-volume-up"></i> 朗讀';
-        } else if (btn.id.includes('_impl-audio-btn-')) {
-          btn.innerHTML = '<i class="fas fa-play"></i>';
-        } else if (btn.id.includes('_vocab-audio-btn-')) {
-          btn.innerHTML = '<i class="fas fa-volume-up"></i>';
+        
+        groups[groupKey].subUnits.push({
+          id: unit.unitId,
+          name: unit.unitName,
+          dataUrl: unit.dataUrl,
+          grade: unit.grade,
+          publisher: unit.publisher,
+          progress: getStoredProgress(unit.unitId)
+        });
+      });
+      
+      // 按 ID 排序
+      return Object.values(groups).sort((a, b) => a.id.localeCompare(b.id));
+    }
+    
+    function calculateUnitProgress(subUnits) {
+      if (!subUnits || subUnits.length === 0) return 0;
+      const total = subUnits.reduce((sum, unit) => sum + (unit.progress || 0), 0);
+      return Math.round(total / subUnits.length);
+    }
+    
+    async function initCurriculum() {
+      const allUnits = await loadUnitsIndex();
+      const filteredUnits = filterUnitsByUser(allUnits);
+      curriculum = groupByUnit(filteredUnits);
+      
+      if (curriculum.length === 0) {
+        showNoMaterialMessage();
+        return;
+      }
+      
+      // 設置默認選中的教材
+      activeUnitId = curriculum[0].id;
+      
+      // 渲染標籤頁
+      renderTabs();
+      
+      // 渲染下拉選單和內容
+      renderSubunitSelector();
+      
+      // 檢查 URL 參數
+      const urlUnit = getUnitFromURL();
+      if (urlUnit) {
+        const foundUnit = findSubUnitById(urlUnit);
+        if (foundUnit) {
+          activeSubUnitId = foundUnit.id;
+          await loadAndRenderUnit(foundUnit);
         } else {
-          btn.innerHTML = btn.innerHTML.includes('朗讀') ? '<i class="fas fa-volume-up"></i> 朗讀' : '<i class="fas fa-play"></i>';
+          await loadFirstSubUnit();
         }
-      },
-
-      resetImplicationButton(btn, isPlaying = false) {
-        if (!btn) return;
-        btn.classList.remove('loading');
-        if (isPlaying) {
-          btn.classList.add('playing');
-          btn.innerHTML = '<i class="fas fa-stop"></i>';
-        } else {
-          btn.classList.remove('playing');
-          btn.innerHTML = '<i class="fas fa-play"></i>';
+      } else {
+        await loadFirstSubUnit();
+      }
+    }
+    
+    function findSubUnitById(unitId) {
+      for (const unit of curriculum) {
+        const found = unit.subUnits.find(su => su.id === unitId);
+        if (found) return found;
+      }
+      return null;
+    }
+    
+    async function loadFirstSubUnit() {
+      if (curriculum.length > 0 && curriculum[0].subUnits.length > 0) {
+        activeSubUnitId = curriculum[0].subUnits[0].id;
+        await loadAndRenderUnit(curriculum[0].subUnits[0]);
+      }
+    }
+    
+    function renderTabs() {
+      const container = document.getElementById('tabsNav');
+      if (!container) return;
+      
+      let html = '';
+      curriculum.forEach((unit, idx) => {
+        const progress = calculateUnitProgress(unit.subUnits);
+        const isActive = unit.id === activeUnitId;
+        html += `
+          <button class="tab-btn ${isActive ? 'active' : ''}" data-unit-id="${unit.id}">
+            <i class="fas fa-folder-open"></i>
+            ${escapeHtml(unit.name)}
+            <span class="tab-progress">
+              <span class="progress-bar">
+                <span class="progress-fill" style="width: ${progress}%"></span>
+              </span>
+              ${progress}%
+            </span>
+          </button>
+        `;
+      });
+      
+      html += `
+        <button class="add-tab-btn" id="addNewUnitBtn" style="display: none;">
+          <i class="fas fa-plus-circle"></i> 新增教材
+        </button>
+      `;
+      
+      container.innerHTML = html;
+      
+      // 綁定標籤頁點擊事件
+      container.querySelectorAll('.tab-btn').forEach(btn => {
+        if (btn.id !== 'addNewUnitBtn') {
+          btn.addEventListener('click', () => switchUnit(btn.dataset.unitId));
         }
-      },
-
-      stop() {
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
-        if (this.currentAudio instanceof HTMLAudioElement) {
-          this.currentAudio.pause();
-          this.currentAudio.currentTime = 0;
-          this.currentAudio = null;
+      });
+    }
+    
+    function updateTabProgress(unitId) {
+      const unit = curriculum.find(u => u.id === unitId);
+      if (!unit) return;
+      
+      const progress = calculateUnitProgress(unit.subUnits);
+      const tabBtn = document.querySelector(`.tab-btn[data-unit-id="${unitId}"]`);
+      if (tabBtn) {
+        const progressSpan = tabBtn.querySelector('.tab-progress');
+        if (progressSpan) {
+          progressSpan.innerHTML = `
+            <span class="progress-bar">
+              <span class="progress-fill" style="width: ${progress}%"></span>
+            </span>
+            ${progress}%
+          `;
         }
-        if (this.currentPlayingButton) {
-          if (this.currentPlayingButton.id.includes('_impl-audio-btn-')) {
-            this.resetImplicationButton(this.currentPlayingButton, false);
-          } else {
-            this.resetButton(this.currentPlayingButton);
-          }
-          this.currentPlayingButton = null;
+      }
+    }
+    
+    async function switchUnit(unitId) {
+      if (isTrialExpired && unitId !== curriculum[0]?.id) {
+        showToast('試用期已屆滿，只能閱讀第一篇文章', 'error');
+        return;
+      }
+      
+      activeUnitId = unitId;
+      
+      // 更新標籤頁樣式
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.unitId === unitId) btn.classList.add('active');
+      });
+      
+      // 重新渲染下拉選單
+      renderSubunitSelector();
+      
+      // 載入第一個子單元
+      const unit = curriculum.find(u => u.id === unitId);
+      if (unit && unit.subUnits.length > 0) {
+        activeSubUnitId = unit.subUnits[0].id;
+        await loadAndRenderUnit(unit.subUnits[0]);
+      }
+    }
+    
+    function renderSubunitSelector() {
+      const container = document.getElementById('subunitSelector');
+      const select = document.getElementById('subunitSelect');
+      const unit = curriculum.find(u => u.id === activeUnitId);
+      
+      if (!unit || unit.subUnits.length === 0) {
+        container.style.display = 'none';
+        return;
+      }
+      
+      container.style.display = 'flex';
+      
+      let optionsHtml = '';
+      unit.subUnits.forEach((sub, idx) => {
+        const progress = sub.progress || 0;
+        const progressText = progress > 0 ? ` (${progress}%)` : '';
+        optionsHtml += `<option value="${sub.id}" ${sub.id === activeSubUnitId ? 'selected' : ''}>
+          ${idx + 1}. ${escapeHtml(sub.name)}${progressText}
+        </option>`;
+      });
+      
+      select.innerHTML = optionsHtml;
+      
+      // 綁定下拉選單事件
+      select.onchange = async (e) => {
+        const newSubUnitId = e.target.value;
+        const newSubUnit = unit.subUnits.find(su => su.id === newSubUnitId);
+        if (newSubUnit) {
+          activeSubUnitId = newSubUnit.id;
+          await loadAndRenderUnit(newSubUnit);
         }
-        this.clearAllSentenceHighlights();
-        this.clearImplicationHighlights();
-        this.isPlayingParagraph = false;
-        this.currentSentenceIndex = -1;
-        this.currentParagraphSentences = [];
-      },
-
-      clearAllSentenceHighlights() {
-        document.querySelectorAll('.sentence-highlightable').forEach(el => {
-          el.classList.remove('sentence-playing', 'sentence-selected');
-        });
-        document.querySelectorAll('.translation-sentence').forEach(el => {
-          el.classList.remove('translation-highlight');
-        });
-      },
-
-      clearImplicationHighlights() {
-        document.querySelectorAll('.implication-english, .implication-chinese-part').forEach(el => {
-          el.classList.remove('implication-playing');
-        });
-      },
-
-      highlightSentence(paraNum, unitId, sentenceIndex) {
-        this.clearAllSentenceHighlights();
-        const selector = `#${unitId}_para${paraNum}-text .sentence-highlightable[data-sentence-index="${sentenceIndex}"]`;
-        const sentenceEl = document.querySelector(selector);
-        if (sentenceEl) sentenceEl.classList.add('sentence-selected');
-        const transSelector = `#${unitId}_trans-${paraNum} .translation-sentence[data-sentence-index="${sentenceIndex}"]`;
-        const transEl = document.querySelector(transSelector);
-        if (transEl) transEl.classList.add('translation-highlight');
-      },
-
-      extractPlainText(htmlContent) {
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = htmlContent;
-        return tempDiv.textContent || tempDiv.innerText || '';
-      },
-
-      preprocessForTTS(text) {
-        return text
-          .replace(/\bI'm\b/g, 'I am')
-          .replace(/\byou're\b/g, 'you are')
-          .replace(/\byou've\b/g, 'you have')
-          .replace(/\bit's\b/g, 'it is')
-          .replace(/\bdon't\b/g, 'do not')
-          .replace(/\bdoesn't\b/g, 'does not')
-          .replace(/\bdidn't\b/g, 'did not')
-          .replace(/\bcan't\b/g, 'cannot');
-      },
-
-      async playSingleSentence(paraNum, unitId, sentenceIndex, sentenceHtml) {
-        if (!this.checkAuth()) return;
-        if (!this.checkTrialAccess()) return;
+      };
+    }
+    
+    async function loadAndRenderUnit(subUnit) {
+      if (isTrialExpired) {
+        const firstUnit = curriculum[0]?.subUnits[0];
+        if (firstUnit && subUnit.id !== firstUnit.id) {
+          showToast('⚠️ 試用期已屆滿，只能閱讀第一篇文章。', 'error');
+          if (firstUnit) return loadAndRenderUnit(firstUnit);
+        }
+      }
+      
+      try {
+        stopReadingSession();
+        showLoading();
         
-        if (this.isPlayingParagraph || this.currentAudio) this.stop();
-        this.stop();
+        const res = await fetch(subUnit.dataUrl);
+        if (!res.ok) throw new Error('載入單元數據失敗');
+        currentUnitData = await res.json();
         
-        const btn = document.getElementById(`${unitId}_para-audio-btn-${paraNum}`);
-        const unitData = UnitManager.getCurrentUnitData();
-        let globalIndex = this.calcGlobalSentenceIndex(unitData, paraNum, sentenceIndex);
+        // 更新 URL
+        const url = new URL(window.location);
+        url.searchParams.set('unit', subUnit.id);
+        window.history.pushState({}, '', url);
         
-        this.highlightSentence(paraNum, unitId, sentenceIndex);
+        // 渲染內容
+        renderArticleVocabulary(currentUnitData, subUnit.id);
         
-        try {
-          const audio = new Audio();
-          const audioPath = getAudioPath(unitId, 'sentence', globalIndex.toString().padStart(3, '0'));
-          const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 3000));
-          audio.src = audioPath;
-          await Promise.race([audio.play(), timeoutPromise]);
+        console.log(`✅ 單元 ${subUnit.id} 載入完成`);
+        
+        // 開始閱讀追蹤
+        startReadingSession(subUnit.id);
+        
+        // 更新子單元進度顯示
+        updateSubUnitProgress(subUnit.id);
+        
+      } catch (error) {
+        console.error('載入失敗:', error);
+        showError('載入單元失敗：' + error.message);
+      }
+    }
+    
+    function updateSubUnitProgress(unitId) {
+      const progress = getStoredProgress(unitId);
+      const unit = curriculum.find(u => u.id === activeUnitId);
+      if (unit) {
+        const subUnit = unit.subUnits.find(su => su.id === unitId);
+        if (subUnit) {
+          subUnit.progress = progress;
+          updateTabProgress(activeUnitId);
           
-          this.currentAudio = audio;
-          if (btn) {
-            if (this.currentPlayingButton) this.resetButton(this.currentPlayingButton);
-            btn.classList.add('playing');
-            btn.innerHTML = '<i class="fas fa-stop"></i> 停止';
-            this.currentPlayingButton = btn;
-          }
-          
-          this.recordAudioPlay();
-
-          if (window.PreloadManager) {
-            window.PreloadManager.switchMode('article', {
-              unitId,
-              paraNum,
-              sentenceIndex,
-              globalIndex
-            });
-          }
-          
-          audio.onended = () => {
-            this.clearAllSentenceHighlights();
-            this.currentAudio = null;
-            if (btn) {
-              this.resetButton(btn);
-              if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
+          // 更新下拉選單顯示
+          const select = document.getElementById('subunitSelect');
+          if (select) {
+            const option = select.querySelector(`option[value="${unitId}"]`);
+            if (option) {
+              const text = option.textContent.replace(/ \(\d+%\)/, '');
+              option.textContent = progress > 0 ? `${text} (${progress}%)` : text;
             }
-          };
-          audio.onerror = () => {
-            console.log('句子音頻不存在，使用 TTS');
-            this.playSingleSentenceTTS(this.extractPlainText(sentenceHtml), paraNum, unitId, sentenceIndex, btn);
-          };
-        } catch (e) {
-          console.log('句子音頻載入失敗，使用 TTS', e);
-          this.playSingleSentenceTTS(this.extractPlainText(sentenceHtml), paraNum, unitId, sentenceIndex, btn);
+          }
         }
-      },
-
-      playSingleSentenceTTS(text, paraNum, unitId, sentenceIndex, btn) {
-        if (this.ttsPlaying) return;
-        this.ttsPlaying = true;
-        this.highlightSentence(paraNum, unitId, sentenceIndex);
+      }
+    }
+    
+    function showLoading() {
+      const container = document.getElementById('tabContent');
+      container.innerHTML = '<div class="loading-indicator"><i class="fas fa-spinner fa-spin"></i> 載入中...</div>';
+    }
+    
+    function showError(message) {
+      const container = document.getElementById('tabContent');
+      container.innerHTML = `<div class="empty-state"><i class="fas fa-exclamation-triangle"></i><h3>載入失敗</h3><p>${escapeHtml(message)}</p></div>`;
+    }
+    
+    function showNoMaterialMessage() {
+      const container = document.getElementById('tabContent');
+      container.innerHTML = `
+        <div class="empty-state">
+          <i class="fas fa-book-open"></i>
+          <h3>目前沒有可用的教材</h3>
+          <p>請聯絡管理員開通權限</p>
+        </div>
+      `;
+      document.getElementById('subunitSelector').style.display = 'none';
+    }
+    
+    // ===== 渲染文章和詞彙（保持原有邏輯）=====
+    function renderArticleVocabulary(unitData, unitId) {
+      const container = document.getElementById('tabContent');
+      const article = unitData.article;
+      const vocab = unitData.vocabulary || [];
+      
+      const titleParts = article.title.split('\n');
+      const englishTitle = titleParts[0] || '';
+      const chineseTitle = titleParts[1] || '';
+      
+      let html = `
+        <div class="a4-container">
+          <div class="article-vocab-wrapper">
+            <div class="article-section">
+              <div class="article-header">
+                <h3 class="article-title">
+                  <span lang="en">${escapeHtml(englishTitle)}</span><br>
+                  <span lang="zh">${escapeHtml(chineseTitle)}</span>
+                </h3>
+                <img src="/eng-reading-panel${article.illustration || '/images/placeholder.png'}" 
+                     alt="illustration" class="article-illustration"
+                     onerror="this.onerror=null; this.style.display='none';">
+              </div>
+              <div class="article-paragraph-wrapper" id="article-content-${unitId}">
+      `;
+      
+      article.paragraphs.forEach((para, idx) => {
+        const paraNum = idx + 1;
+        let paragraphHtml = '';
         
-        const plainText = this.preprocessForTTS(text);
-        const utter = new SpeechSynthesisUtterance(plainText);
-        utter.lang = 'en-GB';
-        utter.rate = 0.8;
-        
-        if (btn) {
-          btn.classList.remove('loading');
-          btn.classList.add('playing');
-          btn.innerHTML = '<i class="fas fa-stop"></i> 停止(TTS)';
-          this.currentPlayingButton = btn;
-        }
-        
-        this.recordAudioPlay();
-
-        if (window.PreloadManager) {
-          const unitData = UnitManager.getCurrentUnitData();
-          const globalIndex = this.calcGlobalSentenceIndex(unitData, paraNum, sentenceIndex);
-          window.PreloadManager.switchMode('article', {
-            unitId,
-            paraNum,
-            sentenceIndex,
-            globalIndex
+        if (para.sentences && para.sentences.length) {
+          para.sentences.forEach((sentence, sIdx) => {
+            paragraphHtml += `<span class="sentence-highlightable" lang="en" data-sentence-index="${sIdx}"
+              onclick="playSingleSentence(${paraNum}, '${unitId}', ${sIdx})">${sentence}</span> `;
+          });
+        } else {
+          const sentences = para.english.split(/(?<=[.!?])\s+/);
+          sentences.forEach((sentence, sIdx) => {
+            paragraphHtml += `<span class="sentence-highlightable" lang="en" data-sentence-index="${sIdx}"
+              onclick="playSingleSentence(${paraNum}, '${unitId}', ${sIdx})">${sentence}</span> `;
           });
         }
-        
-        utter.onend = () => {
-          this.ttsPlaying = false;
-          this.clearAllSentenceHighlights();
-          this.currentAudio = null;
-          if (btn) {
-            this.resetButton(btn);
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          }
-        };
-        utter.onerror = (e) => {
-          this.ttsPlaying = false;
-          console.error('TTS播放錯誤', e);
-          this.clearAllSentenceHighlights();
-          this.currentAudio = null;
-          if (btn) {
-            this.resetButton(btn);
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          }
-        };
-        window.speechSynthesis.speak(utter);
-        this.currentAudio = utter;
-      },
-
-      calcGlobalSentenceIndex(unitData, paraNum, sentenceIndex) {
-        let globalIdx = 0;
-        for (let i = 0; i < paraNum - 1; i++) {
-          const para = unitData.article.paragraphs[i];
-          if (para.sentences) {
-            globalIdx += para.sentences.length;
-          } else {
-            const sentences = para.english.split(/(?<=[.!?])\s+/);
-            globalIdx += sentences.length;
-          }
-        }
-        globalIdx += sentenceIndex + 1;
-        return globalIdx;
-      },
-
-      async toggleParagraphAudio(paraNum, unitId) {
-        if (!this.checkAuth()) return;
-        if (!this.checkTrialAccess()) return;
-        
-        const btn = document.getElementById(`${unitId}_para-audio-btn-${paraNum}`);
-        if (!btn) return;
-        if (btn.classList.contains('playing')) { this.stop(); return; }
-        
-        const unitData = UnitManager.getCurrentUnitData();
-        const paragraph = unitData?.article?.paragraphs[paraNum - 1];
-        let sentences = paragraph?.sentences || [];
-        if (!sentences.length) sentences = paragraph.english.split(/(?<=[.!?])\s+/);
-        if (!sentences.length) { console.warn('無法獲取句子列表'); return; }
-        
-        this.stop();
-        
-        let globalStart = 0;
-        for (let i = 0; i < paraNum - 1; i++) {
-          const prevPara = unitData.article.paragraphs[i];
-          if (prevPara.sentences) {
-            globalStart += prevPara.sentences.length;
-          } else {
-            const prevSentences = prevPara.english.split(/(?<=[.!?])\s+/);
-            globalStart += prevSentences.length;
-          }
-        }
-        
-        this.isPlayingParagraph = true;
-        this.currentParagraphSentences = sentences;
-        this.currentSentenceIndex = -1;
-        this.currentParaNum = paraNum;
-        this.currentUnitId = unitId;
-        this.currentPlayingButton = btn;
-        this.globalStartIndex = globalStart;
-        
-        btn.classList.remove('loading');
-        btn.classList.add('playing');
-        btn.innerHTML = '<i class="fas fa-stop"></i> 停止';
-        
-        this.playNextSentenceAudio();
-      },
-
-      playNextSentenceAudio() {
-        if (!this.isPlayingParagraph) return;
-        this.currentSentenceIndex++;
-        if (this.currentSentenceIndex >= this.currentParagraphSentences.length) {
-          this.finishParagraphPlayback();
-          return;
-        }
-        
-        const sentenceHtml = this.currentParagraphSentences[this.currentSentenceIndex];
-        const globalIdx = this.globalStartIndex + this.currentSentenceIndex + 1;
-        this.highlightSentence(this.currentParaNum, this.currentUnitId, this.currentSentenceIndex);
-        
-        const audio = new Audio();
-        const audioPath = getAudioPath(this.currentUnitId, 'sentence', globalIdx.toString().padStart(3, '0'));
-        audio.src = audioPath;
-        
-        audio.onended = () => {
-          this.playNextSentenceAudio();
-        };
-        
-        audio.onerror = (e) => {
-          if (this.ttsPlaying) return;
-          console.log(`句子音頻 ${audioPath} 不存在，降級使用 TTS`);
-          this.ttsPlaying = true;
-          const plainText = this.preprocessForTTS(this.extractPlainText(sentenceHtml));
-          const utter = new SpeechSynthesisUtterance(plainText);
-          utter.lang = 'en-GB';
-          utter.rate = 0.8;
-          utter.onend = () => {
-            this.ttsPlaying = false;
-            this.playNextSentenceAudio();
-          };
-          utter.onerror = () => {
-            this.ttsPlaying = false;
-            console.error('TTS 播放錯誤，跳過句子');
-            this.playNextSentenceAudio();
-          };
-          window.speechSynthesis.speak(utter);
-          this.currentAudio = utter;
-        };
-        
-        audio.play().catch(e => {
-          console.log('播放失敗', e);
-          audio.onerror(e);
-        });
-        
-        this.currentAudio = audio;
-      },
-
-      finishParagraphPlayback() {
-        this.clearAllSentenceHighlights();
-        if (this.currentPlayingButton) {
-          this.resetButton(this.currentPlayingButton);
-          this.currentPlayingButton = null;
-        }
-        this.currentAudio = null;
-        this.isPlayingParagraph = false;
-        this.currentParagraphSentences = [];
-        this.currentSentenceIndex = -1;
-      },
-
-      async playImplicationEnglish(paraNum, unitId) {
-        if (!this.checkAuth()) return;
-        if (!this.checkTrialAccess()) return;
-        this.stop();
-        
-        const unitData = UnitManager.getCurrentUnitData();
-        const implEnglish = unitData?.article?.paragraphs[paraNum-1]?.implication?.english || '';
-        const cleanEnglish = implEnglish.replace(/^💡\s*/, '');
-        
-        this.clearImplicationHighlights();
-        const englishEl = document.getElementById(`${unitId}_impl-${paraNum}`)?.querySelector('.implication-english');
-        if (englishEl) englishEl.classList.add('implication-playing');
-
-        try {
-          const audio = new Audio();
-          const audioPath = getAudioPath(unitId, 'impl', paraNum.toString().padStart(2,'0'));
-          const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 3000));
-          audio.src = audioPath;
-          await Promise.race([audio.play(), timeoutPromise]);
-          
-          this.currentAudio = audio;
-          
-          audio.onended = () => {
-            this.clearImplicationHighlights();
-            this.currentAudio = null;
-          };
-          audio.onerror = () => {
-            console.log('本地英文音頻失敗，使用 TTS');
-            this.playImplicationEnglishTTS(cleanEnglish, paraNum, unitId);
-          };
-        } catch (e) {
-          console.log('本地英文音頻載入失敗，使用 TTS', e);
-          this.playImplicationEnglishTTS(cleanEnglish, paraNum, unitId);
-        }
-      },
-
-      playImplicationEnglishTTS(text, paraNum, unitId, btn = null) {
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = 'en-GB';
-        utter.rate = 0.75;
-        utter.onend = () => {
-          this.clearImplicationHighlights();
-          this.currentAudio = null;
-          if (btn) {
-            this.resetImplicationButton(btn, false);
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          }
-        };
-        utter.onerror = (e) => {
-          console.error('英文 TTS 播放錯誤', e);
-          this.clearImplicationHighlights();
-          this.currentAudio = null;
-          if (btn) {
-            this.resetImplicationButton(btn, false);
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          }
-        };
-        window.speechSynthesis.speak(utter);
-        this.currentAudio = utter;
-      },
-
-      async toggleImplicationAudio(paraNum, unitId) {
-        if (!this.checkAuth()) return;
-        if (!this.checkTrialAccess()) return;
-        
-        const btn = document.getElementById(`${unitId}_impl-audio-btn-${paraNum}`);
-        if (!btn) return;
-        if (btn.classList.contains('playing')) { this.stop(); return; }
-        
-        btn.classList.add('loading');
-        
-        const unitData = UnitManager.getCurrentUnitData();
-        const implEnglish = unitData?.article?.paragraphs[paraNum-1]?.implication?.english || '';
-        const cleanEnglish = implEnglish.replace(/^💡\s*/, '');
-        
-        try {
-          const audio = new Audio();
-          const audioPath = getAudioPath(unitId, 'impl', paraNum.toString().padStart(2,'0'));
-          const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 3000));
-          audio.src = audioPath;
-          await Promise.race([audio.play(), timeoutPromise]);
-          
-          this.stop();
-          this.currentAudio = audio;
-          this.currentPlayingButton = btn;
-          btn.classList.remove('loading');
-          btn.classList.add('playing');
-          btn.innerHTML = '<i class="fas fa-stop"></i>';
-          
-          this.clearImplicationHighlights();
-          const englishEl = document.getElementById(`${unitId}_impl-${paraNum}`)?.querySelector('.implication-english');
-          if (englishEl) englishEl.classList.add('implication-playing');
-          
-          audio.onended = () => {
-            this.clearImplicationHighlights();
-            btn.classList.remove('playing');
-            btn.innerHTML = '<i class="fas fa-play"></i>';
-            if (this.currentAudio === audio) this.currentAudio = null;
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          };
-          audio.onerror = () => {
-            console.log('本地英文音頻失敗，使用 TTS');
-            btn.classList.remove('loading');
-            this.playImplicationEnglishTTS(cleanEnglish, paraNum, unitId, btn);
-          };
-        } catch (e) {
-          console.log('本地英文音頻載入失敗，使用 TTS', e);
-          btn.classList.remove('loading');
-          this.playImplicationEnglishTTS(cleanEnglish, paraNum, unitId, btn);
-        }
-      },
-
-      async playVocabularyWord(vocabId, unitId) {
-        if (!this.checkAuth()) return;
-        if (!this.checkTrialAccess()) return;
-        
-        const btn = document.getElementById(`${unitId}_vocab-audio-btn-${vocabId}`);
-        if (!btn) return;
-        if (btn.classList.contains('playing')) { this.stop(); return; }
-        
-        btn.classList.add('loading');
-        
-        const unitData = UnitManager.getCurrentUnitData();
-        const wordObj = unitData?.vocabulary?.find(v => v.id === vocabId);
-        const word = wordObj?.word || '';
-        
-        try {
-          const audio = new Audio();
-          const audioPath = getAudioPath(unitId, 'word', vocabId);
-          const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 3000));
-          audio.src = audioPath;
-          await Promise.race([audio.play(), timeoutPromise]);
-          
-          this.stop();
-          this.currentAudio = audio;
-          this.currentPlayingButton = btn;
-          btn.classList.remove('loading');
-          btn.classList.add('playing');
-          btn.innerHTML = '<i class="fas fa-stop"></i>';
-          
-          this.recordVocabLookup();
-
-          if (window.PreloadManager) {
-            window.PreloadManager.switchMode('vocab', {
-              unitId,
-              vocabId
-            });
-          }
-          
-          audio.onended = () => {
-            this.resetButton(btn);
-            if (this.currentAudio === audio) this.currentAudio = null;
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          };
-          audio.onerror = () => {
-            console.log(`本地詞彙音頻失敗，使用 TTS`);
-            btn.classList.remove('loading');
-            this.playTTS(word, btn, 'vocab');
-          };
-        } catch (e) {
-          console.log(`本地詞彙音頻載入失敗，使用 TTS`, e);
-          btn.classList.remove('loading');
-          this.playTTS(word, btn, 'vocab');
-        }
-      },
-
-      playTTS(text, btn = null, type = '') {
-        if (!window.speechSynthesis) return;
-        window.speechSynthesis.cancel();
-        
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = 'en-GB'; 
-        utter.rate = 0.8;
-        
-        if (btn) {
-          this.stop();
-          btn.classList.remove('loading');
-          btn.classList.add('playing');
-          btn.innerHTML = '<i class="fas fa-stop"></i>';
-          this.currentPlayingButton = btn;
-        }
-        
-        if (type === 'vocab') this.recordVocabLookup();
-        
-        utter.onend = () => {
-          if (btn) {
-            this.resetButton(btn);
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          }
-          this.currentAudio = null;
-          this.clearAllSentenceHighlights();
-          this.clearImplicationHighlights();
-        };
-        utter.onerror = (e) => {
-          console.error('TTS播放錯誤', e);
-          if (btn) {
-            this.resetButton(btn);
-            if (this.currentPlayingButton === btn) this.currentPlayingButton = null;
-          }
-          this.currentAudio = null;
-          this.clearAllSentenceHighlights();
-          this.clearImplicationHighlights();
-        };
-        window.speechSynthesis.speak(utter);
-        this.currentAudio = utter;
-      },
-
-      async playImplicationChinese(paraNum, unitId, partIndex, text) {
-        console.log('解讀中文暫無本地音頻，不播放');
-      }
-    };
-
-    window.AudioController = AudioController;
-
-    // 預載入管理器
-    const PreloadManager = {
-      currentMode: null,
-      currentPosition: null,
-      preloadQueue: [],
-      isActive: false,
-      networkType: 'wifi',
-      maxPreload: {
-        wifi: { article: 6, vocab: 10 },
-        cellular: { article: 3, vocab: 5 },
-        slow: { article: 1, vocab: 2 }
-      },
-
-      init() {
-        this.checkNetwork();
-        if ('connection' in navigator) {
-          navigator.connection.addEventListener('change', () => this.checkNetwork());
-        }
-        console.log('PreloadManager 初始化完成');
-      },
-
-      checkNetwork() {
-        if ('connection' in navigator) {
-          const conn = navigator.connection;
-          if (conn.type === 'wifi' || conn.type === 'ethernet') {
-            this.networkType = 'wifi';
-          } else if (conn.effectiveType === '4g' || conn.effectiveType === '3g') {
-            this.networkType = 'cellular';
-          } else {
-            this.networkType = 'slow';
-          }
-        } else {
-          this.networkType = 'wifi';
-        }
-        console.log(`🌐 網路類型: ${this.networkType}`);
-      },
-
-      switchMode(mode, position) {
-        if (this.currentMode === mode && 
-            this.currentPosition && 
-            ((mode === 'article' && position.globalIndex === this.currentPosition.globalIndex) ||
-             (mode === 'vocab' && position.vocabId === this.currentPosition.vocabId))) {
-          return;
-        }
-
-        console.log(`🔄 切換模式: ${mode}`, position);
-        this.stopPreload();
-        this.currentMode = mode;
-        this.currentPosition = position;
-        this.isActive = true;
-
-        if (mode === 'article') {
-          this.preloadArticle(position);
-        } else if (mode === 'vocab') {
-          this.preloadVocab(position);
-        }
-      },
-
-      preloadArticle(position) {
-        const { unitId, paraNum, sentenceIndex, globalIndex } = position;
-        const unitData = UnitManager.getCurrentUnitData();
-        if (!unitData) return;
-
-        const totalSentences = this.calcTotalSentences(unitData);
-        const maxCount = this.maxPreload[this.networkType].article;
-
-        const targets = [];
-        for (let i = 1; i <= maxCount; i++) {
-          const targetGlobal = globalIndex + i;
-          if (targetGlobal <= totalSentences) {
-            targets.push(targetGlobal);
-          } else {
-            break;
-          }
-        }
-
-        this.enqueue(targets.map(idx => ({
-          type: 'sentence',
-          unitId,
-          identifier: idx.toString().padStart(3, '0')
-        })));
-      },
-
-      preloadVocab(position) {
-        const { unitId, vocabId } = position;
-        const unitData = UnitManager.getCurrentUnitData();
-        if (!unitData || !unitData.vocabulary) return;
-
-        const vocabList = unitData.vocabulary;
-        const currentIndex = vocabList.findIndex(v => v.id == vocabId);
-        if (currentIndex === -1) return;
-
-        const maxCount = this.maxPreload[this.networkType].vocab;
-        const targets = [];
-        for (let i = 1; i <= maxCount; i++) {
-          const targetIdx = currentIndex + i;
-          if (targetIdx < vocabList.length) {
-            targets.push(vocabList[targetIdx].id);
-          } else {
-            break;
-          }
-        }
-
-        this.enqueue(targets.map(id => ({
-          type: 'word',
-          unitId,
-          identifier: id.toString().padStart(3, '0')
-        })));
-      },
-
-      calcTotalSentences(unitData) {
-        let total = 0;
-        unitData.article.paragraphs.forEach(para => {
-          if (para.sentences) {
-            total += para.sentences.length;
-          } else {
-            const sentences = para.english.split(/(?<=[.!?])\s+/);
-            total += sentences.length;
-          }
-        });
-        return total;
-      },
-
-      enqueue(tasks) {
-        this.preloadQueue.push(...tasks);
-        if (!this.processing) {
-          this.processQueue();
-        }
-      },
-
-      processing: false,
-
-      async processQueue() {
-        if (this.processing || this.preloadQueue.length === 0) return;
-        this.processing = true;
-
-        while (this.preloadQueue.length > 0) {
-          if (!this.isActive) {
-            this.preloadQueue = [];
-            break;
-          }
-
-          const task = this.preloadQueue.shift();
-          await this.downloadAudio(task);
-          
-          if (this.networkType === 'slow') {
-            await new Promise(r => setTimeout(r, 300));
-          }
-        }
-
-        this.processing = false;
-      },
-
-      async downloadAudio({ type, unitId, identifier }) {
-        const audioPath = getAudioPath(unitId, type, identifier);
-        try {
-          const response = await fetch(audioPath, { mode: 'cors', cache: 'force-cache' });
-          if (response.ok) {
-            console.log(`📥 預載入成功: ${type} ${identifier}`);
-          } else {
-            console.warn(`⚠️ 預載入失敗 (${response.status}): ${type} ${identifier}`);
-          }
-        } catch (e) {
-          console.warn(`⚠️ 預載入錯誤: ${type} ${identifier}`, e);
-        }
-      },
-
-      stopPreload() {
-        this.isActive = false;
-        this.preloadQueue = [];
-        this.processing = false;
-        console.log('⏹️ 停止預載入');
-      }
-    };
-
-    window.PreloadManager = PreloadManager;
-
-    // 句子懸停管理器
-    const SentenceHover = {
-      setupHoverListeners(unitId) {
-        document.querySelectorAll(`.sentence-highlightable`).forEach(sentence => {
-          if (sentence.hasAttribute('data-hover-initialized')) return;
-          
-          const paraNum = sentence.closest('[id*="para"]')?.id.match(/para(\d+)/)?.[1];
-          const sentenceIdx = sentence.dataset.sentenceIndex;
-          
-          if (paraNum && sentenceIdx !== undefined) {
-            sentence.setAttribute('data-hover-initialized', 'true');
-            sentence.addEventListener('mouseenter', () => {
-              this.highlightTranslation(unitId, paraNum, sentenceIdx);
-            });
-            sentence.addEventListener('mouseleave', () => {
-              this.clearTranslationHighlight();
-            });
-          }
-        });
-        this.setupChineseHoverListeners(unitId);
-      },
-      
-      setupChineseHoverListeners(unitId) {
-        document.querySelectorAll(`.translation-sentence`).forEach(transSentence => {
-          if (transSentence.hasAttribute('data-chinese-hover-initialized')) return;
-          const paraNum = transSentence.dataset.para;
-          const sentenceIdx = transSentence.dataset.sentenceIndex;
-          if (paraNum && sentenceIdx !== undefined) {
-            transSentence.setAttribute('data-chinese-hover-initialized', 'true');
-            transSentence.addEventListener('mouseenter', () => {
-              this.highlightEnglishSentence(unitId, paraNum, sentenceIdx);
-            });
-            transSentence.addEventListener('mouseleave', () => {
-              this.clearEnglishSentenceHighlight();
-            });
-          }
-        });
-      },
-      
-      highlightEnglishSentence(unitId, paraNum, sentenceIdx) {
-        document.querySelectorAll(`.sentence-highlightable.sentence-selected`).forEach(el => {
-          el.classList.remove('sentence-selected');
-        });
-        const selector = `#${unitId}_para${paraNum}-text .sentence-highlightable[data-sentence-index="${sentenceIdx}"]`;
-        const sentenceEl = document.querySelector(selector);
-        if (sentenceEl) sentenceEl.classList.add('sentence-selected');
-      },
-      
-      clearEnglishSentenceHighlight() {
-        document.querySelectorAll('.sentence-highlightable.sentence-selected').forEach(el => {
-          el.classList.remove('sentence-selected');
-        });
-      },
-      
-      highlightTranslation(unitId, paraNum, sentenceIdx) {
-        const targetTrans = document.querySelector(
-          `#${unitId}_trans-${paraNum} .translation-sentence[data-sentence-index="${sentenceIdx}"]`
-        );
-        if (targetTrans) targetTrans.classList.add('translation-highlight');
-      },
-      
-      clearTranslationHighlight() {
-        document.querySelectorAll('.translation-sentence.translation-highlight').forEach(el => {
-          el.classList.remove('translation-highlight');
-        });
-      }
-    };
-
-    window.SentenceHover = SentenceHover;
-
-    // 渲染器
-    const Renderer = {
-      vocabPages: new Map(),
-
-      showLoading() {
-        const wrapper = document.getElementById('article-vocab-wrapper');
-        if (wrapper) wrapper.innerHTML = '<div class="loading-indicator"><i class="fas fa-spinner fa-spin"></i> 載入單元中...</div>';
-      },
-
-      renderAll(unitData, unitId) {
-        this.renderArticleVocabulary(unitData, unitId);
-        setTimeout(() => {
-          SentenceHover.setupHoverListeners(unitId);
-          if (window.startReadingSession) {
-            window.startReadingSession(unitId);
-          }
-        }, 50);
-      },
-
-      encodeForHtmlAttribute(text) {
-        return text
-          .replace(/&/g, '&amp;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#39;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;');
-      },
-
-      stripHtml(html) {
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = html;
-        return tempDiv.textContent || tempDiv.innerText || '';
-      },
-
-      renderArticleVocabulary(unitData, unitId) {
-        const wrapper = document.getElementById('article-vocab-wrapper');
-        const article = unitData.article;
-        const vocab = unitData.vocabulary || [];
-        
-        const titleParts = article.title.split('\n');
-        const englishTitle = titleParts[0] || '';
-        const chineseTitle = titleParts[1] || '';
-
-        let html = `
-          <div class="article-section">
-            <div class="article-header">
-              <h3 class="article-title">
-                <span lang="en">${englishTitle}</span><br>
-                <span lang="zh">${chineseTitle}</span>
-              </h3>
-              <img src="/eng-reading-panel${article.illustration || '/images/placeholder.png'}" alt="illustration" class="article-illustration"
-                   onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="image-fallback" style="display:none; width:100%; aspect-ratio:16/9; max-height:220px; align-items:center; justify-content:center; color:#64748b; background-color:#f1f5f9;" lang="zh">
-                <i class="fas fa-image" style="font-size:48px;"></i>
-                <div style="margin-left:12px;">圖片載入失敗</div>
-              </div>
-            </div>
-            <div class="article-paragraph-wrapper" id="article-content-${unitId}">
-        `;
-
-        article.paragraphs.forEach((para, idx) => {
-          const paraNum = idx + 1;
-          let paragraphHtml = '';
-          
-          if (para.sentences && para.sentences.length) {
-            para.sentences.forEach((sentence, sIdx) => {
-              const plainText = this.stripHtml(sentence);
-              const encodedPlainText = this.encodeForHtmlAttribute(plainText);
-              paragraphHtml += `<span class="sentence-highlightable" lang="en" data-sentence-index="${sIdx}" 
-                                data-plain-text="${encodedPlainText}"
-                                onclick="AudioController.playSingleSentence(${paraNum}, '${unitId}', ${sIdx}, this.dataset.plainText)">
-                                ${sentence}</span> `;
-            });
-          } else {
-            const sentences = para.english.split(/(?<=[.!?])\s+/);
-            sentences.forEach((sentence, sIdx) => {
-              const encodedSentence = this.encodeForHtmlAttribute(sentence);
-              paragraphHtml += `<span class="sentence-highlightable sentence-fallback" lang="en" data-sentence-index="${sIdx}"
-                                data-plain-text="${encodedSentence}"
-                                onclick="AudioController.playSingleSentence(${paraNum}, '${unitId}', ${sIdx}, '${encodedSentence}')">
-                                ${sentence}</span> `;
-            });
-          }
-
-          html += `
-            <div class="single-paragraph" id="${unitId}_para${paraNum}-text">
-              ${paragraphHtml}
-            </div>
-            <div class="paragraph-controls">
-              <button class="btn btn-outline paragraph-audio-btn" onclick="AudioController.toggleParagraphAudio(${paraNum}, '${unitId}')" id="${unitId}_para-audio-btn-${paraNum}">
-                <i class="fas fa-volume-up"></i> 朗讀
-              </button>
-              <div class="toggle-button-group" id="${unitId}_toggle-group-${paraNum}">
-                <button class="btn btn-outline toggle-btn active" onclick="Renderer.showTranslation(${paraNum}, '${unitId}')" id="${unitId}_trans-btn-${paraNum}">
-                  <i class="fas fa-exchange-alt"></i> 翻譯
-                </button>
-                <button class="btn btn-outline toggle-btn" onclick="Renderer.showImplication(${paraNum}, '${unitId}')" id="${unitId}_impl-btn-${paraNum}">
-                  <i class="fas fa-lightbulb"></i> 解讀
-                </button>
-              </div>
-            </div>
-          `;
-
-          html += `
-            <div class="unified-content" id="${unitId}_content-${paraNum}">
-              <div class="translation-content" id="${unitId}_trans-${paraNum}" data-content-type="translation" style="display: block;">
-          `;
-
-          if (para.translation_sentences && para.translation_sentences.length) {
-            para.translation_sentences.forEach((sentence, sIdx) => {
-              html += `<span class="translation-sentence" lang="zh" 
-                            data-para="${paraNum}" 
-                            data-sentence-index="${sIdx}">
-                            ${sentence}</span> `;
-            });
-          } else {
-            const transSentences = para.translation.split(/(?<=[。？！!?])\s*/);
-            transSentences.forEach((sentence, sIdx) => {
-              if (sentence.trim()) {
-                html += `<span class="translation-sentence" lang="zh" 
-                              data-para="${paraNum}" 
-                              data-sentence-index="${sIdx}">
-                              ${sentence}</span> `;
-              }
-            });
-          }
-
-          html += `
-              </div>
-              <div class="implication-content" id="${unitId}_impl-${paraNum}" data-content-type="implication" style="display: none;">
-                <div class="implication-text-wrapper">
-                  <div class="implication-english" lang="en" 
-                       onclick="AudioController.playImplicationEnglish(${paraNum}, '${unitId}')">
-                       ${para.implication.english}</div>
-                  <div class="implication-chinese" lang="zh">`;
-
-          const chineseText = para.implication.chinese;
-          const marker = '[換句話說]：';
-          const markerIndex = chineseText.indexOf(marker);
-
-          html += `<div class="implication-chinese-container" style="min-height: 3.6em; line-height: 1.8;">`;
-
-          if (markerIndex !== -1) {
-            const beforePart = chineseText.substring(0, markerIndex);
-            const afterPart = chineseText.substring(markerIndex);
-            
-            const encodedBefore = this.encodeForHtmlAttribute(beforePart);
-            html += `<span class="implication-chinese-part" 
-                           id="${unitId}_impl-${paraNum}-chinese-0"
-                           data-para="${paraNum}"
-                           data-unit-id="${unitId}"
-                           data-part-index="0"
-                           onclick="AudioController.playImplicationChinese(${paraNum}, '${unitId}', 0, '${encodedBefore}')">
-                           ${beforePart}</span>`;
-            
-            const encodedAfter = this.encodeForHtmlAttribute(afterPart);
-            html += `<span class="implication-chinese-part implication-saying" 
-                           id="${unitId}_impl-${paraNum}-chinese-1"
-                           data-para="${paraNum}"
-                           data-unit-id="${unitId}"
-                           data-part-index="1"
-                           onclick="AudioController.playImplicationChinese(${paraNum}, '${unitId}', 1, '${encodedAfter}')">
-                           ${afterPart}</span>`;
-          } else {
-            const encodedText = this.encodeForHtmlAttribute(chineseText);
-            html += `<span class="implication-chinese-part" 
-                           id="${unitId}_impl-${paraNum}-chinese-0"
-                           data-para="${paraNum}"
-                           data-unit-id="${unitId}"
-                           data-part-index="0"
-                           onclick="AudioController.playImplicationChinese(${paraNum}, '${unitId}', 0, '${encodedText}')">
-                           ${chineseText}</span>`;
-          }
-
-          html += `</div>`;
-
-          html += `
-                  </div>
-                </div>
-                <div class="implication-buttons">
-                  <button class="implication-audio-btn" onclick="AudioController.toggleImplicationAudio(${paraNum}, '${unitId}')" id="${unitId}_impl-audio-btn-${paraNum}">
-                    <i class="fas fa-play"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          `;
-        });
-
-        html += `</div></div>`;
-
-        const itemsPerPage = 20;
         
         html += `
+          <div class="single-paragraph" id="${unitId}_para${paraNum}-text">${paragraphHtml}</div>
+          <div class="paragraph-controls">
+            <button class="btn btn-outline" onclick="toggleParagraphAudio(${paraNum}, '${unitId}')" id="${unitId}_para-audio-btn-${paraNum}">
+              <i class="fas fa-volume-up"></i> 朗讀
+            </button>
+            <div class="toggle-button-group">
+              <button class="btn toggle-btn active" onclick="showTranslation(${paraNum}, '${unitId}')" id="${unitId}_trans-btn-${paraNum}">
+                <i class="fas fa-exchange-alt"></i> 翻譯
+              </button>
+              <button class="btn toggle-btn" onclick="showImplication(${paraNum}, '${unitId}')" id="${unitId}_impl-btn-${paraNum}">
+                <i class="fas fa-lightbulb"></i> 解讀
+              </button>
+            </div>
+          </div>
+          <div class="unified-content" id="${unitId}_content-${paraNum}">
+            <div class="translation-content" id="${unitId}_trans-${paraNum}" style="display: block;">
+              ${para.translation}
+            </div>
+            <div class="implication-content" id="${unitId}_impl-${paraNum}" style="display: none;">
+              <div><strong>💡 ${para.implication?.english || ''}</strong></div>
+              <div style="margin-top: 8px;">${para.implication?.chinese || ''}</div>
+            </div>
+          </div>
+        `;
+      });
+      
+      // 詞彙部分
+      const itemsPerPage = 20;
+      const totalPages = Math.ceil(vocab.length / itemsPerPage);
+      
+      html += `
+            </div>
+          </div>
           <div class="vocab-section">
-            <h4 class="vocab-title" lang="zh"><i class="fas fa-bookmark"></i> 核心詞彙</h4>
+            <h4 class="vocab-title"><i class="fas fa-bookmark"></i> 核心詞彙</h4>
             <div class="vocab-pagination" id="${unitId}_vocab-pagination"></div>
             <div class="vocab-list" id="${unitId}_vocab-list"></div>
           </div>
-        `;
-        
-        wrapper.innerHTML = html;
-
-        this.initVocabPagination(unitId, vocab, itemsPerPage);
-      },
-
-      initVocabPagination(unitId, vocab, itemsPerPage) {
-        const actualItemsPerPage = itemsPerPage || 20;
-        const totalPages = Math.ceil(vocab.length / actualItemsPerPage);
-        this.vocabPages.set(unitId, {
-          currentPage: 1,
-          totalPages,
-          itemsPerPage: actualItemsPerPage,
-          vocab
-        });
-        this.renderVocabPage(unitId, 1);
-        this.renderVocabPaginationButtons(unitId, 1);
-      },
-
-      renderVocabPage(unitId, page) {
-        const state = this.vocabPages.get(unitId);
-        if (!state) return;
-        const start = (page - 1) * state.itemsPerPage;
-        const end = start + state.itemsPerPage;
-        const pageItems = state.vocab.slice(start, end);
-        
-        let vocabHtml = '';
-        pageItems.forEach((v, i) => {
-          const globalIndex = start + i + 1;
-          vocabHtml += `
-            <div class="vocab-item ${v.highlightClass || ''}">
-              <button class="vocab-audio-btn" onclick="AudioController.playVocabularyWord(${v.id}, '${unitId}')" id="${unitId}_vocab-audio-btn-${v.id}">
-                <i class="fas fa-volume-up"></i>
-              </button>
-              <div class="vocab-text">
-                <div class="vocab-word-line">
-                  <span class="vocab-number">${globalIndex}.</span>
-                  <span class="vocab-word" lang="en">${v.word}</span>
-                </div>
-                <div class="vocab-meaning" lang="zh">${v.meaning}</div>
-              </div>
-            </div>
-          `;
-        });
-
-        const vocabList = document.getElementById(`${unitId}_vocab-list`);
-        if (vocabList) vocabList.innerHTML = vocabHtml;
-      },
-
-      renderVocabPaginationButtons(unitId, currentPage) {
-        const state = this.vocabPages.get(unitId);
-        if (!state) return;
-        const paginationContainer = document.getElementById(`${unitId}_vocab-pagination`);
-        if (!paginationContainer) return;
-
-        let paginationHtml = `
-          <button class="vocab-page-btn vocab-page-nav" 
-                  onclick="Renderer.changeVocabPage('${unitId}', ${currentPage - 1})"
-                  ${currentPage === 1 ? 'disabled' : ''}
-                  title="上一頁">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-        `;
-
-        for (let i = 1; i <= state.totalPages; i++) {
-          if (state.totalPages <= 7 || 
-              i === 1 || 
-              i === state.totalPages || 
-              (i >= currentPage - 1 && i <= currentPage + 1)) {
-            paginationHtml += `
-              <button class="vocab-page-btn ${i === currentPage ? 'active' : ''}"
-                      onclick="Renderer.changeVocabPage('${unitId}', ${i})"
-                      title="第 ${i} 頁">
-                ${i}
-              </button>
-            `;
-          } else if (i === currentPage - 2 || i === currentPage + 2) {
-            paginationHtml += `<span class="vocab-page-btn" style="border: none; cursor: default; background: transparent; box-shadow: none;">...</span>`;
-          }
-        }
-
-        paginationHtml += `
-          <button class="vocab-page-btn vocab-page-nav"
-                  onclick="Renderer.changeVocabPage('${unitId}', ${currentPage + 1})"
-                  ${currentPage === state.totalPages ? 'disabled' : ''}
-                  title="下一頁">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        `;
-
-        paginationContainer.innerHTML = paginationHtml;
-      },
-
-      changeVocabPage(unitId, page) {
-        const state = this.vocabPages.get(unitId);
-        if (!state) return;
-        if (page < 1 || page > state.totalPages) return;
-        state.currentPage = page;
-        this.renderVocabPage(unitId, page);
-        this.renderVocabPaginationButtons(unitId, page);
-      },
-
-      showTranslation(paraNum, unitId) {
-        const transBtn = document.getElementById(`${unitId}_trans-btn-${paraNum}`);
-        const implBtn = document.getElementById(`${unitId}_impl-btn-${paraNum}`);
-        const transContent = document.getElementById(`${unitId}_trans-${paraNum}`);
-        const implContent = document.getElementById(`${unitId}_impl-${paraNum}`);
-        
-        if (transContent) {
-          transContent.style.display = 'block';
-          if (transBtn) transBtn.classList.add('active');
-        }
-        if (implContent) {
-          implContent.style.display = 'none';
-          if (implBtn) implBtn.classList.remove('active');
-        }
-      },
-
-      showImplication(paraNum, unitId) {
-        const transBtn = document.getElementById(`${unitId}_trans-btn-${paraNum}`);
-        const implBtn = document.getElementById(`${unitId}_impl-btn-${paraNum}`);
-        const transContent = document.getElementById(`${unitId}_trans-${paraNum}`);
-        const implContent = document.getElementById(`${unitId}_impl-${paraNum}`);
-        
-        if (implContent) {
-          implContent.style.display = 'flex';
-          if (implBtn) implBtn.classList.add('active');
-        }
-        if (transContent) {
-          transContent.style.display = 'none';
-          if (transBtn) transBtn.classList.remove('active');
-        }
-      }
-    };
-
-    window.Renderer = Renderer;
-
-    // 用戶狀態同步
-    let isGuestModeGlobal = false;
-    let currentUserDataGlobal = null;
-
-    function syncUserState() {
-      try {
-        const userDataStr = localStorage.getItem('userData');
-        if (userDataStr) {
-          const userData = JSON.parse(userDataStr);
-          isGuestModeGlobal = userData.isGuest === true;
-          currentUserDataGlobal = userData;
-          console.log('🔄 同步用戶狀態:', { isGuestMode: isGuestModeGlobal, role: userData.role, grade: userData.grade });
-        }
-      } catch(e) {
-        console.error('同步用戶狀態失敗:', e);
-      }
+        </div>
+      </div>
+      `;
+      
+      container.innerHTML = html;
+      
+      // 渲染詞彙分頁
+      renderVocabPage(unitId, vocab, 1, itemsPerPage);
+      renderVocabPagination(unitId, totalPages, 1);
     }
     
-syncUserState();
-
-// 監聽 localStorage 變化（跨標籤頁）
-window.addEventListener('storage', (event) => {
-  if (event.key === 'userData') {
-    console.log('🔄 偵測到 userData 變化，重新同步');
-    syncUserState();
-  }
-});
-
+    function renderVocabPage(unitId, vocab, page, itemsPerPage) {
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = vocab.slice(start, end);
+      
+      let vocabHtml = '';
+      pageItems.forEach((v, i) => {
+        const globalIndex = start + i + 1;
+        vocabHtml += `
+          <div class="vocab-item ${v.highlightClass || ''}">
+            <button class="vocab-audio-btn" onclick="playVocabularyWord(${v.id}, '${unitId}')" id="${unitId}_vocab-audio-btn-${v.id}">
+              <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="vocab-text">
+              <div class="vocab-word" lang="en">${globalIndex}. ${escapeHtml(v.word)}</div>
+              <div class="vocab-meaning" lang="zh">${escapeHtml(v.meaning)}</div>
+            </div>
+          </div>
+        `;
+      });
+      
+      const vocabList = document.getElementById(`${unitId}_vocab-list`);
+      if (vocabList) vocabList.innerHTML = vocabHtml;
+    }
+    
+    function renderVocabPagination(unitId, totalPages, currentPage) {
+      const container = document.getElementById(`${unitId}_vocab-pagination`);
+      if (!container) return;
+      
+      let html = `
+        <button class="vocab-page-btn" onclick="changeVocabPage('${unitId}', ${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>‹</button>
+      `;
+      
+      for (let i = 1; i <= Math.min(totalPages, 7); i++) {
+        html += `<button class="vocab-page-btn ${i === currentPage ? 'active' : ''}" onclick="changeVocabPage('${unitId}', ${i})">${i}</button>`;
+      }
+      
+      html += `<button class="vocab-page-btn" onclick="changeVocabPage('${unitId}', ${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
+      
+      container.innerHTML = html;
+    }
+    
+    // ===== 音頻控制（簡化版）=====
+    let currentAudio = null;
+    
+    function playSingleSentence(paraNum, unitId, sentenceIndex) {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio = null;
+      }
+      showToast('🔊 播放句子（TTS 演示）', 'info');
+      const utter = new SpeechSynthesisUtterance('Sample sentence');
+      utter.lang = 'en-GB';
+      window.speechSynthesis.speak(utter);
+    }
+    
+    function toggleParagraphAudio(paraNum, unitId) {
+      showToast('🔊 播放段落（TTS 演示）', 'info');
+      const utter = new SpeechSynthesisUtterance('Paragraph audio');
+      utter.lang = 'en-GB';
+      window.speechSynthesis.speak(utter);
+    }
+    
+    function playVocabularyWord(vocabId, unitId) {
+      showToast('🔊 播放單字（TTS 演示）', 'info');
+      const utter = new SpeechSynthesisUtterance('Vocabulary word');
+      utter.lang = 'en-GB';
+      window.speechSynthesis.speak(utter);
+    }
+    
+    function showTranslation(paraNum, unitId) {
+      const transContent = document.getElementById(`${unitId}_trans-${paraNum}`);
+      const implContent = document.getElementById(`${unitId}_impl-${paraNum}`);
+      const transBtn = document.getElementById(`${unitId}_trans-btn-${paraNum}`);
+      const implBtn = document.getElementById(`${unitId}_impl-btn-${paraNum}`);
+      
+      if (transContent) transContent.style.display = 'block';
+      if (implContent) implContent.style.display = 'none';
+      if (transBtn) transBtn.classList.add('active');
+      if (implBtn) implBtn.classList.remove('active');
+    }
+    
+    function showImplication(paraNum, unitId) {
+      const transContent = document.getElementById(`${unitId}_trans-${paraNum}`);
+      const implContent = document.getElementById(`${unitId}_impl-${paraNum}`);
+      const transBtn = document.getElementById(`${unitId}_trans-btn-${paraNum}`);
+      const implBtn = document.getElementById(`${unitId}_impl-btn-${paraNum}`);
+      
+      if (implContent) implContent.style.display = 'block';
+      if (transContent) transContent.style.display = 'none';
+      if (implBtn) implBtn.classList.add('active');
+      if (transBtn) transBtn.classList.remove('active');
+    }
+    
+    function changeVocabPage(unitId, newPage) {
+      // 簡化：重新載入單元
+      const subUnit = findSubUnitById(activeSubUnitId);
+      if (subUnit) loadAndRenderUnit(subUnit);
+    }
+    
+    function getUnitFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('unit');
+    }
+    
+    // ===== 用戶過濾 =====
     function filterUnitsByUser(units) {
-      if (!isGuestModeGlobal && currentUserDataGlobal?.role === 'admin') {
+      const userDataStr = localStorage.getItem('userData');
+      let userData = null;
+      try {
+        userData = userDataStr ? JSON.parse(userDataStr) : null;
+      } catch(e) {}
+      
+      const isGuest = userData?.isGuest === true;
+      const userRole = userData?.role;
+      const userGrade = userData?.grade;
+      const userPublishers = userData?.publishers || [];
+      
+      if (userRole === 'admin') {
         console.log('👑 管理員模式：顯示所有教材，共', units.length, '個');
         return units;
       }
       
-      if (isGuestModeGlobal) {
+      if (isGuest) {
         const filtered = units.filter(unit => 
           unit.publisher && unit.publisher.includes('Open示範')
         );
@@ -2535,248 +1311,114 @@ window.addEventListener('storage', (event) => {
         return filtered;
       }
       
-      if (currentUserDataGlobal) {
-        let userGrades = currentUserDataGlobal.grade || [];
-        if (typeof userGrades === 'string') userGrades = [userGrades];
-        
-        let userPublishers = currentUserDataGlobal.publishers || [];
-        
-        const trialEndAt = currentUserDataGlobal.trialEndAt;
-        const isTrial = trialEndAt && new Date(trialEndAt) > new Date();
-        
-        let effectivePublishers = [...userPublishers];
-        if (isTrial && effectivePublishers.length === 0) {
-          effectivePublishers = ['Open示範'];
-          console.log('🎁 試用期：自動獲得 Open示範 權限');
-        }
-        
-        if (userGrades.length === 0) {
-          console.warn('⚠️ 使用者缺少年級設定，無法顯示任何教材');
-          return [];
-        }
-        
-        if (effectivePublishers.length === 0) {
-          console.warn('⚠️ 使用者沒有教材權限（試用期已過且未分配出版社）');
-          return [];
-        }
-        
+      if (userGrade && userGrade.length > 0) {
+        const grades = Array.isArray(userGrade) ? userGrade : [userGrade];
         const filtered = units.filter(unit => {
           const unitGrades = unit.grade || [];
-          const gradeMatch = unitGrades.some(g => userGrades.includes(g));
-          const unitPublishers = unit.publisher || [];
-          const publisherMatch = unitPublishers.some(p => effectivePublishers.includes(p));
-          return gradeMatch && publisherMatch;
+          return unitGrades.some(g => grades.includes(g));
         });
-        
-        console.log('👤 一般用戶過濾後:', filtered.length, '/', units.length);
-        if (filtered.length > 0) {
-          console.log('過濾後第一個單元的 publisher:', filtered[0].publisher);
-        }
+        console.log('👤 用戶過濾後:', filtered.length, '/', units.length);
         return filtered;
       }
       
-      return [];
+      return units;
     }
-
-    function showNoMaterialMessage() {
-      const container = document.getElementById('article-vocab-wrapper');
-      if (container) {
-        container.innerHTML = `
-          <div class="loading-indicator" style="text-align:center; padding: 60px 20px;">
-            <i class="fas fa-book-open" style="font-size: 64px; margin-bottom: 20px; display: block; color: #94a3b8;"></i>
-            <h3 style="font-size: 18px; margin-bottom: 8px; color: #334155;">目前沒有可用的教材</h3>
-            <p style="font-size: 14px;">請聯絡管理員開通權限</p>
-          </div>
-        `;
+    
+    // ===== 登入狀態 =====
+    window.handleLogout = async function() {
+      try {
+        const { signOut } = await import('https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js');
+        await signOut(window.auth);
+        localStorage.clear();
+        window.location.href = '/eng-reading-panel/login.html';
+      } catch (error) {
+        console.error('登出失敗:', error);
       }
-      const titleEl = document.getElementById('practice-title');
-      if (titleEl) titleEl.innerHTML = '暫無教材';
-      const descEl = document.getElementById('practice-desc');
-      if (descEl) descEl.innerHTML = '您的帳號尚未被分配任何教材權限';
+    };
+    
+    // 暴露全局函數
+    window.playSingleSentence = playSingleSentence;
+    window.toggleParagraphAudio = toggleParagraphAudio;
+    window.playVocabularyWord = playVocabularyWord;
+    window.showTranslation = showTranslation;
+    window.showImplication = showImplication;
+    window.changeVocabPage = changeVocabPage;
+    
+    // ===== 初始化 =====
+    document.addEventListener('DOMContentLoaded', async () => {
+      // 從 localStorage 讀取用戶信息
+      const userDataStr = localStorage.getItem('userData');
+      if (userDataStr) {
+        try {
+          const userData = JSON.parse(userDataStr);
+          isGuestMode = userData.isGuest === true;
+          currentUserData = userData;
+          document.getElementById('userInfoBar').style.display = 'flex';
+          document.getElementById('userNameDisplay').textContent = userData.displayName || '會員';
+        } catch(e) {}
+      }
       
-      const floatingPlayer = document.getElementById('floatingPlayer');
-      if (floatingPlayer) {
-        floatingPlayer.style.display = 'none';
+      // 檢查試用期
+      const trialEndAt = currentUserData?.trialEndAt;
+      if (trialEndAt && new Date(trialEndAt) < new Date() && !currentUserData?.premium) {
+        isTrialExpired = true;
+        document.getElementById('trialExpiredNotice').style.display = 'block';
       }
-    }
-
-    // 單元管理器
-    const UnitManager = (function() {
-      let unitsIndex = [];
-      let currentUnitData = null;
-      let currentUnitId = '';
-      const app = document.getElementById('app');
-
-      function getUnitsIndex() { return unitsIndex; }
-
-      async function init() {
-        const filteredUnits = await loadUnitsIndex();
-        unitsIndex = filteredUnits;
-        
-        if (unitsIndex.length === 0) {
-          showNoMaterialMessage();
-          return;
-        }
-        
-        populateUnitSelect();
-
-        if (window.isTrialExpired && window.isTrialExpired()) {
-          const select = document.getElementById('unit-select');
-          select.style.pointerEvents = 'none';
-          select.style.opacity = '0.6';
-          select.title = '試用期已屆滿，只能閱讀第一篇文章';
-          if (unitsIndex.length > 0) await loadAndRenderUnit(unitsIndex[0]);
-          return;
-        }
-
-        const urlUnit = getUnitFromURL();
-        if (urlUnit) {
-          const found = unitsIndex.find(u => u.unitId === urlUnit);
-          if (found) { await loadAndRenderUnit(found); return; }
-        }
-
-        if (unitsIndex.length > 0) await loadAndRenderUnit(unitsIndex[0]);
-      }
-
-      async function loadUnitsIndex() {
-        try {
-          const res = await fetch(`./data/units-index.json?v=${Date.now()}`);
-          if (!res.ok) throw new Error('網路錯誤');
-          const data = await res.json();
-          const allUnits = data.units || [];
-          
-          const filteredUnits = filterUnitsByUser(allUnits);
-          console.log('📚 載入單元索引:', filteredUnits.length, '個單元');
-          
-          return filteredUnits;
-        } catch (error) {
-          console.error('載入單元索引失敗:', error);
-          return [];
+      
+      // 初始化教材
+      await initCurriculum();
+      
+      // 上傳功能（老師專用）
+      const userRole = currentUserData?.role;
+      if (userRole === 'teacher' || userRole === 'admin') {
+        const uploadWrapper = document.getElementById('uploadWrapper');
+        const uploadInput = document.getElementById('unitUpload');
+        if (uploadWrapper) uploadWrapper.style.display = 'flex';
+        if (uploadInput) {
+          uploadInput.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            showToast('上傳功能演示', 'info');
+            uploadInput.value = '';
+          });
         }
       }
-
-      function populateUnitSelect() {
-        const select = document.getElementById('unit-select');
-        select.innerHTML = '';
-        unitsIndex.forEach(u => {
-          const opt = document.createElement('option');
-          opt.value = u.unitId;
-          opt.textContent = u.unitName;
-          select.appendChild(opt);
-        });
-        select.addEventListener('change', function(e) { handleUnitSelect(e.target.value); });
-      }
-
-      function getUnitFromURL() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('unit');
-      }
-
-      async function loadAndRenderUnit(unitInfo) {
-        if (window.isTrialExpired && window.isTrialExpired()) {
-          const firstUnit = unitsIndex[0];
-          if (firstUnit && unitInfo.unitId !== firstUnit.unitId) {
-            alert('⚠️ 試用期已屆滿，只能閱讀第一篇文章。');
-            if (firstUnit) return loadAndRenderUnit(firstUnit);
-          }
+    });
+  </script>
+  
+  <script type="module">
+    // Firebase 初始化（用於認證）
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyBwvsGR126V-_yNR9ZafSwNtp_lfS6jYFQ",
+      authDomain: "eng-read-mb-f1-newtreasureplus.firebaseapp.com",
+      projectId: "eng-read-mb-f1-newtreasureplus",
+      storageBucket: "eng-read-mb-f1-newtreasureplus.firebasestorage.app",
+      messagingSenderId: "609164976857",
+      appId: "1:609164976857:web:647920c68d2aaa0d47d4c8"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    
+    window.auth = auth;
+    window.db = db;
+    
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) {
+        const currentPath = window.location.pathname;
+        if (!currentPath.includes('login.html')) {
+          sessionStorage.setItem('redirectAfterLogin', currentPath);
+          window.location.href = '/eng-reading-panel/login.html';
         }
-
-        try {
-          if (currentUnitId && currentUnitId.startsWith('upload_')) {
-            const prevEntry = unitsIndex.find(u => u.unitId === currentUnitId);
-            if (prevEntry?.dataUrl?.startsWith('blob:')) URL.revokeObjectURL(prevEntry.dataUrl);
-          }
-
-          AudioController.stop();
-          Renderer.showLoading();
-
-          const res = await fetch(unitInfo.dataUrl);
-          if (!res.ok) throw new Error('載入單元數據失敗');
-          const unitData = await res.json();
-          currentUnitData = unitData;
-          currentUnitId = unitData.unitId || unitInfo.unitId;
-          app.dataset.unitId = currentUnitId;
-
-          const select = document.getElementById('unit-select');
-          select.value = currentUnitId;
-
-          const url = new URL(window.location);
-          url.searchParams.set('unit', currentUnitId);
-          window.history.pushState({}, '', url);
-
-          Renderer.renderAll(unitData, currentUnitId);
-          console.log(`單元 ${currentUnitId} 載入完成`);
-
-          if (window.PreloadManager) {
-            window.PreloadManager.init();
-          }
-
-        } catch (e) {
-          console.error(e);
-          alert('載入單元失敗：' + e.message);
-        }
+      } else {
+        console.log('✅ 已登入:', user.email);
       }
-
-      async function handleUnitSelect(unitId) {
-        if (window.isTrialExpired && window.isTrialExpired()) {
-          const firstUnit = unitsIndex[0];
-          if (firstUnit && unitId !== firstUnit.unitId) {
-            alert('⚠️ 試用期已屆滿，只能閱讀第一篇文章。');
-            const select = document.getElementById('unit-select');
-            select.value = firstUnit.unitId;
-            return;
-          }
-        }
-        const unitInfo = unitsIndex.find(u => u.unitId === unitId);
-        if (unitInfo) await loadAndRenderUnit(unitInfo);
-      }
-
-      async function handleFileUpload(input) {
-        const file = input.files[0];
-        if (!file) return;
-        try {
-          const text = await file.text();
-          const unitData = JSON.parse(text);
-          if (!unitData.unitId || !unitData.unitName || !unitData.article) {
-            throw new Error('無效的單元JSON格式');
-          }
-          const tempId = 'upload_' + Date.now();
-          const tempEntry = {
-            unitId: tempId,
-            unitName: unitData.unitName,
-            dataUrl: URL.createObjectURL(file)
-          };
-          unitsIndex.push(tempEntry);
-          populateUnitSelect();
-          await loadAndRenderUnit(tempEntry);
-        } catch (e) {
-          alert('解析JSON失敗：' + e.message);
-        } finally {
-          input.value = '';
-        }
-      }
-
-      return {
-        init,
-        handleUnitSelect,
-        handleFileUpload,
-        getCurrentUnitId: () => currentUnitId,
-        getCurrentUnitData: () => currentUnitData,
-        getUnitsIndex: getUnitsIndex,
-        loadAndRenderUnit: loadAndRenderUnit
-      };
-    })();
-
-    window.UnitManager = UnitManager;
-
-    // Service Worker 註冊
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/eng-reading-panel/service-worker.js')
-          .then(reg => console.log('Service Worker 註冊成功', reg.scope))
-          .catch(err => console.log('Service Worker 註冊失敗', err));
-      });
-    }
+    });
   </script>
 </body>
 </html>

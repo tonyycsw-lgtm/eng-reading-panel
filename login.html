@@ -210,6 +210,35 @@
             box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
         }
         
+        .overlay-content input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 40px;
+            font-size: 15px;
+            margin-bottom: 20px;
+            transition: all 0.2s;
+            background: white;
+        }
+        
+        .overlay-content input:focus {
+            border-color: #4f46e5;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        
+        .overlay-content input::placeholder {
+            color: #cbd5e1;
+        }
+        
+        .invite-hint {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: -12px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        
         .overlay-content button {
             width: 100%;
             padding: 14px;
@@ -300,6 +329,12 @@
                 <option value="S6">S6</option>
             </select>
             
+            <label class="input-label">邀請碼（選填）</label>
+            <input type="text" id="inviteCode" maxlength="5" placeholder="請輸入邀請碼，例如：MU123" autocomplete="off">
+            <div class="invite-hint">
+                <i class="fas fa-info-circle"></i> 格式：2個字母 + 3個數字（如 MU123）
+            </div>
+            
             <button class="btn-primary" id="confirmBtn">
                 確認
             </button>
@@ -345,6 +380,7 @@
         const errorDiv = document.getElementById('errorMessage');
         const overlay = document.getElementById('firstLoginOverlay');
         const gradeSelect = document.getElementById('gradeSelect');
+        const inviteCodeInput = document.getElementById('inviteCode');
         const confirmBtn = document.getElementById('confirmBtn');
         const formMessage = document.getElementById('formMessage');
         
@@ -368,14 +404,28 @@
             formMessage.style.display = 'none';
         }
         
+        // 驗證邀請碼格式
+        function validateInviteCode(code) {
+            if (!code) return true; // 空白為有效
+            return /^[A-Z]{2}\d{3}$/.test(code);
+        }
+        
         // 處理首次登入資料提交
         async function handleFirstLoginSubmit() {
             const grade = gradeSelect.value;
+            let inviteCode = inviteCodeInput.value.trim().toUpperCase();
             
             hideFormError();
             
+            // 驗證年級
             if (!grade) {
                 showFormError('請選擇年級');
+                return;
+            }
+            
+            // 驗證邀請碼格式（如果有填寫）
+            if (inviteCode && !validateInviteCode(inviteCode)) {
+                showFormError('邀請碼格式錯誤，請輸入 2 個字母 + 3 個數字（如 MU123）');
                 return;
             }
             
@@ -389,12 +439,19 @@
                 const trialEndDate = new Date();
                 trialEndDate.setDate(trialEndDate.getDate() + 7);
                 
+                // 處理群組（branch 陣列）
+                let branchArray = [];
+                if (inviteCode) {
+                    branchArray = [inviteCode];
+                }
+                
                 await setDoc(userRef, {
                     email: pendingUser.email,
                     displayName: pendingUser.displayName || pendingUser.email || '會員',
                     photoURL: pendingUser.photoURL || null,
                     role: 'user',
                     grade: grade,
+                    branch: branchArray,  // 🔥 群組欄位（邀請碼）
                     publishers: [],
                     premium: false,
                     plan: 'free',
@@ -416,7 +473,7 @@
                     updatedAt: new Date().toISOString()
                 });
                 
-                console.log('✅ 用戶資料已建立:', { grade, trialEndAt: trialEndDate.toISOString() });
+                console.log('✅ 用戶資料已建立:', { grade, inviteCode: inviteCode || '無', trialEndAt: trialEndDate.toISOString() });
                 
                 overlay.style.display = 'none';
                 window.location.href = './index.html';
@@ -450,6 +507,8 @@
                 if (!userSnap.exists()) {
                     // 新用戶：顯示年級選擇彈窗
                     pendingUser = user;
+                    // 清空邀請碼輸入框
+                    inviteCodeInput.value = '';
                     overlay.style.display = 'flex';
                     googleBtn.disabled = false;
                     googleBtn.innerHTML = '<i class="fab fa-google"></i> 使用 Google 帳號登入';
@@ -487,8 +546,11 @@
                 const userSnap = await getDoc(userRef);
                 
                 if (!userSnap.exists()) {
+                    // 訪客模式：加入默認年級 S1
                     await setDoc(userRef, {
                         role: 'guest',
+                        grade: 'S1',
+                        branch: [],  // 訪客沒有群組
                         createdAt: new Date().toISOString(),
                         lastLoginAt: new Date().toISOString(),
                         readingProgress: {},
@@ -502,6 +564,7 @@
                         isGuest: true,
                         publishers: ["Open示範"]
                     });
+                    console.log('✅ 訪客用戶資料已建立，默認年級: S1');
                 } else {
                     await updateDoc(userRef, {
                         lastLoginAt: new Date().toISOString()
@@ -521,6 +584,9 @@
         // 確認按鈕
         confirmBtn.addEventListener('click', handleFirstLoginSubmit);
         gradeSelect.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleFirstLoginSubmit();
+        });
+        inviteCodeInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleFirstLoginSubmit();
         });
     </script>
